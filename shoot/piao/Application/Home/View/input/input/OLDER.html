@@ -1,0 +1,119 @@
+<div class="content grass-in">
+    <div class="info grass-in">
+        <table>
+            <tr id="sexy">
+                <td>性别：</td>
+                <td><em><img src="/piao/Public/images/f-toux.png" width="76" height="68"></em><span class="radio gender on " data-option="female" info="女"> </span></td>
+                <td><em><img src="/piao/Public/images/m-toux.png" width="76" height="68"></em><span class="radio gender" data-option="male" info="男"> </span></td>
+            </tr>
+            <tr>
+                <td>年龄：</td><td colspan="2"><input  info="年龄" id="older_age"  name="age" type="tel" min="46" max="99" value="50" class="radius-input" /></td>
+            </tr>
+            <tr  id="issmoker">
+                <td><em>吸烟者</em><span class="radio smoking" data-option="smoker" info="吸烟者"> </span></td><td colspan="2"><em>非吸烟者</em><span class="radio smoking on" data-option="nosmoker" info="非吸烟者"> </span></td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>定期人寿投保额：</em><span><input id="older_amount" name="age" type="tel" min="4" max="80" value="" class="radius-input"  info="定期人寿投保额"  />万</span>
+                <br />
+                    <span style="float: right;">投保额范围为40,000 - 800,000港币</span></td>
+            </tr>
+            <tr>
+                <td colspan="3"><span class="radio on longcare" data-option="1" info="长期护理"> </span><em>自选项目一：长期护理</em></td>
+            </tr>
+            <tr id="Timelimit">
+                <td>保障期限：</td><td><em>五年</em><span class="radio Timelimit" data-option="5" info="五年"> </span></td><td><em>终身</em><span class="radio on Timelimit" data-option="50" info="终身"> </span></td>
+            </tr>
+            <tr><td colspan="3">每月保障金额(港币)：</td></tr>
+            <tr  id="Timelimit_amount">
+                <td><em>2800</em><span class="radio amount" data-option="2800"  info="2800"> </span></td><td><em>5200</em><span class="radio on amount" data-option="5200"  info="5200"> </span></td><td><em>10000</em><span class="radio amount" data-option="10000"  info="10000"> </span></td>
+            </tr>
+            <tr>
+                <td colspan="3"><span class="radio cash" data-option="1" info="住院现金"> </span><em>自选项目二：住院现金</em></td>
+            </tr>
+            <tr><td colspan="3">每日住院现金(港币)：</td></tr>
+            <tr>
+                <td><em>400</em><span class="radio cash_amount" data-option="400"  info="400"> </span></td>
+                <td><em>800</em><span class="radio cash_amount" data-option="800"  info="800"> </span></td>
+                <td><em>1200</em><span class="radio cash_amount" data-option="1200"  info="1200"> </span></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><em>1600</em><span class="radio cash_amount" data-option="1600"  info="1600"> </span></td>
+                <td><em>2000</em><span class="radio cash_amount" data-option="2000"  info="2000"> </span></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<input class="{$color}_select" type="hidden" value="0" />
+<input name="{$code}_price" class="{$color}_price totalprice  {$code}_price" type="hidden" value="0" />
+<input name="{$code}_info" class="{$code}_info selected" type="hidden" value="" />
+<script language="JavaScript">
+
+    jQuery(function ($) {
+        $(".grass-in .gender").click(function(){
+            if($(".gender").size() > 0){
+                $(".gender").removeClass("on");
+                $(this).addClass("on");
+            }
+        });
+
+        $(".grass-in .smoking").click(function(){
+            if($(".smoking").size() > 0){
+                $(".smoking").removeClass("on");
+                $(this).addClass("on");
+            }
+        });
+
+
+        $(".grass-in .amount").click(function(){
+            if($(".amount").size() > 0){
+                $(".amount").removeClass("on");
+                $(this).addClass("on");
+                $(".longcare").addClass("on");
+            }
+        });
+
+        $(".grass-in .cash_amount").click(function(){
+            if($(".cash_amount").size() > 0){
+                $(".cash_amount").removeClass("on");
+                $(this).addClass("on");
+                $(".cash").addClass("on");
+            }
+        });
+
+
+
+        $(".grass-in .Timelimit").click(function(){
+            if($(".Timelimit").size() > 0){
+                $(".Timelimit").removeClass("on");
+                $(this).addClass("on");
+                $(".longcare").addClass("on");
+            }
+        });
+
+        $(".grass-in .longcare").click(function(){
+            $(this).toggleClass("on");
+            if(!$(this).hasClass("on")){
+                $(".Timelimit").removeClass("on");
+                $(".amount").removeClass("on");
+            }else{
+                $(".Timelimit").eq(0).addClass("on");
+                $(".amount").eq(0).addClass("on");
+            }
+        });
+
+        $(".grass-in .cash").click(function(){
+            $(this).toggleClass("on");
+            if(!$(this).hasClass("on")){
+                $(".cash_amount").removeClass("on");
+            }else{
+                $(".cash_amount").eq(0).addClass("on");
+            }
+        });
+
+        $(".grass .OLDER_1").show();
+    });
+
+
+</script>

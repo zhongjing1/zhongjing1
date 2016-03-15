@@ -1,0 +1,37 @@
+@charset "utf-8";
+/* 港漂保险 */
+* {margin:0; padding:0;}
+body {width:100%; height:100%; font-size:175%; position:relative;}
+img {max-width:100%;height:auto; width:auto\9;}
+
+header {max-width:100%; height:auto; background-color:#26537b; color:#FFF; font-family:"微软雅黑"; text-align:center; padding-bottom:0.8em; padding-top:0.8em; display:block;}
+header h2 {color:#fff; border:1px solid #fff; font-size:1.2em; width:55%; margin:0 auto; display:block; -moz-border-radius: 1.5em; -webkit-border-radius: 1.5em; border-radius:1.5em; padding:0.2em 0;}
+
+.rowBar {width:100%; padding:0.6em 0; font-size:0.7em; height:1.2em; line-height:1.2em; color:#000; border-bottom:1px solid #eee; padding-bottom:1.8em;}
+.rowBar span {display:block; float:left; padding-left:2em; background:url(../images/dot-bg.png) no-repeat 0.5em 1em; background-size:auto 30%;}
+.rowBar input {font-size:0.8em; background:none; border:1px solid #7a7a7a; color:#26537b; padding:0.5em 0.8em; font-size:1em;  -moz-border-radius: 1.5em; -webkit-border-radius: 1.5em; border-radius:1.5em;}
+.btnBar {width:100%; padding:2.2em 0 1.2em; text-align:center;}
+.btnBar input {font-size:2em; background:#f2cd4e; border:none; color:#fff; padding:0 0.5em; font-size:1em;  -moz-border-radius: 1.5em; -webkit-border-radius: 1.5em; border-radius:1.5em;}
+.space {margin-right:2em;}
+
+.gray-in .radio{width:18px; height:18px; background: url("../images/radios-gray.png") left bottom no-repeat; background-size:100% auto; padding: 0; margin-top: 7px;}
+.gray-in .on{ background-position-y: top;}
+
+.info {padding:0.8em 0; padding-bottom:1em; padding-left:0;} 
+.rowBar em {padding:0 0.5em; font-style:normal; display:block;}
+.rowBar em span {padding-left:0.8em; padding-right:0.8em; display:block;}
+.rowBar b {padding-left:0.8em; font-weight:normal;}
+
+.bright-green {background-color:#70b99d;}
+.deep-yellow {background-color:#ffbb5c;}
+.light-red {background-color:#ef8467;}
+.deep-blue {background-color:#72c0a4;}
+.green {background-color:#83d161;}
+.light-green {background-color:#b7e244;}
+.pink {background-color:#e9b2b4;}
+.yellow {background-color:#f2cd4e;}
+.cyan {background-color:#8992db;}
+.gray {background-color:#eeeeee;}
+.white {background-color:#fff;}
+
+.bottomBg {height:2em;}

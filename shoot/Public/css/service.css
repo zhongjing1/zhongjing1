@@ -1,0 +1,35 @@
+#service dl{ background: url(../images/bgImg/line2.gif) right repeat-y; height:235px; float:left; padding:0 20px; width:200px;}
+#service dt{ margin-bottom:10px;}
+#service dd h2{ color:#333; font-size:14px; font-family:"微软雅黑"; font-weight:600 }
+#service dd{ background:url(../images/icon/icon-circle.gif) left 8px no-repeat; padding:0 0 0 12px; margin:0 0 5px 0; line-height:1.8}
+#service dd a{color:#333;}
+#service dd a:hover{color:#333; text-decoration:underline}
+
+#Process,#Need{ margin:30px auto}
+#Process-Title,#Need-Title{ height:17px; height:17px;  padding:0 0 10px 0; }
+#Process-Title h3,#Need-Title h3{ height:17px;   text-indent:-9999px;}
+#Process-Title h3{ background:url(../images/bgImg/title2.gif) 20px 0 no-repeat;}
+#Need-Title h3{ background:url(../images/bgImg/title3.gif) 20px 0 no-repeat;}
+#Need-Title h5{ background:url(../images/yingpin.png) 20px 0 no-repeat;}
+#Need-Title h4{ background:url(../images/bgImg/title_join.png) 20px 0 no-repeat;}
+
+.liucheng img{ display:block; margin:20px 0 0px 0;}
+.liucheng ul{ width:100%}
+.liucheng li{ float:left; line-height:1.6; width:13%; padding:10px 0 0 32px;}
+
+{ height:17px; height:17px;  padding:0 0 5px 0}
+#Need ul{ display:block; float:left; width:550px; padding:10px 20px; float:left;}
+#Need li{ width:250px; float:left; margin:15px 25px 0 0}
+#Need label{ display:block; line-height:24px; font-family:"微软雅黑"; font-weight:bold; color:#000}
+#Need li input[type="text"]{ background:url(../images/bgImg/inputBg.gif) no-repeat; width:218px; height:27px; line-height:27px; padding:5px 15px}
+#Need li span{ background:url(../images/icon/icon-msg.gif) 10px 30px no-repeat; display:block; padding:24px 0 0 50px; line-height:1.6}
+#Need li span a{ text-decoration:underline; color:#1d66aa}
+#Need li span a:hover{ text-decoration:none;}
+
+.msgTeaxtarea{ padding:20px 0 !important; margin:0}
+.msgTeaxtarea textarea{ background: url(../images/bgImg/textareaBg.gif); line-height:1.4; height:76px; width:345px; padding:10px; overflow:hidden;}
+.msgTeaxtarea button{ background:url(../images/btnImg/textareabtnBg.gif) no-repeat; display:block; height:30px; font-weight:bold;width:365px;
+text-align:center; color:#000; font-family:"微软雅黑"; letter-spacing:10px }
+.msgTeaxtarea button:active{color:#1d66aa}
+
+

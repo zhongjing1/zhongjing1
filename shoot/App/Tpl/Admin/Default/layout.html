@@ -1,0 +1,89 @@
+<taglib name='html' />
+<!DOCTYPE html>
+<html>
+  <head id="Head1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="__PUBLIC__/css/bootstrap.css" rel="stylesheet" type="text/css"   />
+    <script src="__PUBLIC__/js/jquery-1.8.2.min.js" type="text/javascript"></script>
+    <script src="__PUBLIC__/js/jquery.validate.min.js" type="text/javascript"></script>
+    <script src="__PUBLIC__/js/messages_cn.js" type="text/javascript"></script>
+    <script src="__PUBLIC__/js/bootstrap.min.js" type="text/javascript"></script>
+    <link href="__PUBLIC__/css/admin.css" rel="stylesheet" type="text/css" />
+    <!--[if IE 6]>
+       <link href="__PUBLIC__/css/ie6.css" rel="stylesheet">
+    <![endif]-->
+    <title>系统管理</title>
+    <script type="text/javascript">
+
+        $(function () {
+            $("#form1").validate();
+            $("#sub").submit(function () {
+                $("#ids").val($("input[name='c_id']").val());
+                var chk_value = [];
+                $('input[name="c_id"]:checked').each(function () {
+                    chk_value.push($(this).val());
+                });
+                $("#ids").val(chk_value);
+                if (chk_value == "") {
+                    alert("请选择操作的记录！");
+                    return false;
+                }
+                if ($("#cp").val() == "0") {
+                    alert("请选择操作！");
+                    return false;
+                }
+                if( confirm("确认执行操作吗？")){
+                   if($('#cp').val()=="1"){
+                       $("#sub").attr("action","__URL__/foreverdelete");
+                   }else if($('#cp').val()=="2"){
+                       $("#sub").attr("action","__URL__/checkPass");
+                   }else if($('#cp').val()=="3"){
+                       $("#sub").attr("action","__URL__/recycle");
+                    }
+
+                    return true;
+                }
+
+            });
+            $("a").focus(function () { $(this).blur(); });
+            $("input[type='checkbox']").addClass("checkbox");
+            $("#ckall").live("click",function () {
+
+
+                if (!$(this).attr("checked")) {
+                    $("input[name='c_id']").removeAttr("checked");
+                }
+                else {
+                    $("input[name='c_id']").attr("checked", true);
+
+                }
+            });
+            $("#ckall1").live("click",function () {
+                if (!$(this).attr("checked")) {
+                    $("input[name='c1_id[]']").removeAttr("checked");
+                }
+                else {
+                    $("input[name='c1_id[]']").attr("checked", true);
+                }
+            });
+            $(".table tr:odd").addClass("odd");
+            $("#del").click(function () {
+                if (confirm("确认要删除吗？")) {
+                    $("#form1").submit();
+                }
+            });
+            $("a[data-toggle=modal]").click(function(){
+                var target = $(this).attr('data-target');
+                var url = $(this).attr('href');
+                $(target+" .modal-body").load(url);
+            });
+        });
+    </script>
+</head>
+<body style="*width:98.5%;">
+<div style="padding-right:20px; " >
+    {__CONTENT__}
+</div>
+<script src="__PUBLIC__/js/ie6.js" type="text/javascript"></script>
+</body>
+</html>

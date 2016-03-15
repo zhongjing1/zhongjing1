@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{$seo[title]}</title>
+<meta name="keywords" content="{$seo[keywords]}" />
+<meta name="description" content="{$seo[description]}" />
+<link href="/skin/style/css.css" rel="stylesheet" type="text/css" />
+<link href="/skin/style/style.css" rel="stylesheet" type="text/css" />
+<link href="/skin/style/subcss.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/skin/js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="/skin/js/slide.js"></script>
+<script type="text/javascript" src="/skin/js/main.js"></script>
+<script src="/skin/js/jquery.kinMaxShow-1.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="/skin/js/js.js"></script><script type="text/javascript">
+$(function(){
+	  $("#kinMaxShow").kinMaxShow();
+});
+</script>
+<script type="text/javascript"> 
+function displaySubMenu(li) { 
+var subMenu = li.getElementsByTagName("ul")[0]; 
+subMenu.style.display = "block"; 
+} 
+function hideSubMenu(li) { 
+var subMenu = li.getElementsByTagName("ul")[0]; 
+subMenu.style.display = "none"; 
+} 
+</script> 
+
+</head>
+<body>
+<include file="public:head" />
+<div id="content"><div class="sider left" style="margin-top:10px;">
+<div class="sider-a"><h2>在线留言</h2><ul>
+    <li><a href="<?php echo U('sinpage/yuyue');?>"  >在线留言</a></li>
+</ul></div><div class="sider-c"><p><img src="/skin/images/pro_19.jpg" /></p><div style="line-height:2.2; padding-left:10px;padding-right:10px;">
+{$leftcontact[0][content]}
+</div></div></div>
+<div class="detail">
+<div class="title"><span>当前位置：<a href="/">首页</a> >&nbsp;<a class="bc" href="#">在线留言</a></span><h2>在线留言</h2></div>
+            <table width="730" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="411" height="195" valign="top" style="line-height:180%; padding:10px;  border-top:0px;">
+                 <form id="form1" class="form-horizontal" method="post"  action="{:U('Feedbook/insert')}"   >
+<input type="hidden" name="catid" value="249">
+<table class="tab_form" width="100%" align="center" border="0" cellpadding="0" cellspacing="5">
+  <tbody>
+<tr>
+<td class="b" align="right" width="100px">姓名：</td>
+<td>
+<input class="input_txt" type="text" name="title" value="" size="40" style="width: 150px"  maxlength="100" /> *
+<span class="post_error"> </span>
+</td>
+</tr> 
+
+  <tr>
+<td class="b" align="right">手机号码：</td>
+<td align="left">
+<input class="input_txt" style="width: 150px" name="mobile" id="mobile" maxlength="20"> 
+</td>
+  </tr>
+  <tr>
+<td class="b" align="right">E-mail：</td>
+<td align="left">
+<input class="input_txt" style="width: 150px" name="email" id="email" maxlength="40">
+<span class=redsmall>*</span>
+</td>
+  </tr>
+<tr>
+<td class="b" align="right">地址：</td>
+<td align="left">
+<textarea class="input_txt" name="address" id="address" cols="45" rows="2"></textarea>
+</td>
+  </tr>
+  <tr>
+<td class="b" align="right">详细信息：</td>
+<td align="left">
+<textarea class="input_txt" name="remark" id="remark" cols="45" rows="5"></textarea>
+</td>
+  </tr> 	  
+  <tr>
+<td>
+<input type="hidden" name="action" value=exbRegister>
+</td>
+<td align="left">
+<input class="btn" type="submit" value="提交" style="width:120px;">
+&nbsp;<input class="btn" type="reset" value="重置" style="width:120px;">
+</td>
+  </tr>
+  </tbody>
+</table>
+
+</form> 
+                </td>
+              </tr>
+            </table>
+<div class="clear"></div></div><div class="clear"></div></div>
+<include file="public:foot" />
+</body>
+</html>
+<script type="text/javascript" src="/skin/scripts/jquery.jcarousel.min.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function() {
+    jQuery('#mycarousel').jcarousel({
+        auto: 1,
+        wrap: 'last'
+    });	
+});
+</script></body></html>
+
+<script>
+$(document).ready(function(){
+   var newImage = new Image();
+   var oldImage = $(qh).attr('src');
+   newImage.src = 'images/company.jpg';
+   $(qh).hover(function(){
+    $(qh).attr('src',newImage.src);
+    },
+    function(){
+    $(qh).attr('src',oldImage);
+    });
+});
+</script>
+

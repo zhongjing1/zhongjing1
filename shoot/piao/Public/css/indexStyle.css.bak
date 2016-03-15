@@ -1,0 +1,817 @@
+.mobile {
+	display: none;
+}
+.top {
+	height: 104px;
+	border-bottom: solid 4px #d12f21;
+}
+.top .logo, .page5 .logo {
+	height: 53px;
+	width: 252px;
+	background: url(/piao/Public/images/top-logo.png) no-repeat center;
+	background-size: 100% 100%;;
+	margin-top: 23px;
+}
+.top .contact {
+	margin: 36px 0 0 42px;
+}
+.top .title {
+	font: 13px;
+	color: #747474;
+}
+.top .address {
+	color: #d12f21;
+	font-size: 16px;
+}
+body>.title {
+	background: url(/piao/Public/images/title-background.jpg) no-repeat bottom;
+	background-size: cover;
+	height: 606px;width: 100%;
+	color: white;
+	text-align: center;
+	overflow: hidden;
+}
+body>.title h1 {
+	margin: 146px 0 50px;
+	font: 54px normal;
+}
+body>.title h2 {
+	font: 34px normal;
+}
+h3 {
+	font: 34px normal;
+	color: #202020;
+	text-align: center;
+	margin-top: 85px;
+}
+.page {
+	border-bottom: solid 1px #e1e1e1;
+	padding-bottom: 47px;
+}
+.page1 h3 .ico {
+	display: inline-block;
+	height: 47px;width: 36px;
+	background: url(/piao/Public/images/page1-title.png) center no-repeat;
+	background-size: contain;
+	margin-right: 21px;
+}
+.page1 .row, .page4 .inner {
+	margin: 85px auto 0;
+	color: #202020;
+}
+.page1 .des {
+	color: #898989;
+	font-size: 12px;
+}
+.page1 .row>div {
+	text-align: center;
+	margin: 0 0 56px;
+}
+.page1 .row .ico {
+	margin: 0 auto;
+	height: 56px;width: 68px;
+}
+.page1 .box1 .ico {
+	background: url(/piao/Public/images/page1_icon1.jpg) center no-repeat;
+	background-size: contain;
+}
+.page1 .box2 .ico {
+	background: url(/piao/Public/images/page1_icon2.jpg) center no-repeat;
+	background-size: contain;
+}
+.page1 .box3 .ico {
+	background: url(/piao/Public/images/page1_icon3.jpg) center no-repeat;
+	background-size: contain;
+}
+.page1 .box4 .ico {
+	background: url(/piao/Public/images/page1_icon4.jpg) center no-repeat;
+	background-size: contain;
+}
+.page1 .box5 .ico {
+	background: url(/piao/Public/images/page1_icon5.jpg) center no-repeat;
+	background-size: contain;
+}
+.page1 .box6 .ico {
+	background: url(/piao/Public/images/page1_icon6.jpg) center no-repeat;
+	background-size: contain;
+}
+.page .title {
+	font-size: 20px;
+	margin: 24px 0 15px
+}
+.page2 {
+	padding-bottom: 60px;
+}
+.page2 h3 {
+	margin: 100px 0 80px;
+}
+.page2 input {
+	-webkit-appearance: none;
+}
+.page2 form.input.pc {
+	width: 90%;
+	font-size: 22px;
+	line-height: 52px;
+	color: #222;
+	margin: auto;
+}
+.page2 .input.pc  {
+	font-size: 20px;
+	color: #2d6391;
+	width: 120px;
+	border: none;
+	outline: none;
+	border-bottom: solid 1px #858585;
+    line-height: 22px;
+	text-align: center;
+}
+.page2 .input.pc .select {
+	font-size: 20px;
+	color: #2d6391;
+	display: inline-block;
+    line-height: 22px;
+	cursor: pointer;
+	text-align: center;
+}
+.page2 .input.pc .select .select-inner {
+	width: 120px;
+	display: inline-block;
+}
+.page2 .input.pc .select .line {
+	width: 120px;height: 1px;
+	display: inline-block;
+	background: #858585;
+    position: absolute;
+    margin: 24px 0 0 -125px;
+}
+.page2 .input.pc .select .ico {
+	background: url(/piao/Public/images/select-ico.png) center no-repeat;
+	width: 15px;
+	height: 8px;
+	display: inline-block;
+}
+.page2 .input.pc ul {
+	display: none;
+	position: absolute;
+	padding: 0;
+	list-style: none;
+	width: 120px;
+	background: white;
+    margin-top: 4px;
+}
+.page2 .input.pc li {
+	padding: 5px 0;
+	cursor: pointer;
+}
+.page2 .input.pc li:hover {
+	background: rgba(0,0,0,0.1);
+}
+.page2 .input.pc .button {
+	width: 240px;height: 50px;color: white;
+	font-size: 16px;
+	line-height: 50px;
+	margin: 76px auto 0;
+	background: rgb(213, 41, 38);
+	border-radius: 999em;
+	text-align: center;
+	cursor: pointer;
+}
+
+.page2 .compute {
+	display: none;
+}
+.page2 .compute.pc {
+	width: 920px;
+	margin: auto;
+}
+.page2 h3.compute {
+	margin-bottom: 64px;
+}
+.page2 .compute.pc dl {
+	border: 1px solid rgb(213,213,213);
+	width: 436px;height: 210px;
+	position: relative;
+	margin: 0;
+}
+.page2 .compute.pc .left {
+	margin-right:auto;
+	margin-left:auto;
+}
+.page2 .compute.pc dt {
+	margin: 21px 0 39px 28px;
+	font-weight: normal;
+}
+.page2 .compute.pc dd {
+	margin: 0 0 4px 28px;
+	color: #5b5b5b;
+}
+.page2 .compute.pc .num {
+	color: #d82927;
+	font-size: 20px;
+	display: inline-block;
+	margin: 0 10px;
+}
+.page2 .compute.pc .right .num {
+	color: #222;
+	font-weight: bold;
+}
+.page2 .compute.pc .right .ico {
+	width: 12px;height: 12px;
+	border: 3px solid #f35351;
+	display: inline-block;
+	border-radius: 999em;
+}
+.page2 .compute.pc .right .ico2 {
+	border-color: #21c5da;
+}
+.page2 .compute.pc .right .ico3 {
+	border-color: #5969c0;
+}
+.page2 .compute.pc canvas {
+	float: right;
+	position: absolute;
+	right: 44px;
+	top: 44px;
+}
+.page2 .compute.pc .button {
+	width: 136px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 16px;
+	color: #222;
+	border: 1px solid rgb(213,213,213);
+	margin: auto;
+	text-align: center;
+	border-radius: 999em;
+	margin-top: 40px;
+	cursor: pointer;
+}
+.page3 h3 {
+	margin-bottom: 72px;
+}
+.page3 .box {
+	margin-bottom: 63px;
+}
+.page3 .title {
+	margin: 0 0 32px;
+}
+.page3 .inner {
+	width: 100%;
+	border: solid #d82927;
+	border-width: 2px 1px 0 9px;
+	position: relative;
+}
+.page3 .inner:before {
+	content: "";
+	background: url(/piao/Public/images/page3-before.png) center no-repeat;
+	width: 33px;height: 12px;
+	background-size: 100% 100%; 
+	position: absolute;
+	top: -14px;
+	left: -9px;
+}
+.page3 .inner .inner-title {
+	margin: 36px 0 26px 23px;
+	font-size: 14px;
+	color: #2d6391;
+}
+.page3 .text {
+	width: 343px;
+	margin-left: 23px;
+	float: left;
+}
+.page3 .inner ul {
+	color: #5b5b5b;
+	padding: 0;
+	list-style: none;
+}
+.page3 .inner ul span {
+	width: 3px;height: 3px;
+	display: inline-block;
+	background: #d82927;
+	margin: 0px 10px 4px 0;
+}
+.page3 .inner li {
+	margin: 1px 0;
+}
+.page3 .logo {
+	margin: 79px auto 0;
+	float: left;
+}
+.page3 .box1 .logo {
+	background: url(/piao/Public/images/page3-logo1.jpg) no-repeat center;
+	background-size: contain;
+	width: 125px;height: 72px;
+}
+.page3 .box2 .logo {
+	background: url(/piao/Public/images/page3-logo2.jpg) no-repeat center;
+	background-size: contain;
+	width: 82px;height: 82px;
+}
+.page3 .box3 .logo {
+	background: url(/piao/Public/images/page3-logo1.jpg) no-repeat center;
+	background-size: contain;
+	width: 125px;height: 72px;
+}
+.page3 .box4 .logo {
+	background: url(/piao/Public/images/page3-logo3.jpg) no-repeat center;
+	background-size: contain;
+	width: 82px;height: 82px;
+}
+.page3 .img {
+	width: 370px;height: 170px;
+	float: right;
+	margin: 13px;
+}
+.page3 .box1 .img {
+	background: url(/piao/Public/images/page3-img1.jpg) no-repeat center;
+	background-size: cover;
+}
+.page3 .box2 .img {
+	background: url(/piao/Public/images/page3-img2.jpg) no-repeat center;
+	background-size: cover;
+}
+.page3 .box3 .img {
+	background: url(/piao/Public/images/page3-img3.jpg) no-repeat center;
+	background-size: cover;
+}
+.page3 .box4 .img {
+	background: url(/piao/Public/images/page3-img4.jpg) no-repeat center;
+	background-size: cover;
+}
+.page3 .inner-bottom {
+	width: 100%;height: 6px;
+	background:#dfdfdf; /* 一些不支持背景渐变的浏览器 */  
+    background:-moz-linear-gradient(top, #dfdfdf, #ededed);  
+    background:-webkit-gradient(linear, 0 0, 0 bottom, from(#dfdfdf), to(#ededed));  
+    background:-o-linear-gradient(top, #dfdfdf, #ededed); 
+}
+.page4 {
+	border: none;
+}
+.page4 .inner {
+	border-bottom: 1px solid #e1e1e1;
+	padding-bottom: 64px;
+	margin-bottom: 64px;
+}
+.page4 .inner .title {
+	margin: 0 0 20px;
+	color: #d12f21;
+}
+.page4 .inner-ico {
+	background: url(/piao/Public/images/page4-ico.png) center no-repeat;
+	width: 12px;height: 18px;
+}
+.page4 .text {
+	text-align: center;
+	color: #202020;
+	font-size: 20px;
+	border-bottom: 1px solid #e1e1e1;
+	padding-bottom: 74px;
+}
+.page4 .author {
+	font-size: 14px;
+	color: #898989;
+}
+.page4 .author span {
+	display: block;
+	margin: 20px 0 8px;
+}
+.page4 .text .ico {
+	width: 62px;height: 1px;background: #d12f21;
+	margin: 54px auto;
+}
+.page4 .call {
+	text-align: center;
+	margin: 50px 0 0;
+	border: none;
+}
+.page4 .wechat {
+	border-left: solid 1px #e1e1e1;
+}
+.page4 .call .ico {
+	background: url(/piao/Public/images/phone-ico.jpg) no-repeat center;
+	width: 23px;
+	height: 23px;
+	display: inline-block;
+	background-size: contain;
+	margin: 0 7px -5px 0;
+}
+.page4 .wechat .ico {
+	background-image: url(/piao/Public/images/wechat-ico.jpg);
+}
+.page4 .call .num {
+	font-size: 32px;
+	color: rgb( 216, 41, 39 );
+	margin-top: 64px;
+}
+.page4 .call .img {
+	background: url(/piao/Public/images/wechat-img.jpg) no-repeat center;
+	width: 140px;height: 140px;
+	margin: 22px auto 0;
+	background-size: contain;
+}
+.page4 .call .title {
+	margin: 0;
+}
+.page5 {
+	background: #262626;
+	color: #8e8e8e;
+	font-size: 14px;
+	line-height: 1.5em;
+	padding-bottom: 80px;
+}
+.page5 .logo {
+	background-image: url(/piao/Public/images/bottom-logo.png);
+	margin: 60px 0 0; 
+}
+.page5 .text {
+	margin: 70px 0 40px;
+}
+
+.choice{
+	display: inline-block;
+	border:solid 2px grey;
+	border-radius: 8px;
+	padding:5px 10px;
+	margin-left: 10px;
+	width:20%;
+}
+.choice:hover{
+	border:solid 2px lightblue;
+}
+.ad{
+	border-radius:10px;
+	width:20%;
+	float:right;
+	position:absolute;
+	right:30px;
+	top:200px;
+}
+
+
+@media (max-width: 992px) {
+	.pc {
+		display: none;
+	}
+	.mobile {
+		display: block;
+	}
+	.page2 h3 {
+		margin-bottom: 50px;
+	}
+	.page2 .input.mobile {
+		font-size: 12px;
+		margin: auto;
+	}
+	.page2 .input.mobile input {
+		width: 100%;
+		margin-top: 14px;
+		font-size: 15px;
+		color: #202020;
+		height: 44px;
+		border: 1px solid #dedede;
+		outline: none;
+		padding: 0 12px;
+		border-radius: 4px;
+	}
+	.page2 .input.mobile > div {
+		margin-bottom: 34px;
+	}
+	.page2 .input.mobile .last {
+		margin-bottom: 0;
+	}
+	.page2 .input.mobile .select-sex .box {
+		height: 90px;
+		width: 48%;
+		border: solid 1px #dedede;
+		float: left;
+		text-align: center;
+		margin-top: 14px;
+	}
+	.page2 .box {
+		border-radius: 4px;
+	}
+	.page2 .input.mobile .select-sex .box.female {
+		margin-left: 4%;
+	}
+	.page2 .input.mobile .select-sex .box.check {
+		border: solid 1.5px #d82927;
+	}
+	.page2 .input.mobile .select-sex .box .ico {
+		background: url(/piao/Public/images/male.png) no-repeat center;
+		width: 16px;height: 27px;
+		background-size: contain;
+		margin: 18px auto 10px;
+	}
+	.page2 .input.mobile .select-sex .box.female .ico {
+		background-image: url(/piao/Public/images/female.png);
+	}
+	.page2 .input.mobile .select-marital > div {
+		height: 60px;
+		text-align: center;
+		line-height: 60px;
+		width: 48%;
+		float: left;
+		border: solid 1px #dedede;
+		margin-top: 14px;
+	}
+	.page2 .input.mobile .select-marital .unmarried {
+		margin-left: 4%;
+	}
+	.page2 .input.mobile .select-marital .check {
+		border: solid 1.5px #d82927;
+	}
+	.page2 .input.mobile .input-box {
+		width: 100%;
+		border: solid 1px #dedede;
+		margin-top: 14px;
+		border-radius: 4px;
+	}
+	.page2 .input.mobile .input-box .text {
+		line-height: 44px;
+		font-size: 13px;
+		text-align: center;
+		width: 15%;
+		display: inline-block;
+	}
+	.page2 .input.mobile .input-box input {
+		width: 85%;
+		float: right;
+		display: inline;
+		margin: 0;
+		border: none;
+		padding: 0;
+	}
+	.page2 .input.mobile .button {
+		width: 240px;height: 43px;color: white;
+		font-size: 16px;
+		line-height: 43px;
+		margin: 50px auto 60px;
+		background: rgb(213, 41, 38);
+		border-radius: 999em;
+		text-align: center;
+		cursor: pointer;
+	}
+	.page2 h3.compute {
+		margin-bottom: 50px;
+	}
+	.page2 .compute.mobile dt {
+		font-size: 13px;
+		margin: 28px 0 30px 24px;
+	}
+	.page2 .compute.mobile dl {
+		margin: 0;
+	}
+	.page2 .compute.mobile dl {
+		border: 1px solid #dedede;
+	}
+	.page2 .compute.mobile dl:first-child {
+		overflow: hidden;
+		border-bottom: none;
+	}
+	.page2 .compute.mobile dd {
+		font-size: 15px;
+		margin: 0 0 18px 24px;
+	}
+	.page2 .compute.mobile dl:first-child dd:last-child {
+		margin: 0 0 46px 24px;
+	}
+	.page2 .compute.mobile .num {
+		color: #d82927;
+		display: inline-block;
+		margin: 0 16px;
+	}
+	.page2 .compute.mobile .compute-bottom .num {
+		margin: 0 10px;
+		color: black;
+		font-weight: bold;
+	}
+	.page2 .compute.mobile dl div {
+		width: 176px;
+		margin: auto;
+	}
+	.page2 .compute.mobile canvas {
+		margin: 46px auto 55px;
+	}
+	.page2 .compute.mobile dd .ico {
+		width: 12px;height: 12px;
+		border: 3px solid #f35351;
+		display: inline-block;
+		border-radius: 999em;
+	}
+	.page2 .compute.mobile dd .ico2 {
+		border-color: #21c5da;
+	}
+	.page2 .compute.mobile dd .ico3 {
+		border-color: #5969c0;
+	}
+	.page2 .compute.mobile .button {
+		width: 200px;
+		height: 50px;
+		line-height: 50px;
+		font-size: 16px;
+		color: #222;
+		border: 1px solid rgb(213,213,213);
+		margin: 55px auto 0;
+		text-align: center;
+		border-radius: 999em;
+		cursor: pointer;
+	}
+	.page2 .compute.mobile .compute-bottom dd:last-child {
+		margin-bottom: 50px;
+	}
+	.page.page2 {
+		padding-bottom: 60px
+	}
+	.ad{
+	border-radius:10px;
+	width:100%;
+	float:none;
+	position:static;
+	right:30px;
+	top:400px;
+}
+	.ad1{
+	width:80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+}
+@media (max-width: 750px) {
+	.top {
+		height: 73px;
+		border-bottom-size: 3px;
+	}
+	.top .logo, .page5 .logo {
+		margin-top: 15px;
+		height: 36px;
+		width: 170px;
+	}
+	body>.title {
+		height: 314px;
+		background-image: url(/piao/Public/images/title-background-mobile.jpg);
+	}
+	body>.title h1 {
+		margin: 60px 0 34px;
+		font-size: 28px;
+		line-height: 1.4em;
+	}
+	body>.title h2 {
+		font-size: 20px;
+	}
+	h3 {
+		font-size: 20px;
+		margin-top: 42px;
+	}
+	.page {
+		padding-bottom: 23px;
+	}
+	.page1 h3 .ico {
+		width: 20px;
+		height: 26px;
+		margin-right: 9px;
+	}
+	.page1 .row, .page4 .inner {
+		margin-top: 50px;
+		text-align: center;
+	}
+	.page1 .row .ico {
+		width: 50px;height: 41px;
+	}
+	.page .title {
+		margin: 17px 0 9px;
+		font-size: 15px;
+	}
+	.page1 .des {
+		font-size: 13px;
+	}
+	.page1 .row>div {
+		margin-bottom: 42px;
+	}
+	.page3 h3 {
+		margin: 50px 0;
+	}
+	.page3 .title {
+		font-size: 13px;
+		margin: 0 0 11px;
+	}
+	.page3 .inner {
+		border-top-width: 4px;
+	}
+	.page3 .inner ul {
+		font-size: 13px;
+	}
+	.page3 .inner .inner-title {
+		font-size: 13px;
+		margin: 0 0 14px 14px;
+	}
+	.page3 .text {
+	    margin: 95px 0 0 18px;
+	    width: auto;
+	}
+	.page3 .img {
+		width: auto;
+		height: 81px;
+		margin: 4px;
+		float: none;
+	}
+	.page3 .logo {
+		float: none;
+		position: absolute;
+		right: 13px;
+		bottom: 15px;
+		margin: 0;
+	}
+	.page3 .box1 .logo, .page3 .box3 .logo {
+		width: 66px;height: 38px;
+	}
+	.page3 .box2 .logo, .page3 .box4 .logo {
+		width: 42px;height: 42px;
+	}
+	.page3 .inner:before {
+		width: 11px;height: 4px;
+	    top: -8px;
+	}
+	.page4 h3 {
+		margin-top: 60px;
+	}
+	.page4 .inner-ico {
+		background-image: url(/piao/Public/images/page4-ico-mobile.png);
+		width: 13px;height: 9px;
+		margin: 11px auto;
+		background-size: contain;
+	}
+	.page4 .inner {
+		margin: 30px 0 40px;
+		padding-bottom: 40px;
+	}
+	.page4 .inner .title {
+		margin-bottom: 10px;
+	}
+	.page4 .text {
+		font-size: 15px;
+		padding-bottom: 40px;
+	}
+	.page4 .author span {
+		display: inline;
+		margin: 0;
+	}
+	.page4 .author {
+		font-size: 13px;
+		margin-top: 16px;
+	}
+	.page4 .text .ico {
+		margin: 28px auto;
+	}
+	.page4 .call {
+		margin-top: 56px;
+	}
+	.page4 .call .num {
+		margin-top: 12px;
+		font-size: 18px;
+	}
+	.page4 .call .ico {
+		width: 16px;height: 16px;
+	    margin: 0 7px -2px 0;
+	}
+	.page4 .wechat {
+		border: none;
+		margin-top: 54px;
+	}
+	.page4 {
+		padding-bottom: 40px;
+	}
+	.page5 .logo {
+		margin-top: 40px;
+	}
+	.page5 {
+		font-size: 12px;
+	}
+	.page5 .right {
+		    margin-left: 40px;
+	}
+	.page5 .text {
+		margin: 20px 0 18px;
+	}
+	.choice{
+		display: inline-block;
+		width:20%;
+		margin:10px 10px;
+	}
+	.ad{
+	border-radius:10px;
+	width:100%;
+	float:none;
+	position:static;
+	right:30px;
+	top:400px;
+}
+.ad1{
+	width:80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+} 
+
+

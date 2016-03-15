@@ -1,0 +1,3 @@
+RewriteEngine on  
+RewriteCond $1 !^(index\.php|zx_Ten|zx_quan|zx_qie|public|uploads|views|robots\.txt|favicon\.ico)
+RewriteRule ^(.*)$ /index.php/$1 [L]

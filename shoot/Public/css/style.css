@@ -1,0 +1,81 @@
+
+/*----------Slide Start幻灯片位置开始----------*/
+#Slidebox{width:100%; height:380px;   margin:0 auto;  /*position:relative;*/overflow:hidden; background:#001736}
+#flashBg {height: 380px;overflow: hidden;width:100%;clear: both;margin: 0;padding: 0;}
+#flashLine {background: url(../images/bgImg/tg_flashbar.png) repeat-x center bottom; background:none; height: 380px; width: 100%;clear: both;}
+#flash{height: 380px; clear: both;position: relative;padding: 0px 0px;}
+#flash img {width:980px;height: 380px;}
+.flash_bar { width:100%;padding:13px 0 0 440px; z-index:2; height: 30px;overflow: hidden;position: absolute;
+bottom:0px;left:0px; background: url(../images/bgImg/tg_flashbar.png) no-repeat 0px 0px;  background:none;}
+.flash_bar .dq , .flash_bar .no  {display: block;float: left;width: 12px;height: 12px;margin:2px 4px;cursor: pointer; overflow:hidden; _background:none; }
+.flash_bar .dq {background: url(../images/btnImg/pagination.png) no-repeat 0px -12px; }
+.flash_bar .no {background:url(../images/btnImg/pagination.png) no-repeat 0px 0px; }
+
+/*----------文字滾動----------*/
+#newsFont{ background:url(../images/bgImg/newsFontBg.gif) repeat-x 100%; width:100%;}
+#newsFont .container{ height:34px; overflow:hidden; line-height:34px;}
+
+#newsFont .container p{ margin-left:65px; }
+#newsFont .container p a{ display:block ; width:70%; overflow:hidden; color:#4d4d4d; height:34px; line-height:34px; float:left;}
+#newsFont .container p a:hover{ color:#000}
+
+#news{ width:80%; float:left}
+#newsFont #weibo{width:80px; padding:5px 0 5px 50px;  height:24px; float:right; display:block; line-height:34px; font-family:"微软雅黑"; font-size:14px; color:#000; font-weight:700}
+#newsFont #weibo a{ display:inline-block; background-image:url(../images/bgImg/weibo.gif); background-repeat:no-repeat; margin: 0 5px;}
+#sinaWeibo{ height:20px; width:24px; background-position:0 0; }
+#sinaWeibo:hover{background-position:-24px 0; }
+#tencentWeibo{ height:21px; width:23px; background-position:0 -20px;}
+#tencentWeibo:hover{background-position:-24px -20px; }
+
+/*----------服務 & 優勢 & 需求----------*/
+#content{ margin:0 auto 30px; }
+.lineBorder{  background:url(../images/bgImg/line2.gif) right 45px no-repeat; float:left; padding:30px 0px 10px 0px; margin: 0 30px 0 0; width:296px;}
+.lineBorder h3{ width:100%; height:76px; margin-bottom:20px; text-indent:-9999px;}
+.lineBorder p{ line-height:1.8; padding:0px 10px 0 0}
+.lineBorder li{padding:0 0 0 20px;line-height:1.8;}
+.lineBorder button{ display:block; margin:10px 0 0 0}
+.buttonTheme1{ background:url(../images/btnImg/btn1.gif) no-repeat 0 0; text-indent:-12px; color:#032f4a; height:20px; line-height:20px; width:86px; overflow:hidden; display:block }
+.buttonTheme1:hover{background:url(../images/btnImg/btn1.gif) no-repeat 0 -20px;}
+#service h3{ background:url(../images/bgImg/serviceBg.png) 0px 0px no-repeat;}
+#service li{ background:url(../images/icon/icon1.gif) 0 center no-repeat; } 
+#advantages h3{ background:url(../images/bgImg/advantagesBg.png) 0 0 no-repeat;}
+#advantages li{ background:url(../images/icon/icon2.gif) 10px center no-repeat; }
+#enquiry h3{ background:url(../images/bgImg/enquiryBg.png) 0 0 no-repeat;}
+#enquiry li{ background:url(../images/icon/icon2.gif) 10px center no-repeat; }
+/*----------New product----------*/
+#newproduct-Title{ height:17px; border-bottom:10px #d6d6d6 solid; height:17px;  padding:0 0 5px 0}
+#newproduct h3{ background:url(../images/bgImg/title1.gif) 0px 0 no-repeat; height:17px;   text-indent:-9999px;}
+
+#mainproduct{ padding:10px 0}
+.product-Show{ padding:10px; background: url(../images/bgImg/shadow1.gif) #fff left bottom no-repeat; height:260px; width:210px; margin:0px 20px 0 0; float:left}
+.product-Show img{ width:210px; height:120px; display:block; padding:0 0 10px 0}
+.product-Show dd{ line-height:24px; font-family:"微软雅黑"; padding:0 0 0 10px}
+.product-Show dd em{ font-weight:700; font-size:14px;}
+.product-Show dd span{ color:#46acd8}
+.product-Show .viewBtn{ background:url(../images/btnImg/viewBtn2.gif) no-repeat 0 0; display:block; height:25px; margin:10px auto 0 auto;width:201px;}
+
+.weibo-Show{ background: #fff !important; width:230px; height:263px;   float:right;}
+
+.product-Show:hover{background: url(../images/bgImg/shadow1.gif) #47ad2e left bottom no-repeat; cursor:pointer}
+.product-Show:hover dl,.product-Show:hover dd span{ color:#fff}
+.product-Show:hover .viewBtn{ background:url(../images/btnImg/viewBtn2.gif) no-repeat 0 -25px; display:block; height:25px; margin:10px auto 0 auto;width:201px;}
+
+/*----------Client Logo----------*/
+#client{ background: url(../images/bgImg/clientBg.gif) repeat-x 100%; border:1px solid #908f8f; margin:10px auto; height:78px;  width:978px; }
+.choseUs ,.contactUs{  display:block; float:left; height:58px; padding: 20px 20px 0 20px;}
+.choseUs { background:url(../images/bgImg/gray-bg.gif) repeat-x;  width:117px;}
+.clientsLogo { overflow:hidden; zoom:1;  width:821px;}
+.pcont { width:760px; height:78px; line-height:78px; float:left; overflow:hidden;}
+.ScrCont { width:32766px; zoom:1;}
+#List1_1,#List2_1 { float:left;}
+.LeftBotton, .RightBotton {  background-image: url(../images/btnImg/arrow.gif); background-repeat:no-repeat;  width: 18px; height:78px; }
+.LeftBotton{ background-position:0 0; float:left;}
+.RightBotton {background-position:-36px 0; right:0; top:0; float:right; }
+.LeftBotton:hover { background-position:-18px 0 ;}
+.RightBotton:hover { background-position:-54px 0 ;}
+.ScrCont img, .ScrCont span b { display:inline-block; vertical-align:middle; cursor:default}
+.ScrCont span{ width:140px; height:78px; line-height:78px; text-align:center; float:left; display:block; margin:0 0 0 45px;}
+.ScrCont span b{ height:100%; width:0;}
+
+/*----------INDEX 
+            END----------*/

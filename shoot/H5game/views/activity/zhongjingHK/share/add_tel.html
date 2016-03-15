@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no" name="format-detection">
+<meta content="email=no" name="format-detection">
+<title>中精新年抽奖活动</title>
+<link rel="stylesheet" href="<{$tmp_dir}>/css/style.css" type="text/css">
+	<{load_js('jquery')}>
+	<{load_js('validform')}>
+	<{load_js('layer1.8/layer')}>
+</head>
+<body class="bgimg">
+	<div class="gx">
+		<p>恭喜你获得<strong style="font-size: 22px; color: #ffea00;"><{$prize_list[$user_data.prize]}></strong><br>填写你的信息领奖吧</p>
+	</div>
+	<div class="add_tel">
+		<form name="add_tel" id="add_tel" method="post" action="<{site_url("<{$index_dir}>/save_add_tel")}>">
+		<div class="name">
+			<label><img src="<{$tmp_dir}>/images/name.png" width="90%"></label>
+			<input type="text" name="username" datatype="*" nullmsg="请输入姓名！"/>
+		</div>
+		<div class="tel">
+			<label><img src="<{$tmp_dir}>/images/tel.png" width="90%"></label>
+			<input type="tel" name="tel" datatype="*" nullmsg="请输入手机！" errormsg="请输入手机"/>
+		</div>
+		<div class="tel">
+			<label><img src="<{$tmp_dir}>/images/address.png" width="90%"></label>
+			<input type="text" name="address" datatype="*" nullmsg="请输入地址！"/>
+		</div>
+		<div class="submit">
+			<input type="submit" value="" />
+		</div>
+		</form>
+	</div>
+	<{include file="activity/share.tpl"}>
+	<script type="text/javascript" >
+		$(function(){
+			$.Tipmsg.r=null;
+			$("#add_tel").Validform({
+				tiptype:function(msg){
+					layer.msg(msg, 2, -1);//错误提示
+				},
+				tipSweep:true,
+				ajaxPost:true,
+				callback:function(data){
+					if(data.status=='y')
+					{
+						window.location.reload();
+					}
+					else
+					{
+						layer.msg(data.info, 2, -1);//错误提示
+					}
+				}
+			});
+		})
+	</script>
+</body>
+</html>
+ 
+
+

@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{$seo[title]}</title>
+<meta name="keywords" content="{$seo[keywords]}" />
+<meta name="description" content="{$seo[description]}" />
+<link href="/skin/style/css.css" rel="stylesheet" type="text/css" />
+<link href="/skin/style/style.css" rel="stylesheet" type="text/css" />
+<link href="/skin/style/subcss.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/skin/js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="/skin/js/slide.js"></script>
+<script type="text/javascript" src="/skin/js/main.js"></script>
+<script src="/skin/js/jquery.kinMaxShow-1.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="/skin/js/js.js"></script><script type="text/javascript">
+$(function(){
+	  $("#kinMaxShow").kinMaxShow();
+});
+</script>
+<script type="text/javascript"> 
+function displaySubMenu(li) { 
+var subMenu = li.getElementsByTagName("ul")[0]; 
+subMenu.style.display = "block"; 
+} 
+function hideSubMenu(li) { 
+var subMenu = li.getElementsByTagName("ul")[0]; 
+subMenu.style.display = "none"; 
+} 
+</script> 
+
+</head>
+<body>
+<include file="public:head" />
+<div id="content"><div class="sider left" style="margin-top:10px;">
+<div class="sider-a"><h2>企业视频</h2><ul>
+<volist name="catenews" id="vo" >
+    <li><a href="<?php echo U('article/videos',array('catid'=>$vo["id"]));?>"    <if condition='$catid eq $vo["id"]'>  class="current"  </if>>{$vo.title}</a></li>
+   </volist>   
+</ul></div><div class="sider-c"><p><img src="/skin/images/pro_19.jpg" /></p><div style="line-height:2.2; padding-left:10px;padding-right:10px;">
+{$leftcontact[0][content]}
+</div></div></div>
+<div class="detail">
+<div class="title"><span>当前位置：<a href="/">首页</a> >&nbsp;<a class="bc" href="#">{$cattitle}</a></span><h2>{$cattitle}</h2></div>
+           <table width="730" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="730" height="477" valign="top" style="line-height:200%; padding:10px; padding-left:20px; padding-right:0px; border-top:0px;">
+    <volist name="list" id="vo" mod="2" >
+          <div style="float:left; width:180px; margin-right:45px;">
+                <if condition='$_GET["catid"] eq 279'>
+               <a href="<?php echo U('article/videos_read',array('id'=>$vo["id"],'catid'=>$_GET["catid"]));?>"> <img src="{$vo.thumb}" height="59" width="180"  style="border:1px solid #e0e0e0; padding:3px;" /></a>
+                <else />
+               <a href="<?php echo U('article/videos_read',array('id'=>$vo["id"],'catid'=>$vo["catid"]));?>"> <img src="{$vo.thumb}" height="135" width="180" style="border:1px solid #e0e0e0; padding:3px;"/></a>
+                 </if>
+            <div style="width:180px; text-align:center; padding-top:10px; padding-bottom:15px;">
+             <a href="<?php echo U('article/videos_read',array('id'=>$vo["id"],'catid'=>$vo["catid"]));?>" class="link_pro">{$vo.title}</a></div>
+           </div>
+    </volist>  
+    <div class="clear"></div>
+       <div class='t_page ColorLink' style="width:680px;">{$page} </div>
+                </td>
+              </tr>
+            </table>
+<div class="clear"></div></div><div class="clear"></div></div>
+<include file="public:foot" />
+</body>
+</html>
+<script type="text/javascript" src="/skin/scripts/jquery.jcarousel.min.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function() {
+    jQuery('#mycarousel').jcarousel({
+        auto: 1,
+        wrap: 'last'
+    });	
+});
+</script></body></html>
+
+<script>
+$(document).ready(function(){
+   var newImage = new Image();
+   var oldImage = $(qh).attr('src');
+   newImage.src = 'images/company.jpg';
+   $(qh).hover(function(){
+    $(qh).attr('src',newImage.src);
+    },
+    function(){
+    $(qh).attr('src',oldImage);
+    });
+});
+</script>
+

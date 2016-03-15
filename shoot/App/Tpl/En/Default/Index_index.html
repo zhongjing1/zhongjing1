@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{$seo[title]}</title>
+<meta name="keywords" content="{$seo[keywords]}" />
+<meta name="description" content="{$seo[description]}" />
+<!-- css-->
+<link type="text/css" rel="stylesheet" href="/templets/68_en/styles/util.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="/templets/68_en/styles/reset_html5.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="/templets/68_en/styles/index.css" media="screen" />
+<script type="text/javascript" src="/templets/68_en/js/modernizr.2.7.1.js"></script>
+<script type="text/javascript" src="/templets/68_en/js/greensock/TweenMax.min.js"></script>
+<script type="text/javascript" src="/templets/68_en/js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="/templets/68_en/js/jquery.flexslider.js"></script>
+<script type="text/javascript" src="/templets/68_en/js/index.js"></script>
+<script type="text/javascript" src="/templets/68_en/js/slide.js"></script>
+<script type="text/javascript" src="/templets/68_en/js/util.js"></script>
+</head>
+<body>
+<style>
+A.applink:hover {border: 2px dotted #DCE6F4;padding:2px;background-color:#ffff00;color:green;text-decoration:none}
+A.applink       {border: 2px dotted #DCE6F4;padding:2px;color:#2F5BFF;background:transparent;text-decoration:none}
+A.info          {color:#2F5BFF;background:transparent;text-decoration:none}
+A.info:hover    {color:green;background:transparent;text-decoration:underline}
+</style>
+<include file="public:head" />
+<div class="bannerbox">
+<link rel="stylesheet" type="text/css" href="/focus/css/style.css" />
+<div id="demo01" class="flexslider">
+	<ul class="slides">
+         <volist name='ad_huandeng' id='vo'>
+		   <li><div class="img"><img src="{$vo.thumb}" height="488" width"990" alt="" /></div></li>
+        </volist>
+	</ul>
+</div><!--flexslider end-->
+<script type="text/javascript" src="/focus/js/slider.js"></script> 
+<script type="text/javascript">
+$(function(){
+
+	$('#demo01').flexslider({
+		animation: "slide",
+		direction:"horizontal",
+		easing:"swing"
+	});
+	
+});
+</script>
+
+</div>
+
+<div class="home_content" style="padding-top:10px;">
+  <table width="1000" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="600" height="200">
+<table width="710" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="522" height="33" valign="middle" style="padding-left:20px; color:#ad0411; font-weight:bold; padding-top:10px; text-align:left;">News</td>
+    <td width="78" valign="middle" style="padding-left:20px; color:#ad0411; padding-top:10px; text-align:left;"><a href="{:U('article/index')}">more>></a>&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="95" colspan="2" style="padding-left:10px;">
+         <volist name='news' id='vo'>
+           <table width="96%" border="0" cellspacing="0" cellpadding="0" >
+            <tr>
+              <td width="4%" height="26" align="right" valign="middle"><img src="/images/icon_arror.jpg"   /></td>
+              <td width="70%" height="28" align="left" style="padding-left:5px;"><a href="<?php echo U('article/read',array('id'=>$vo["id"]));?>"><php>echo getsubstrutf8($vo[title],0,26); </php></a></td>
+              <td width="26%"><span class="font_time"><php>
+             if($row['timetext']!=''){
+              echo  $row['timetext'];
+             }else{
+              echo date('Y-m-d',$vo['createtime']);
+             }
+             </php></span></td>
+            </tr>
+          </table>    
+   </volist>   
+    
+    </td>
+  </tr>
+</table>
+<table width="600" border="0" cellspacing="5" cellpadding="10">
+  <tr>
+       <volist name='ad8' id='vo'>
+            <td style="padding-left:10px;"><a href="{$vo.url}"><img src="{$vo.thumb}" width="220" height="85" /></a></td>
+        </volist>
+    
+    
+    
+  </tr>
+</table>
+    </td>
+    <td width="400" valign="top" style="background:url(/images/line.jpg) no-repeat left 0px; padding-left:10px;"><table width="290" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td style="padding-left:20px; color:#ad0411; font-weight:bold; padding-top:10px; text-align:left;">Contact us</td>
+      </tr>
+       <tr>
+        <td style="padding-left:20px; padding-top:10px; text-align:left; line-height:2;">
+        {$homecontact[0][content]}
+        </td>
+      </tr>
+      <tr>
+        <td style="padding-left:20px; color:#ad0411; font-weight:bold; padding-top:10px; text-align:left;">Links</td>
+      </tr>
+      <tr>
+        <td style="padding-left:20px; padding-top:10px; text-align:left; line-height:2;">
+           
+           <volist  name="footlink" id="vo">
+                <a href="{$vo.url}" target="_blank" style="border:0px; float:left; margin-right:10px; margin-bottom:10px;">{$vo.title}</a> 
+               </volist>
+        </td>
+      </tr>      
+    </table></td>
+  </tr>
+</table>
+
+</div>
+
+
+<include file="public:foot" />
+</body>
+</html>

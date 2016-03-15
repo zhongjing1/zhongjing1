@@ -1,0 +1,87 @@
+<DIV class="part-c-bd clearfix" style="height:190px;">
+<DIV class="fs guide">
+<DIV class="hd">
+<H2>关于我们</H2></DIV>
+<DIV class="bd">
+<UL>
+     <volist name="cate1" id="vo">
+        <LI><a href="<?php echo U('sinpage/index',array('catid'=>$vo["id"]));?>">{$vo.title}</a></LI>
+     </volist> 
+ </UL></DIV></DIV>
+<DIV class="fs choose">
+<DIV class="hd">
+<H2>热点动态</H2></DIV>
+<DIV class="bd">
+<UL>
+      <volist name="cate10" id="vo">
+        <LI><a href="<?php echo U('article/index',array('catid'=>$vo["id"]));?>">{$vo.title}</a></LI>
+      </volist>
+ </UL></DIV></DIV>
+<DIV class="fs geomancy">
+<DIV class="hd">
+<H2>服务项目</H2></DIV>
+<DIV class="bd">
+<UL>
+      <volist name="cate4" id="vo">
+        <LI><a href="<?php echo U('sinpage/service',array('catid'=>$vo["id"]));?>">{$vo.title}</a></LI>
+     </volist>
+ </UL></DIV></DIV>
+<DIV class="fs geomancy">
+  <DIV class="hd">
+    <H2>成功案例</H2>
+  </DIV>
+  <DIV class="bd">
+    <UL>
+    <volist name="cate5" id="vo">
+        <if condition="$vo.mid eq 5">
+        <LI><a  href="<?php echo U('sinpage/partners');?>">{$vo.title}</a></LI>
+        <else />
+        <LI><a href="<?php echo U('article/cases',array('catid'=>$vo["id"]));?>">{$vo.title}</a></LI>
+        </if>
+      </volist>
+<!--      <LI><A href="<?php echo U('sinpage/partners');?>">合作伙伴</A></LI>
+-->    </UL>
+  </DIV>
+</DIV>
+<DIV class="fs geomancy">
+  <DIV class="hd">
+    <H2>活动预告</H2>
+  </DIV>
+  <DIV class="bd">
+    <UL>
+       <volist name="cate2" id="vo">
+        <if condition="$vo.mid eq 5">
+        <LI><a  href="<?php echo U('sinpage/appointment');?>">{$vo.title}</a></LI>
+        <else />
+        <LI><a href="<?php echo U('article/huodong',array('catid'=>$vo["id"]));?>">{$vo.title}</a></LI>
+        </if>
+      </volist>
+    </UL>
+  </DIV>
+</DIV>
+<DIV class="fs geomancy">
+  <DIV class="hd">
+    <H2>客服中心</H2>
+  </DIV>
+  <DIV class="bd">
+    <UL>
+     <volist name="cate6" id="vo">
+        <LI><a href="<?php echo U('sinpage/kefu',array('catid'=>$vo["id"]));?>">{$vo.title}</a></LI>
+     </volist> 
+    <LI><A href="<?php echo U('sinpage/yuyue');?>">在线预约</A></LI>
+    </UL>
+  </DIV>
+</DIV>
+<DIV class="fs geomancy">
+  <DIV class="hd">
+    <H2>加入我们</H2>
+  </DIV>
+  <DIV class="bd">
+    <UL>
+     <volist name="cate11" id="vo">
+        <LI><a href="<?php echo U('sinpage/contact',array('catid'=>$vo["id"]));?>">{$vo.title}</a></LI>
+     </volist>
+    </UL>
+  </DIV>
+</DIV>
+</DIV><div style="clear:both;"></div>

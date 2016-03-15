@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{$seo[title]}</title>
+<meta name="keywords" content="{$seo[keywords]}" />
+<meta name="description" content="{$seo[description]}" />
+<!-- css-->
+<link type="text/css" rel="stylesheet" href="/templets/68/styles/reset_html5.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="/templets/68/styles/index.css" media="screen" />
+<script type="text/javascript" src="/templets/68/js/modernizr.2.7.1.js"></script>
+<script type="text/javascript" src="/templets/68/js/greensock/TweenMax.min.js"></script>
+<script type="text/javascript" src="/templets/68/js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="/templets/68/js/jquery.flexslider.js"></script>
+<script type="text/javascript" src="/templets/68/js/index.js"></script>
+<script type="text/javascript" src="/templets/68/js/slide.js"></script>
+<script type="text/javascript" src="/templets/68/js/util.js"></script>
+
+<link href="/templets/54/css/resetcommon.css" rel="stylesheet" type="text/css" />
+<link href="/templets/54/css/style.css" rel="stylesheet" type="text/css" />
+
+<link type="text/css" rel="stylesheet" href="/templets/68/styles/util.css" media="screen" />
+
+
+
+</head>
+<body>
+<style>
+A.applink:hover {border: 2px dotted #DCE6F4;padding:2px;background-color:#ffff00;color:green;text-decoration:none}
+A.applink       {border: 2px dotted #DCE6F4;padding:2px;color:#2F5BFF;background:transparent;text-decoration:none}
+A.info          {color:#2F5BFF;background:transparent;text-decoration:none}
+A.info:hover    {color:green;background:transparent;text-decoration:underline}
+</style>
+<include file="public:head"/>
+
+<div class="topadcs" style="z-index:0">
+        <a class="fullad" href="javascript:;" title="" style="background:url(/images/sub_banner.jpg) no-repeat center top;"></a>
+    </div>
+    <div class="brd_bg">
+    <div class="bread">
+        <p style="background:#eee;">
+            <span>您現在的位置:</span><a href='/'>主頁</a> > <a href="<?php echo U('sinpage/index',array('catid'=>77));?>">{$row.title}</a></p>
+    </div>
+</div>
+<div class="sou_bg">
+        <div class="south">
+            <ul class="s_tab fn" >
+                <li><span>公司简介</span></li>
+            </ul>
+            <div class="s_con">
+<div class="jian s_part">
+<p>
+      {$row.content} 
+ </p>				
+<p class="s_jg">&nbsp;</p>
+</div>
+                <!--诚聘英才-->
+            </div>
+        </div>
+    </div>
+<include file="public:foot" />
+<script type="text/javascript" src="../v3.jiathis.com/code/jia.js縰id=1" charset="utf-8"></script> 
+<!-- JiaThis Button BEGIN --> 
+<script type="text/javascript" src="templets/68/js/jia.js" charset="utf-8"></script> 
+<!-- JiaThis Button END -->
+</body>
+</html>

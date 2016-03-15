@@ -1,0 +1,248 @@
+﻿* {
+	FONT-FAMILY: "宋体"
+}
+BODY {
+	LINE-HEIGHT: 150%; MARGIN: auto; FONT-FAMILY: "宋体",arial,sans-serif; COLOR: #333333; FONT-SIZE: 12px
+}
+BODY {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+DIV {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+DL {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+DT {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+DD {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+UL {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+OL {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+LI {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+H1 {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+H2 {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+H3 {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+H4 {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+H5 {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+H6 {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+PRE {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+CODE {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+FORM {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+FIELDSET {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+LEGEND {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+INPUT {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+BUTTON {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+TEXTAREA {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+
+BLOCKQUOTE {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+TH {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+TD {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+P {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+DL {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+DT {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+DD {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+UL {
+	PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+OL {
+	PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+LI {
+	PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+INPUT {
+	LINE-HEIGHT: 22px; HEIGHT: 22px; COLOR: #666666; VERTICAL-ALIGN: middle
+}
+SELECT {
+	BORDER-BOTTOM: #cccccc 1px solid; BORDER-LEFT: #cccccc 1px solid; LINE-HEIGHT: 21px; HEIGHT: 22px; COLOR: #666666; VERTICAL-ALIGN: middle; BORDER-TOP: #cccccc 1px solid; BORDER-RIGHT: #cccccc 1px solid
+}
+H1 {
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 160%; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+H2 {
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 160%; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+H3 {
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 160%; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+H4 {
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 160%; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+H5 {
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 160%; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+H6 {
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 160%; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+H1 {
+	FONT-SIZE: 24px
+}
+H2 {
+	FONT-SIZE: 22px
+}
+H3 {
+	FONT-SIZE: 20px
+}
+H4 {
+	FONT-SIZE: 12px
+}
+H5 {
+	FONT-SIZE: 16px
+}
+H6 {
+	FONT-SIZE: 14px
+}
+.fl {
+	FLOAT: left
+}
+.fr {
+	FLOAT: right
+}
+A {
+	TEXT-DECORATION: none
+}
+.b {
+	FONT-WEIGHT: bold
+}
+IMG {
+	BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px
+}
+.v {
+	FONT-FAMILY: Arial,Helvetica,sans-serif
+}
+.m10 {
+	MARGIN-LEFT: 10px
+}
+.hidden {
+	DISPLAY: none
+}
+.333 {
+	COLOR: #333
+}
+.000 {
+	COLOR: #ff6600; FONT-WEIGHT: bold
+}
+.red {
+	COLOR: #ff3200
+}
+.green {
+	COLOR: #009900
+}
+.FormBase {
+	BORDER-BOTTOM: #b6c2cc 1px solid; BORDER-LEFT: #b6c2cc 1px solid; PADDING-BOTTOM: 2px; PADDING-LEFT: 2px; PADDING-RIGHT: 2px; BACKGROUND: url(../input-bg.gif) #fff repeat-x 50% top; BORDER-TOP: #b6c2cc 1px solid; BORDER-RIGHT: #b6c2cc 1px solid; PADDING-TOP: 2px
+}
+.FormFocus {
+	BORDER-BOTTOM: #9ecc00 1px solid; BORDER-LEFT: #9ecc00 1px solid; PADDING-BOTTOM: 2px; PADDING-LEFT: 2px; PADDING-RIGHT: 2px; BORDER-TOP: #9ecc00 1px solid; BORDER-RIGHT: #9ecc00 1px solid; PADDING-TOP: 2px
+}
+.note {
+	BORDER-BOTTOM: #f90 1px solid; BORDER-LEFT: #f90 1px solid; PADDING-BOTTOM: 7px; BACKGROUND-COLOR: #fffff0; PADDING-LEFT: 7px; PADDING-RIGHT: 7px; DISPLAY: block; BORDER-TOP: #f90 1px solid; BORDER-RIGHT: #f90 1px solid; PADDING-TOP: 7px
+}
+.table_edit {
+	
+}
+.table_edit {
+	MARGIN: auto; BORDER-COLLAPSE: collapse
+}
+.table_edit TR {
+	
+}
+.table_edit TH {
+	TEXT-ALIGN: right; PADDING-BOTTOM: 3px; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; COLOR: #999; PADDING-TOP: 3px
+}
+.table_edit TD {
+	PADDING-BOTTOM: 3px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 3px
+}
+
+#banner #ifocus {
+	POSITION: relative; WIDTH: 980px; HEIGHT: 427px
+}
+#banner #ifocus_pic {
+	POSITION: relative; WIDTH: 980px; DISPLAY: inline; FLOAT: left; HEIGHT: 427px; OVERFLOW: hidden
+}
+#banner #ifocus_piclist {
+	Z-INDEX: 1; POSITION: absolute
+}
+#banner #ifocus_piclist LI {
+	WIDTH: 980px; HEIGHT: 427px; OVERFLOW: hidden
+}
+#banner #ifocus_piclist IMG {
+	WIDTH: 980px; HEIGHT: 427px
+}
+#banner #ifocus_btn {
+	Z-INDEX: 3; POSITION: absolute; PADDING-LEFT: 3px; WIDTH: 980px; BOTTOM: 2px; HEIGHT: auto; LEFT: 0px; _bottom: 2px
+}
+UNKNOWN {
+	BOTTOM: 5px
+}
+#banner #ifocus_btn LI {
+	FILTER: alpha(opacity=50); PADDING-BOTTOM: 0px; MARGIN-TOP: 10px; PADDING-LEFT: 0px; WIDTH: auto; PADDING-RIGHT: 0px; DISPLAY: block; FLOAT: left; HEIGHT: auto; CURSOR: pointer; PADDING-TOP: 0px; opacity: 0.5; -moz-opacity: 0.5
+}
+#banner #ifocus_btn IMG {
+	BORDER-BOTTOM: #ffffff 1px solid; BORDER-LEFT: #ffffff 1px solid; WIDTH: 324px; HEIGHT: 160px; BORDER-TOP: #ffffff 1px solid; BORDER-RIGHT: #ffffff 1px solid
+}
+#banner #ifocus_btn .current {
+	TEXT-ALIGN: left; FILTER: alpha(opacity=100); MARGIN-TOP: 0px; DISPLAY: block; FLOAT: left; opacity: 1; -moz-opacity: 1
+}
+#banner #ifocus_btn .current IMG {
+	BORDER-BOTTOM: #fff 2px solid; BORDER-LEFT:#fff 2px solid; WIDTH: 324px; HEIGHT: 160px; BORDER-TOP: #fff 2px solid; BORDER-RIGHT: #fff 2px solid
+}
+#banner #ifocus_opdiv {
+	Z-INDEX: 2; POSITION: absolute; FILTER: alpha(opacity=50); WIDTH: 980px; BOTTOM: 0px; BACKGROUND: #000; HEIGHT: 45px; LEFT: 0px; opacity: 0.5; -moz-opacity: 0.5; _height: 45px
+}
+#banner #ifocus_tx {
+	Z-INDEX: 3; POSITION: absolute; BOTTOM: 8px; COLOR: #fff; LEFT: 8px
+}
+#banner #ifocus_tx .normal {
+	DISPLAY: none
+}

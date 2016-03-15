@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+<!DOCTYPE html PUBLIC "" ""><HTML><HEAD><META content="IE=11.0000" 
+http-equiv="X-UA-Compatible">
+<META charset="utf-8">
+<title>{$seo[title]}</title>
+<meta name="keywords" content="{$seo[keywords]}" />
+<meta name="description" content="{$seo[description]}" />
+<LINK href="/skin/images/base.css" rel="stylesheet"> 
+<LINK href="/skin/images/home.css" rel="stylesheet"> 
+<LINK href="/skin/images/sub.css" rel="stylesheet">
+<style type="text/css">
+body,td,th {
+	font-family: Tahoma, "宋体", "microsoft yahei", Arial;
+}
+</style>
+<SCRIPT src="/skin/images/jquery-1.7.2.min.js"></SCRIPT>
+<SCRIPT src="/skin/images/jquery.SuperSlide.2.1.1.js"></SCRIPT>
+ <SCRIPT src="/skin/images/adver.js" type="text/javascript"></SCRIPT>
+<SCRIPT src="/skin/images/common.js" type="text/javascript"></SCRIPT>
+</HEAD> 
+<BODY>
+<DIV class="wrapper">
+<SCRIPT>
+$(function(){
+	function listMouseover() {
+		$(this).addClass("current");
+		$(this).find('.subNav').show();
+	}
+	function listMouseleave() {
+		$(this).removeClass("current");
+		$(this).find('.subNav').hide();
+	}
+	$('.nav li').mouseover(listMouseover);
+	$('.nav li').mouseleave(listMouseleave);
+})
+</SCRIPT>
+<DIV class="headersub">
+<include file="public:head" />
+</DIV>
+<div style="background:url(/skin/images/subbanner.jpg) center top; height:197px;"></div>
+<div class="main-home inner">
+<div class="main-top"></div>
+<div class="main mainbg clearfix">
+	
+	<div class="location"><span class="ico"><a href="/">首页</a> &gt; <a href="#">成功案例</a> &gt; <a href="#">合作伙伴</a></span></div>
+	
+	<div class="left" id="leftObj">
+
+		<div class="shadow"></div>
+<div class="box">
+
+	<h2 class="title"><div class="title_more">成功案例</div></h2>
+
+<div class="menu">
+	<dl>
+    <volist name="catenews" id="vo" >
+    <if condition="$vo.mid eq 5">
+    <dt><a href="<?php echo U('sinpage/appointment');?>">{$vo.title}</a></dt>
+    <else />
+    <dt><a href="<?php echo U('article/cases',array('catid'=>$vo["id"]));?>"    <if condition='$catid eq $vo["id"]'>  class="current"  </if>>{$vo.title}</a></dt>
+    </if>
+   </volist>
+    <dt><a href="<?php echo U('sinpage/partners');?>">合作伙伴</a></dt>
+   
+	</dl>
+</div>
+</div>
+
+<div class="box"><div class="title"><div class="title_more">合作伙伴</div></div><div class="content" width="100%"><div>
+ <volist name='leftnews' id='vo'>
+    <div class="list"><a href="<?php echo U('article/read',array('id'=>$vo["id"]));?>" title="{$vo.title}"><php> echo getsubstrutf8($vo[title],0,25); </php></a></div><div class="clear"></div>
+   </volist>
+
+</div></div><div class="clear"></div></div>
+
+<div class="col_bottom"></div>
+
+	</div>
+	<div class="right" id="rightObj">
+		<h2 class="title">
+			<b>合作伙伴</b>
+		</h2>
+		<div class="display_title">
+				<div class="others">
+					
+				</div>
+			</div>
+			 <div id="info_content" class="display_content">
+                  <volist  name="list" id="vo">
+                         <a href="{$vo.url}" target="_blank"><img src="{$vo.thumb}"></a> 
+                  </volist>
+                  <div class="t_page ColorLink"> 
+     {$page}
+</div>
+
+                  
+                  
+                  
+                  
+			  <div class="map_box"></div>
+			</div>
+			<div class="clear"></div>
+			<script language="javascript">
+				var imgObj = $("#info_content").find("img");
+				if (imgObj.length > 0)
+				{
+					for (var i = 0; i < imgObj.length; i++)
+					{
+						if (imgObj[i].width > 720)
+						{
+							imgObj[i].width = 720;
+						}
+					}
+				}
+			</script>
+			<div class="page_top"><span id="pageTop" style="display: none;"><a href="#">[向上]</a></span>&nbsp;</div>
+		
+	</div>
+	<div class="main_bottom"></div>
+</div>
+<div class="main-btm"></div>
+</div>
+
+<div class="container">
+<DIV class="part-c">
+<include file="public:nav" />
+</DIV></DIV>
+
+<include file="public:foot" />
+</DIV>
+<DIV class="hide" id="backtop">返回顶部</DIV>
+<DIV class="online">
+<DIV class="ft"></DIV></DIV>
+<SCRIPT src="/skin/images/jquery.easing.1.3.js"></SCRIPT>
+ </CENTER><!--[if lte IE 6]><script src="/skin/js/iepng.js"></script><![endif]--> 
+</BODY></HTML>

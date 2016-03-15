@@ -1,0 +1,201 @@
+<div class="content {$color}-in">
+    <div class="info {$color}-in">
+        <table>
+            <tr>
+                <td>职业：</td><td colspan="2"><em>文职</em><span class="radio on vocation" data-option="1" info="文职"> </span></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td><td colspan="2"><em>轻度劳动力</em><span class="radio vocation" data-option="2" info="轻度劳动力"> </span></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td><td colspan="2"><em>技术性劳动力</em><span class="radio vocation" data-option="3" info="技术性劳动力"> </span></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td><td colspan="2"><em>体力劳动力</em><span class="radio vocation" data-option="4" info="体力劳动力"> </span></td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>年龄介乎3-17岁未婚全日制学生</em><span class="radio vocation" data-option="5" info="全日制学生"> </span></td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>基本计划投保额(>50万)</em><input name="age" id="accident_amount" type="tel" min="50" max="500" value="50" class="radius-input s-input" info="基本计划投保额" />&nbsp;万元</td>
+            </tr>
+            <tr  ID="ACCIDENT_payway">
+                <td>付款方式：</td><td><em>年付</em><span class="radio on {$code}_payway" data-option="1" info="年付"> </span></td><td><em>月付</em><span class="radio {$code}_payway" data-option="2" info="月付"> </span></td>
+            </tr>
+            <tr>
+                <td colspan="3"><span class="radio on Optional1" data-option="1" info="自选项目1"> </span><em>自选项目1：暂时丧失工作能力</em></td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>每周 投保额</em><input id="Optional1" name="age" type="tel" min="0" max="5000" value="" class="radius-input"  info="自选项目1暂丧工作能力每周投保额" />&nbsp;元</td>
+            </tr>
+            <tr>
+                <td colspan="3"><span class="radio on Optional2" data-option="1"  info="自选项目2"> </span><em>自选项目2：医疗费用</em></td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>每年 投保额</em><input  id="Optional2" name="age" type="tel" min="10001" max="50000" value="" class="radius-input"   info="自选项目2医疗费用每年投保额"/>&nbsp;元</td>
+            </tr>
+            <tr>
+                <td colspan="3"><span class="radio on Optional3" data-option="1"  info="自选项目3"> </span><em>自选项目3：住院现金</em></td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>每日 投保额</em><input  id="Optional3" name="age" type="tel" min="500" max="1000" value="" class="radius-input"  info="自选项目3住院现金每日投保额" />&nbsp;元</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+<input   name="{$code}_price" class="{$color}_price totalprice {$code}_price" type="hidden" value="0" />
+<input name="{$code}_info" class="{$code}_info selected" type="hidden" value="" />
+<script language="JavaScript">
+
+    jQuery(function ($) {
+        $(".{$color}-in .vocation").click(function(){
+            if($(".vocation").size() > 0){
+                $(".vocation").removeClass("on");
+                $(this).addClass("on");
+            }
+            checknone();
+
+        });
+
+        $(".{$color}-in .{$code}_payway").click(function(){
+            if($(".{$code}_payway").size() > 0){
+                $(".{$code}_payway").removeClass("on");
+                $(this).addClass("on");
+            }
+        });
+
+
+        $(".Optional1, .Optional2, .Optional3").click(function(){
+            $(this).toggleClass("on");
+            checknone();
+            if(!$(this).hasClass('on')){
+                $("#Optional"+$(this).attr("data-option")).val(0);
+            }
+        });
+
+       $("#accident_amount").change(function(){
+            var amount = parseInt($("#accident_amount").val());
+            if(amount < 50 ){
+                tip("基本投保额最低50万");
+                $("#accident_amount").val(50)
+            }
+        });
+        $("#Optional1").change(function(){
+            var amount = parseInt($("#Optional1").val());
+            if(amount >= 5000 ){
+                tip("暂丧工作能力每周投保额请低于5000");
+                $("#Optional1").val(5000)
+            }
+            if(amount > 0){
+                $(".redwine-in .Optional1").addClass("on");
+            }
+            checknone();
+        });
+
+        $("#Optional2").change(function(){
+            var amount = parseInt($("#Optional2").val());
+            if(amount < 10000 ){
+                tip("医疗费用每年投保额请高于10000");
+                $("#Optional2").val(10000)
+            }
+            if(amount > 50001 ){
+                tip("医疗费用每年投保额请低于50000");
+                $("#Optional2").val(50000)
+            }
+            if(amount > 0){
+                $(".redwine-in .Optional2").addClass("on");
+            }
+            checknone();
+        });
+
+        $("#Optional3").change(function(){
+            var amount = parseInt($("#Optional3").val());
+            if(amount < 500 ){
+                tip("住院现金每日投保额请高于500");
+                $("#Optional3").val(10000)
+            }
+            if(amount > 1000 ){
+                tip("住院现金每日投保额请低于1000");
+                $("#Optional3").val(1000)
+            }
+            if(amount > 0){
+                $(".redwine-in .Optional3").addClass("on");
+            }
+            checknone();
+        });
+
+
+
+        init_{$code}("1");
+
+    });
+    function init_{$code}(aa){
+        var aa;
+        $(".{$color} .listBar").hide();
+        $(".{$code}_"+aa).show();
+    }
+
+    function checknone(){
+        option1 = option2 = option3 = 0;
+        plan = 1;//职业
+        for(i=0;i<$(".vocation").length;i++){
+            if($(".vocation").eq(i).hasClass('on')){
+                plan = parseInt($(".vocation").eq(i).attr("data-option"));
+            }
+        }
+        if($(".redwine-in .Optional1").hasClass('on')){
+            option1 = parseInt($("#Optional1").val());
+        }
+        if($(".redwine-in .Optional2").hasClass('on')){
+            option2 = parseInt($("#Optional2").val());
+        }
+        if($(".redwine-in .Optional3").hasClass('on')){
+            option3 = parseInt($("#Optional3").val());
+        }
+
+        switch (plan){
+            case 5:
+                if(option1 > 0){
+                    $(".redwine-in .Optional1").removeClass("on");
+                    $("#Optional1").val(0);
+                    tip("本职业不可投本自选项目");
+                }
+                if(option3 > 0){
+                    $(".redwine-in .Optional3").removeClass("on");
+                    $("#Optional3").val(0);
+                    tip("本职业不可投本自选项目");
+                }
+                if(option2 > 30000){
+                    $("#Optional2").val(30000);
+                    tip("本职业此项最高限额30000");
+                }
+                break;
+            case 4:
+                if(option2 > 20000){
+                    tip("本职业此项最高限额20000");
+                    $("#Optional2").val(20000);
+                }
+                break;
+            case 3:
+                if(option2 > 30000){
+                    tip("本职业此项最高限额30000");
+                    $("#Optional2").val(30000);
+                }
+                break;
+            case 2:
+                if(option2 > 40000){
+                    tip("本职业此项最高限额40000");
+                    $("#Optional2").val(40000);
+                }
+                break;
+        }
+
+
+
+
+
+    }
+
+</script>

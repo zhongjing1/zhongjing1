@@ -1,0 +1,217 @@
+[ 2016-02-10T15:30:26+08:00 ] 106.56.97.143 /
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Common/common.php 第 92 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000116s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000190s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /var/www/dev/ThinkPHP/Lib/Driver/Db/DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `es_config` [ RunTime:0.000792s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Core/Db.class.php 第 565 行.
+SQL: SELECT `varname`,`value` FROM `es_config`  [ RunTime:0.000109s ]
+SQL: SHOW COLUMNS FROM `es_link` [ RunTime:0.000691s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Core/Db.class.php 第 565 行.
+SQL: SELECT * FROM `es_link` WHERE catid=105  [ RunTime:0.000115s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Core/Db.class.php 第 565 行.
+SQL: SELECT * FROM `es_link` WHERE catid=106 LIMIT 0,6   [ RunTime:0.000101s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Core/Db.class.php 第 565 行.
+SQL: SELECT * FROM `es_link` WHERE catid=101  [ RunTime:0.000096s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Core/Db.class.php 第 565 行.
+SQL: SELECT * FROM `es_link` WHERE catid=107 LIMIT 0,15   [ RunTime:0.000113s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Core/Db.class.php 第 565 行.
+SQL: SELECT * FROM `es_link` WHERE catid=282 LIMIT 0,1   [ RunTime:0.000096s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Core/Db.class.php 第 565 行.
+SQL: SELECT * FROM `es_link` WHERE catid=283 LIMIT 0,1   [ RunTime:0.000094s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Core/Db.class.php 第 565 行.
+SQL: SELECT * FROM `es_link` WHERE catid=284 LIMIT 0,1   [ RunTime:0.000128s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Core/Db.class.php 第 565 行.
+SQL: SELECT * FROM `es_link` WHERE catid=285 LIMIT 0,1   [ RunTime:0.000093s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Core/Db.class.php 第 565 行.
+SQL: SELECT * FROM `es_link` WHERE catid=286 LIMIT 0,1   [ RunTime:0.000093s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Core/Db.class.php 第 565 行.
+SQL: SELECT * FROM `es_link` WHERE catid=287 LIMIT 0,1   [ RunTime:0.000092s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Core/Db.class.php 第 565 行.
+SQL: SELECT * FROM `es_link` WHERE catid=288 LIMIT 0,3   [ RunTime:0.000091s ]
+SQL: SHOW COLUMNS FROM `es_article` [ RunTime:0.001002s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Core/Db.class.php 第 565 行.
+SQL: SELECT * FROM `es_article` WHERE ch=10 ORDER BY ordernum desc LIMIT 0,5   [ RunTime:0.000196s ]
+SQL: SHOW COLUMNS FROM `es_category` [ RunTime:0.000722s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Core/Db.class.php 第 565 行.
+SQL: SELECT * FROM `es_category` WHERE  ch=1  ORDER BY ordernum asc  [ RunTime:0.000105s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Core/Db.class.php 第 565 行.
+SQL: SELECT * FROM `es_category` WHERE  ch=2  ORDER BY ordernum asc  [ RunTime:0.000165s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Core/Db.class.php 第 565 行.
+SQL: SELECT * FROM `es_category` WHERE  ch=3 and mid=1  ORDER BY ordernum asc  [ RunTime:0.000099s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Core/Db.class.php 第 565 行.
+SQL: SELECT * FROM `es_category` WHERE  ch=4   and pid=0 ORDER BY ordernum asc  [ RunTime:0.000097s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Core/Db.class.php 第 565 行.
+SQL: SELECT * FROM `es_category` WHERE  ch=5  ORDER BY ordernum asc  [ RunTime:0.000134s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Core/Db.class.php 第 565 行.
+SQL: SELECT * FROM `es_category` WHERE  ch=10  ORDER BY ordernum asc  [ RunTime:0.000099s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Core/Db.class.php 第 565 行.
+SQL: SELECT * FROM `es_category` WHERE  ch=6  ORDER BY ordernum asc  [ RunTime:0.000096s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Core/Db.class.php 第 565 行.
+SQL: SELECT * FROM `es_category` WHERE  ch=11  ORDER BY ordernum asc  [ RunTime:0.000139s ]
+SQL: SHOW COLUMNS FROM `es_sinpage` [ RunTime:0.000567s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Core/Db.class.php 第 565 行.
+SQL: SELECT * FROM `es_sinpage` WHERE  id=193   [ RunTime:0.000094s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Core/Db.class.php 第 565 行.
+SQL: SELECT * FROM `es_sinpage` WHERE  id=125   [ RunTime:0.000090s ]
+NOTIC: [8] Undefined variable: currentabout /var/www/dev/App/Lib/Action/Home/CommonAction.class.php 第 85 行.
+NOTIC: [8] Undefined variable: currentservice /var/www/dev/App/Lib/Action/Home/CommonAction.class.php 第 86 行.
+NOTIC: [8] Undefined variable: currentcase /var/www/dev/App/Lib/Action/Home/CommonAction.class.php 第 87 行.
+NOTIC: [8] Undefined variable: currentarticle /var/www/dev/App/Lib/Action/Home/CommonAction.class.php 第 88 行.
+NOTIC: [8] Undefined variable: currenthuodong /var/www/dev/App/Lib/Action/Home/CommonAction.class.php 第 89 行.
+NOTIC: [8] Undefined variable: currentkefu /var/www/dev/App/Lib/Action/Home/CommonAction.class.php 第 90 行.
+NOTIC: [8] Undefined variable: currentcontact /var/www/dev/App/Lib/Action/Home/CommonAction.class.php 第 91 行.
+NOTIC: [8] Undefined variable: currentjoin /var/www/dev/App/Lib/Action/Home/CommonAction.class.php 第 92 行.
+SQL: SHOW COLUMNS FROM `es_sinpage` [ RunTime:0.000633s ]
+SQL: SHOW COLUMNS FROM `es_category` [ RunTime:0.000694s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Core/Db.class.php 第 565 行.
+SQL: SELECT `varname`,`value` FROM `es_config`  [ RunTime:0.000097s ]
+NOTIC: [8] Undefined index: videoid /var/www/dev/App/Lib/Action/Home/IndexAction.class.php 第 18 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Core/Db.class.php 第 565 行.
+SQL: SELECT * FROM `es_article` WHERE catid=82 and thumb<>""  LIMIT 0,1   [ RunTime:0.000110s ]
+SQL: SHOW COLUMNS FROM `es_index` [ RunTime:0.000499s ]
+ERR: Table 'chinaelite.es_index' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `es_index`
+NOTIC: [2] Invalid argument supplied for foreach() /var/www/dev/App/Lib/Action/Home/CommonAction.class.php 第 177 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Core/Db.class.php 第 565 行.
+SQL: SELECT * FROM `es_sinpage` WHERE id=245  [ RunTime:0.000095s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Core/Db.class.php 第 565 行.
+SQL: SELECT * FROM `es_sinpage` WHERE id=246  [ RunTime:0.000095s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Core/Db.class.php 第 565 行.
+SQL: SELECT * FROM `es_article` WHERE catid=279 ORDER BY ordernum desc LIMIT 0,56   [ RunTime:0.000184s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Core/Db.class.php 第 565 行.
+SQL: SELECT * FROM `es_article` WHERE ch=5 and catid=269 ORDER BY ordernum desc LIMIT 0,15   [ RunTime:0.000111s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Core/Db.class.php 第 565 行.
+SQL: SELECT * FROM `es_category` WHERE ch=4 ORDER BY ordernum desc LIMIT 0,9   [ RunTime:0.000124s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Core/Db.class.php 第 565 行.
+SQL: SELECT * FROM `es_article` WHERE ch=10 and is_recommend=1 ORDER BY ordernum desc LIMIT 0,7   [ RunTime:0.000115s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Core/Db.class.php 第 565 行.
+SQL: SELECT * FROM `es_article` WHERE ch=10  ORDER BY ordernum desc LIMIT 0,5   [ RunTime:0.000120s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Core/Db.class.php 第 565 行.
+SQL: SELECT * FROM `es_article` WHERE ch=5 and thumb<>"" ORDER BY ordernum desc LIMIT 0,15   [ RunTime:0.000107s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Core/Db.class.php 第 565 行.
+SQL: SELECT COUNT(id) AS tp_count FROM `es_index` WHERE ( `status` = 1 ) LIMIT 1   [ RunTime:0.000181s ]
+ERR: Table 'chinaelite.es_index' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(id) AS tp_count FROM `es_index` WHERE ( `status` = 1 ) LIMIT 1  
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.024163s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000169s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 164 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 344 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 344 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 344 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 344 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 344 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 344 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 344 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 344 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 344 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 344 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 344 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 344 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 344 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 344 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 349 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 193 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /var/www/dev/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 133 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.024424s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013939s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.038441s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.039080s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.039683s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.040050s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002389s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.040882s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001185s ]
+

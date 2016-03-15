@@ -1,0 +1,414 @@
+.header {
+	height: 139px; padding-bottom: 484px;
+}
+
+.headersub {
+	background: url("header.jpg") repeat-x top; padding: 0px; width: 100%; position: relative; z-index: 9;height: 139px; padding-bottom: 0px;
+}
+
+
+.banner {
+	left: 50%; width: 1600px; height: 484px; margin-top: -5px; margin-left: -800px; position: relative;
+}
+.banner .hd {
+	left: 50%; width: 780px; bottom: 0px; margin-left: -390px; position: absolute; z-index: 9;
+}
+.banner .hd ul {
+	margin: 0px auto; width: 720px; height: 80px; text-align: center; float: left;
+}
+.banner .hd ul li {
+	margin: 0px 1px; width: 178px; height: 80px; float: left; display: inline; cursor: pointer; opacity: 0.5;
+}
+.banner .hd ul .on {
+	opacity: 1;
+}
+.bPrev {
+	width: 29px; height: 80px; float: left; display: block;
+}
+.bNext {
+	width: 29px; height: 80px; float: left; display: block;
+}
+.bPrev {
+	background: url("bPrev.png") no-repeat;
+}
+.bNext {
+	background: url("bNext.png") no-repeat;
+}
+.part-a {
+	background: url("part-a.jpg") repeat-x; height: 181px;
+}
+.part-a .bd {
+	margin: 0px auto; width: 1002px;
+}
+.news {
+	width: 496px; height: 181px; float: left;
+}
+.news .hd {
+	width: 83px; float: left;
+}
+.news .bd {
+	padding: 20px 0px 0px 20px; width: 393px; float: right;
+}
+.list-1 {
+	
+}
+.list-1 li {
+	color: rgb(255, 205, 175); line-height: 27px; border-bottom-color: rgb(228, 117, 53); border-bottom-width: 1px; border-bottom-style: dashed;
+}
+.list-1 li a {
+	color: rgb(255, 255, 255);
+}
+.video {
+	background: url("video.png") no-repeat; width: 506px; height: 181px; float: right; position: relative;
+}
+.video ul li {
+	font: 16px/26px "microsoft yahei"; top: 33px; width: 75px; color: rgb(232, 89, 4); position: absolute; font-size-adjust: none; font-stretch: normal;
+}
+.video ul li a {
+	color: rgb(232, 89, 4);
+}
+.video ul li a:hover {
+	color: rgb(0, 0, 0);
+}
+.video ul .v1 {
+	background: url("v1.jpg") no-repeat 0px; left: 54px; padding-left: 28px;
+}
+.video ul .v2 {
+	background: url("v2.jpg") no-repeat 0px; right: 65px; padding-left: 21px;
+}
+.part-b {
+	margin: 0px auto; width: 990px;
+}
+.part-b-a {
+	padding: 15px 0px 0px;
+}
+.part-b-b {
+	margin-bottom: 10px;
+}
+.mod .hd {
+	padding: 10px 0px; height: 46px; border-bottom-color: rgb(218, 184, 102); border-bottom-width: 1px; border-bottom-style: solid; position: relative;
+}
+.mod .more {
+	top: 30px; right: 0px; color: rgb(153, 153, 153); line-height: 24px; position: absolute;
+}
+.mod .more a {
+	color: rgb(153, 153, 153);
+}
+.about {
+	background: url("ico_09.jpg") no-repeat right top; width: 396px; height: 326px; padding-right: 20px; float: left;
+}
+.about .bd {
+	padding: 18px 10px 0px 0px; height: 241px;
+}
+.about .info {
+	color: rgb(153, 153, 153); line-height: 20px;
+}
+.about .info img {
+	border: 1px solid rgb(231, 231, 231); border-image: none;
+}
+.about .info a {
+	color: rgb(234, 85, 4);
+}
+.favorable {
+	width: 562px; float: right;
+}
+.favorable .bd {
+	padding-top: 7px;
+}
+.favorable .bd .item {
+	padding: 13px 0px 0px; height: 63px;
+}
+.favorable .bd .item .pic {
+	width: 98px; height: 63px; margin-right: 15px; float: left;
+}
+.favorable .bd .item dl {
+	height: 63px; overflow: hidden; display: block; -ms-zoom: 1;
+}
+.favorable .bd .item dl dt {
+	color: rgb(234, 85, 4); line-height: 24px; font-size: 14px; font-weight: bold;
+}
+.favorable .bd .item dl dt a {
+	color: rgb(234, 85, 4);
+}
+.favorable .bd .item dl dd {
+	color: rgb(153, 153, 153);
+}
+.case {
+	margin-bottom: 10px;
+}
+.project {
+	min-height: 150px; position: relative; text-align:left;
+}
+
+.project a{ float:left; margin-left:6px; margin-right:7px; margin-bottom:15px;}
+
+.p {
+	width: 207px; height: 179px; overflow: hidden; position: absolute; z-index: 1;
+}
+.p a {
+	display: block;
+}
+.p span {
+	display: block;
+}
+.p .b {
+	display: none;
+}
+.p-on {
+	z-index: 2;
+}
+.p-on .t {
+	display: none;
+}
+.p-on .b {
+	display: block;
+}
+.p-1 {
+	left: 0px; top: 125px;
+}
+.p-2 {
+	left: 177px; top: 23px;
+}
+.p-3 {
+	left: 177px; top: 224px;
+}
+.p-4 {
+	left: 345px; top: 80px; width: 304px; height: 262px;
+}
+.p-5 {
+	top: 23px; right: 177px;
+}
+.p-6 {
+	top: 224px; right: 177px;
+}
+.p-7 {
+	top: 125px; right: 0px;
+}
+.construction {
+	margin-bottom: 17px;
+}
+.construction .hd .l {
+	top: 35px; right: 0px; color: rgb(0, 0, 0); font-size: 14px; font-weight: bold; position: absolute;
+}
+.construction .hd .l a {
+	color: rgb(0, 0, 0);
+}
+.construction .hd .l a:hover {
+	color: rgb(234, 85, 4);
+}
+.construction .hd .l .on {
+	color: rgb(234, 85, 4);
+}
+.construction .bd th {
+	background: rgb(250, 243, 225); border-width: 0px 1px 1px; border-style: none solid solid; border-color: currentColor rgb(225, 225, 225) rgb(225, 225, 225); border-image: none; height: 30px; color: rgb(240, 131, 0);
+}
+.construction .bd td {
+	padding: 4px; border: 1px solid rgb(225, 225, 225); border-image: none; text-align: center; color: rgb(102, 102, 102); line-height: 22px;
+}
+.construction .bd td a {
+	color: rgb(102, 102, 102);
+}
+.construction .bd td .o {
+	background: url("ico_08.gif") no-repeat; width: 69px; height: 22px; color: rgb(255, 255, 255); display: inline-block;
+}
+.designer {
+	width: 680px; float: left;
+}
+.designer .bd {
+	padding: 18px 0px 0px;
+}
+.designers {
+	height: 240px;
+}
+.designers .item {
+	width: 130px; height: 240px; overflow: hidden; float: left; cursor: pointer;
+}
+.designers .item .pic {
+	width: 130px; height: 240px; float: left;
+}
+.designers .item .pic img {
+	opacity: 0.5;
+}
+.designers .item .info {
+	padding: 65px 10px 0px; width: 140px; height: 175px; color: rgb(249, 211, 184); float: left; display: none;
+}
+.designers .item .info h2 {
+	font: 26px/38px "microsoft yahei"; color: rgb(255, 255, 255); font-size-adjust: none; font-stretch: normal;
+}
+.designers .item .info h2 em {
+	font: 12px/18px arial; padding-left: 5px; font-size-adjust: none; font-stretch: normal;
+}
+.designers .item .info .i {
+	padding: 18px 0px 0px;
+}
+.designers .on {
+	background: rgb(240, 131, 0); width: 290px !important;
+}
+.designers .on .pic img {
+	opacity: 1;
+}
+.designers .on .info {
+	display: block;
+}
+.designer .bd .tempWrap {
+	width: 680px !important;
+}
+.register {
+	width: 260px; float: right;
+}
+.register .bd {
+	padding: 18px 0px 0px;
+}
+.register .bd form {
+	background: rgb(231, 233, 234); padding: 5px 10px; height: 230px;
+}
+.register .bd form h3 {
+	font: 18px/40px "microsoft yahei"; color: rgb(240, 131, 0); font-size-adjust: none; font-stretch: normal;
+}
+.register .bd form td {
+	font: 12px/22px "microsoft yahei"; padding: 3px 0px; font-size-adjust: none; font-stretch: normal;
+}
+.register .bd form .text {
+	background: rgb(255, 255, 255); padding: 2px; border: 1px solid rgb(220, 220, 220); border-image: none; width: 151px; height: 16px;
+}
+.register .bd .submit {
+	background: url("ico_12.jpg") no-repeat; border: 0px currentColor; border-image: none; width: 113px; height: 34px; color: rgb(234, 85, 4); font-size: 16px; font-weight: bold; cursor: pointer;
+}
+.service {
+	margin-bottom: 8px;
+}
+.service .bd {
+	padding: 20px 0px;
+}
+.ad {
+	width: 330px; height: 190px; margin-right: 30px; float: left;
+}
+.diary {
+	width: 340px; float: left;
+}
+.diary .mt {
+	background: url("mt.gif") repeat-x; height: 36px; position: relative;
+}
+.diary .mt h2 {
+	background: rgb(238, 239, 239); font: 20px/36px "microsoft yahei"; height: 36px; padding-right: 12px; display: inline-block; font-size-adjust: none; font-stretch: normal;
+}
+.diary .mc {
+	height: 154px;
+}
+.diary .mc li {
+	background: url("ico_01.gif") no-repeat 0px; line-height: 26px; padding-left: 16px; font-size: 14px;
+}
+.diary .mc li a {
+	color: rgb(102, 102, 102);
+}
+.pictxt {
+	padding: 5px 0px; height: 66px;
+}
+.pictxt .pic {
+	width: 106px; height: 66px; margin-right: 10px; float: left;
+}
+.pictxt dl {
+	height: 66px; overflow: hidden; display: block; -ms-zoom: 1;
+}
+.pictxt dl dt {
+	font: 12px/22px "microsoft yahei"; color: rgb(240, 131, 0); font-size-adjust: none; font-stretch: normal;
+}
+.pictxt dl dt a {
+	color: rgb(51, 51, 51);
+}
+.pictxt dl dd {
+	color: rgb(153, 153, 153);
+}
+.evaluate {
+	width: 260px; float: right;
+}
+.evaluate .mt {
+	background: url("mt.gif") repeat-x; height: 36px; position: relative;
+}
+.evaluate .mt h2 {
+	background: rgb(238, 239, 239); font: 20px/36px "microsoft yahei"; height: 36px; padding-right: 12px; display: inline-block; font-size-adjust: none; font-stretch: normal;
+}
+.evaluate .mt .m {
+	background: rgb(238, 239, 239); top: 0px; right: 0px; color: rgb(235, 17, 15); line-height: 36px; padding-left: 12px; position: absolute;
+}
+.evaluate .mt .m a {
+	color: rgb(235, 17, 15);
+}
+.evaluate .mc {
+	padding: 12px 0px 0px; height: 142px;
+}
+.evaluate .mc li {
+	line-height: 26px; font-size: 14px; border-bottom-color: rgb(201, 201, 201); border-bottom-width: 1px; border-bottom-style: dashed;
+}
+.evaluate .mc li em {
+	padding: 0px 9px; color: rgb(235, 17, 15); font-size: 14px; font-style: italic; font-weight: bold;
+}
+.tabPanel {
+	height: 34px; border-bottom-color: rgb(240, 131, 0); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.tabPanel li {
+	background: url("ico_02.jpg") no-repeat; width: 104px; height: 34px; text-align: center; line-height: 34px; font-size: 14px; font-weight: bold; float: left; cursor: pointer;
+}
+.tabPanel .on {
+	background: url("ico_03.jpg") no-repeat; color: rgb(255, 255, 255);
+}
+.link .bd {
+	padding: 13px 0px 0px;
+}
+.iLinks {
+	background: url("link.jpg") no-repeat; padding: 13px 12px; height: 60px;
+}
+.iLinks ul li {
+	margin: 0px 3px; width: 155px; height: 60px; float: left; display: inline;
+}
+.fLinks {
+	padding: 6px 6px 24px; color: rgb(153, 153, 153); line-height: 24px;
+}
+.fLinks a {
+	color: rgb(153, 153, 153); white-space: pre-wrap;
+}
+.part-c {
+	background: rgb(76, 69, 63);
+}
+.part-c-bd {
+	margin: 0px auto; padding: 35px 0px; width: 990px;
+}
+.fs {
+	width: 120px; float: left;
+}
+.fs .hd {
+	background: url("ico_05.jpg") no-repeat; height: 30px; padding-left: 5px;
+}
+.fs .hd h2 {
+	font: 16px/40px "microsoft yahei"; color: rgb(203, 197, 192); font-size-adjust: none; font-stretch: normal;
+}
+.fs .bd {
+	padding: 10px 0px 0px;
+}
+.fs .bd li {
+	background: url("ico_04.gif") no-repeat 0px 11px; line-height: 24px; padding-left: 8px;
+}
+.fs .bd li a {
+	color: rgb(156, 143, 136);
+}
+.guide .hd {
+	background: url("ico_05.jpg") no-repeat;
+}
+.choose .hd {
+	background: url("ico_06.jpg") no-repeat;
+}
+.geomancy .hd {
+	background: url("ico_07.jpg") no-repeat;
+}
+.txtlist {
+	overflow: hidden; font-size: 14px;
+}
+.txtlist .txt {
+	padding: 20px; width: 490px; line-height: 26px; float: left;
+}
+.txtlist .list {
+	padding: 9px 10px 0px; width: 440px; line-height: 26px; float: right;
+}
+.txtlist .list li {
+	background: url("ico_01.gif") no-repeat 0px 10px; padding-left: 16px;
+}

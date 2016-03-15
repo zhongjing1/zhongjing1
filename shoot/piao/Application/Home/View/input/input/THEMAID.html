@@ -1,0 +1,86 @@
+<div class="content pink-in">
+    <div class="info pink-in">
+        <table>
+            <tr>
+                <td colspan="3">家庭佣工类型：</td>
+            </tr>
+            <tr><td colspan="3"><em>本地家庭佣工（月嫂等）</em><span id="local" class="radio on leix" info="本地全职或兼职家务助理" data-option="1"> </span></td></tr>
+            <tr><td colspan="3"><em>外籍家庭佣工</em><span id="themaid" class="radio leix" info="外籍家庭佣工" data-option="2"> </span></td></tr>
+            <tr><td rowspan="2"><em>保障期：</em></td>
+                <td><em>一年</em><span class="radio baoz on oneyear" data-option="10" info="一年"> </span></td>
+                <td id="thelocal"><em>一个月</em><span class="radio baoz monthy" data-option="1" info="一个月"> </span></td>
+            </tr>
+            <tr><td><em>两年</em><span class="radio baoz oneyear" data-option="20" info="两年"> </span></td>
+                <td  id="thethemaid"><em>三个月</em><span class="radio baoz monthy" data-option="3" info="三个月"> </span></td>
+            </tr>
+        </table>
+    </div>
+</div>
+<input class="{$color}_select" type="hidden" value="0" />
+<input   name="{$code}_price" class="{$color}_price totalprice  {$code}_price" type="hidden" value="0" />
+<input name="{$code}_info" class="{$code}_info selected" type="hidden" value="" />
+
+<script language="JavaScript">
+
+    jQuery(function ($) {
+        $(".pink-in .leix").click(function(){
+            if($(".leix").size() > 0){
+                $(".leix").removeClass("on");
+                $(this).addClass("on");
+                init_themaid($(this).attr("data-option"));
+            }
+
+            if($(this).hasClass("on") && $(this).attr("data-option") == '1'){
+                $("#thelocal").show();
+                $("#thethemaid").show();
+                haveone = false;
+                for(i=0;i<$(".baoz").length;i++){
+                    if($(".baoz").eq(i).hasClass('on')){
+                        haveone = true;
+                    }
+                }
+                if(!haveone){
+                    $(".baoz").eq(0).addClass('on')
+                }
+            }
+
+            if($(this).hasClass("on") && $(this).attr("data-option") == '2'){
+                $("#thelocal").hide();
+                $("#thelocal").find("on").removeClass("on");
+                $("#thethemaid").hide();
+                $("#thethemaid").find("on").removeClass("on");
+                haveone = false;
+                for(i=0;i<$(".oneyear").length;i++){
+                    if($(".oneyear").eq(i).hasClass('on')){
+                        haveone = true;
+                    }
+                }
+                if(!haveone){
+                    $(".oneyear").eq(0).addClass('on')
+                }
+            }
+        });
+
+        $(".pink-in .baoz").click(function(){
+            if($(".baoz").size() > 0){
+                $(".baoz").removeClass("on");
+                $(this).addClass("on");
+               // init_themaid($(this).attr("data-option"));
+            }
+        });
+
+        init_themaid("1");
+
+    });
+    function init_themaid(aa){
+        var aa;
+        $(".pink .listBar").hide();
+        $(".THEMAID_"+aa).show();
+        if($(".pink-in .leix").eq(0).hasClass("on")){
+            $(".pink .unitbg").eq(1).hide();
+        }else{
+            $(".pink .unitbg").eq(1).show();
+        }
+    }
+
+</script>

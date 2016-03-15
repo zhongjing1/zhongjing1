@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>网站后台管理系统</title>
+<link href="__PUBLIC__/css/bootstrap.css" rel="stylesheet" type="text/css"   />
+
+<link rel="stylesheet" href="/Public/admin/css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="/Public/admin/css/style.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="/Public/admin/css/invalid.css" type="text/css" media="screen" />
+
+
+<script src="__PUBLIC__/js/jquery-1.8.2.min.js" type="text/javascript"></script>
+<script src="__PUBLIC__/js/jquery.validate.min.js" type="text/javascript"></script>
+<script src="__PUBLIC__/js/messages_cn.js" type="text/javascript"></script>
+<script src="__PUBLIC__/js/bootstrap.min.js" type="text/javascript"></script>
+
+<style>
+body {
+	background: #f0f0f0;
+}
+</style>
+<script type="text/javascript">
+        $(function () {
+            $("#form1").validate();
+            $("#sub").submit(function () {
+                $("#ids").val($("input[name='c_id']").val());
+                var chk_value = [];
+                $('input[name="c_id"]:checked').each(function () {
+                    chk_value.push($(this).val());
+                });
+                $("#ids").val(chk_value);
+                if (chk_value == "") {
+                    alert("请选择操作的记录！");
+                    return false;
+                }
+                if ($("#cp").val() == "0") {
+                    alert("请选择操作！");
+                    return false;
+                }
+                if( confirm("确认执行操作吗？")){
+                   if($('#cp').val()=="1"){
+                       $("#sub").attr("action","__URL__/foreverdelete");
+                   }else if($('#cp').val()=="2"){
+                       $("#sub").attr("action","__URL__/checkPass");
+                   }else if($('#cp').val()=="3"){
+                       $("#sub").attr("action","__URL__/recycle");
+                    }
+
+                    return true;
+                }
+
+            });
+            $("a").focus(function () { $(this).blur(); });
+            $("input[type='checkbox']").addClass("checkbox");
+            $("#ckall").live("click",function () {
+
+
+                if (!$(this).attr("checked")) {
+                    $("input[name='c_id']").removeAttr("checked");
+                }
+                else {
+                    $("input[name='c_id']").attr("checked", true);
+
+                }
+            });
+            $("#ckall1").live("click",function () {
+                if (!$(this).attr("checked")) {
+                    $("input[name='c1_id[]']").removeAttr("checked");
+                }
+                else {
+                    $("input[name='c1_id[]']").attr("checked", true);
+                }
+            });
+            $(".table tr:odd").addClass("odd");
+            $("#del").click(function () {
+                if (confirm("确认要删除吗？")) {
+                    $("#form1").submit();
+                }
+            });
+            $("a[data-toggle=modal]").click(function(){
+                var target = $(this).attr('data-target');
+                var url = $(this).attr('href');
+                $(target+" .modal-body").load(url);
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="main-content">
+<!-- Main Content Section with everything -->
+<div class="content-box"> 
+  <!-- Start Content Box -->
+  <div class="content-box-header">
+    <h3>{$_GET[catid]|getName}</h3>
+  </div>
+  <!-- End .content-box-header -->
+  <div class="content-box-content">
+    <div class="tab-content default-tab">
+   <div style=" overflow:hidden;" >
+    <div>
+    <div class="well clearfix"  style=" padding:6px;" >
+        <form class="form-horizontal" method="post" id="sub" style="float: left; margin: 0px;"  method="get"  >
+            <input type="hidden" id="ids" name="id" value="" />
+            <select id="cp" name="cp" class="select1" >
+                <option value="0">批量操作</option>
+                <option value="1">批量删除</option>
+                <option value="2">批量审核</option>
+                <option value="3">取消审核</option>
+            </select>
+            <button type="submit" class="btn  btn-danger" ><i class="icon-check icon-white"></i> 应用</button>&nbsp;&nbsp;
+            <a href="__URL__/add/catid/{$_GET['catid']}" class="btn btn-success"><i class="icon-plus icon-white"></i>添加</a>
+        </form>
+        <form class="form-search" action="__URL__" style="float: right; margin: 0px;">
+            <input type="hidden" id="catid" name="catid" value="{$_GET[catid]}"  />
+
+            <div class="input-append">
+
+                <input type="text" class="input-medium" id="title" name="title" placeholder="请输入查询内容" value="{$Think.get.title}" />
+                <button type="submit" class="btn"><i class="icon-search"></i> 查询</button>
+            </div>
+        </form>
+    </div>
+    <table class="table table-bordered table-striped ">
+        <thead>
+        <tr>
+            <th  width="30"><input type="checkbox" name="ckall" id="ckall" /></th>
+            <th width="30">编号</th>
+            <th  width="100">栏目</th>
+            <th width="250">标题</th>
+            <th >url链接</th>
+            <th >位置</th>
+            <th  width="40">状态</th>
+            <th  width="150">时间</th>
+            <th  width="150">时间</th>
+            <th width="80">操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <volist name="list" id="vo">
+            <tr >
+                <td><input type="checkbox" name="c_id" value="{$vo.id}" class="checkbox"> </td>
+                <td>{$vo.id}</td>
+                <td>{$vo.catid|getname}</td>
+                <td>{$vo.title}</td>
+                <td>{$vo.url}</td>
+                <td>{$vo.orderid}</td>
+                <td>{$vo.status|getStatus}</td>
+                <td>{$vo.createtime|date='Y-m-d H:i:s',###}</td>
+                <td>{$vo.updatetime|date='Y-m-d H:i:s',###}</td>
+                <td>
+                    <a href="__URL__/edit/id/{$vo.id}/catid/{$vo.catid}" class="btn btn-mini"><i class="icon-edit"></i>编辑</a>
+                </td>
+            </tr>
+          </volist>
+        </tbody>
+    </table>
+    <div class="page">
+        {$page}
+    </div>
+</div>
+
+</div>
+    </div>
+    <!-- End .content-box-content --> 
+  </div>
+</div>
+
+  <!-- End .content-box -->
+      <include file="public:footer" />
+  <!-- End #footer --> 
+  
+</div>
+<!-- End #main-content -->
+</body>
+</html>

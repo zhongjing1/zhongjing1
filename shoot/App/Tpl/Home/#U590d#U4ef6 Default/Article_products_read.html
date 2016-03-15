@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{$seo[title]}</title>
+<meta name="keywords" content="{$seo[keywords]}" />
+<meta name="description" content="{$seo[description]}" />
+<link href="/skin/style/css.css" rel="stylesheet" type="text/css" />
+<link href="/skin/style/style.css" rel="stylesheet" type="text/css" />
+<link href="/skin/style/subcss.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/skin/js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="/skin/js/slide.js"></script>
+<script type="text/javascript" src="/skin/js/main.js"></script>
+<script src="/skin/js/jquery.kinMaxShow-1.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="/skin/js/js.js"></script><script type="text/javascript">
+$(function(){
+	  $("#kinMaxShow").kinMaxShow();
+});
+</script>
+<script type="text/javascript"> 
+function displaySubMenu(li) { 
+var subMenu = li.getElementsByTagName("ul")[0]; 
+subMenu.style.display = "block"; 
+} 
+function hideSubMenu(li) { 
+var subMenu = li.getElementsByTagName("ul")[0]; 
+subMenu.style.display = "none"; 
+} 
+</script> 
+
+</head>
+<body>
+<include file="public:head" />
+<div id="content"><div class="sider left" style="margin-top:10px;">
+<div class="sider-a"><h2>产品展示</h2><ul>
+<volist name="catenews" id="vo" >
+    <li><a href="<?php echo U('article/products',array('catid'=>$vo["id"]));?>"    <if condition='$catid eq $vo["id"]'>  class="current"  </if>>{$vo.title}</a></li>
+   </volist>   
+</ul></div><div class="sider-c"><p><img src="/skin/images/pro_19.jpg" /></p><div style="line-height:2.2; padding-left:10px;padding-right:10px;">
+{$leftcontact[0][content]}
+</div></div></div>
+<div class="detail">
+<div class="title"><span>当前位置：<a href="/">首页</a> >&nbsp;<a class="bc" href="#">{$cattitle}</a></span><h2>{$cattitle}</h2></div>
+          <table width="730" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="411" height="195" valign="top" style="line-height:200%; padding:10px; padding-left:15px; padding-right:0px; border-top:0px;">
+<div class="tit">{$row.title}</div>
+<div class="txt">
+   <div style="text-align:center; padding-top:20px; padding-bottom:20px;"> <img src="{$row.thumb}" width="450"></div>
+
+ {$row.content} </br></br>
+<div class="previous_next" style="float:right;">
+<if condition="$front.title eq ''">
+            <a href="###" title="已经是第一个"  >已经是第一条</a>
+            <else />
+            <a href="<?php echo U('article/products_read',array('id'=>$front["id"],'catid'=>$_GET["catid"]));?>" title="上一页"  >上一条：{$front[title]|strcut=40,'..'}</a>
+            </if>  
+            &nbsp;&nbsp;
+           <if condition="$after.title eq ''">
+            <a href="###" title="已经是最后一个" >已经是最后一条</a>
+            <else />
+            <a href="<?php echo U('article/products_read',array('id'=>$after["id"],'catid'=>$_GET["catid"]));?>" title="下一页" >下一条：{$after[title]|strcut=40,'..'}</a>
+           </if>  
+</div>
+<div class="clear"></div>
+<!-- JiaThis Button BEGIN -->
+<div id="ckepop" class="share_area" style="float:right;">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tsina">新浪微博</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_renren">人人网</a>
+<a class="jiathis_button_kaixin001">开心网</a>
+<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+</div>
+<script type="text/javascript" src="http://v2.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+
+</div>
+                </td>
+              </tr>
+            </table>
+            
+         <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="95%" height="33" style="background:url(images/line_1.jpg) no-repeat left bottom;"><span class="font_title">相关产品</span> </td>
+        <td width="5%" style="background:url(images/line_1.jpg) no-repeat right bottom;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td height="169" colspan="2" valign="top" style="padding:10px; padding-top:20px;">
+            <div id="demo">
+	<table border=0 align=center cellpadding=1 cellspacing=1 cellspace=0 >
+		<tr><td valign=top  id=marquePic1>
+	<table width='100%' border='0' cellspacing='0'><tr>
+         <volist name="relist" id="vo" mod="2" >
+            <td align=center valign="top" style="padding-left:10px; padding-right:10px;"><a href="<?php echo U('article/products_read',array('id'=>$vo["id"],'catid'=>$_GET["catid"]));?>">
+                            <img src="{$vo.thumb}" width="220" height="146" style="border:#cccccc 1px solid; padding:3px;" /> <br> <br>{$vo.title}</a></td>
+          </volist>     
+            
+               </tr></table>
+		</td><td id=marquePic2 valign=top></td></tr>
+	</table></div>
+           <style>
+img{ border:0px;}
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+a:link {
+	color: #666666;
+	text-decoration: none;
+}
+a:visited {
+	color: #666666;
+	text-decoration: none;
+}
+a:hover {
+	color: #FF0000;
+	text-decoration: underline;
+}
+a:active {
+	color: #FF0000;
+	text-decoration: none;
+}
+#demo{width:728px; overflow:hidden; margin:0px auto}
+		   
+		   </style>
+<script type="text/javascript">
+var speed=30 
+marquePic2.innerHTML=marquePic1.innerHTML 
+function Marquee(){ 
+if(demo.scrollLeft>=marquePic1.scrollWidth){ 
+demo.scrollLeft=0 
+}else{ 
+demo.scrollLeft++ 
+} 
+} 
+var MyMar=setInterval(Marquee,speed) 
+demo.onmouseover=function() {clearInterval(MyMar)} 
+demo.onmouseout=function() {MyMar=setInterval(Marquee,speed)} 
+</script>
+
+           
+           
+           
+           
+           
+           
+           
+        </td>
+      </tr>
+      </table>   
+            
+<div class="clear"></div></div><div class="clear"></div></div>
+<include file="public:foot" />
+</body>
+</html>
+<script type="text/javascript" src="/skin/scripts/jquery.jcarousel.min.js"></script>
+<script type="text/javascript">
+jQuery(document).products_ready(function() {
+    jQuery('#mycarousel').jcarousel({
+        auto: 1,
+        wrap: 'last'
+    });	
+});
+</script></body></html>
+
+<script>
+$(document).products_ready(function(){
+   var newImage = new Image();
+   var oldImage = $(qh).attr('src');
+   newImage.src = 'images/company.jpg';
+   $(qh).hover(function(){
+    $(qh).attr('src',newImage.src);
+    },
+    function(){
+    $(qh).attr('src',oldImage);
+    });
+});
+</script>
+

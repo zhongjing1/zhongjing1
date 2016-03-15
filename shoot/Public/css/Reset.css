@@ -1,0 +1,146 @@
+/*                             
+--------------------------------- 
+        Reset
+--------------------------------- 
+*/
+html,body,div,h1,h2,h3,h4,h5,h6,hr,p,blockquote,pre,span,object,iframe,/* 结构元素 */
+form,label,fieldset,legend,button,input,textarea,/* 表单元素 */
+table,caption,tbody,tfoot,thead,tr,th,td,/*表格元素 */
+small,strike,strong,sub,sup,tt,em,/* 文本格式元素 */
+dl,dt,dd,ul,ol,li/* 列表元素 */ {
+margin:0;
+padding:0
+}
+
+/** 设置默认字体 **/
+body,button,input,select,textarea /* for ie */ {
+font-size:12px;
+font-family:宋体, 微软雅黑, Arial
+}
+
+h1,h2,h3,h4,h5,h6 {
+font-size:100%;
+font-weight:400
+}
+
+/* 将斜体扶正 */
+address,cite,dfn,em,var,i {
+font-style:normal
+}
+
+/*点击去掉默认虚线框*/
+:focus {
+outline:0
+}
+
+/** 统一等宽字体 小于 12px 的中文很难阅读，让 small 正常化 */ **/
+small {
+font-size:12px
+}
+
+
+/** 重置列表元素 **/
+ul,ol {
+list-style:none
+}
+
+/*链接清除下划线*/
+a {
+text-decoration:none;
+cursor:pointer;
+outline:none;
+outline:0
+}
+
+/* img 搭车：让链接里的 img 无边框 */
+fieldset,img {
+border:none
+}
+
+/* 使得表单元素在 ie 下能继承字体大小 */
+button,input,select,textarea {
+font-size:100%
+}
+
+/** 重置表格元素 **/
+table {
+border:none;
+border-collapse:collapse;
+border-spacing:0
+}
+
+p {
+word-break:break-all;
+word-wrap:break-word;/*字段自动折行*/
+text-align:justify;
+text-justify:inter-ideograph;/*字段两端对齐*/
+text-overflow:ellipsis/*字段溢出省略号显示注意保证不换行前提*/
+}
+
+/*重置按钮、文本框元素*/
+input,button,textarea {
+border:none;
+list-style-type:none;
+cursor:pointer
+}
+
+/*水平居中*/
+.center {
+margin:0 auto
+}
+
+.hidden {
+display:none
+}
+
+.borderNone {
+border:none
+}
+
+/*清除背景*/
+.bgdNone {
+background:none!important
+}
+
+/*清除外间距*/
+.marginNone {
+margin:0
+}
+
+/*清除浮动*/
+.clear {
+clear:both;
+overflow:hidden
+}
+
+.clearfix:after {
+content:" ";
+display:block;
+height:0;
+clear:both;
+visibility:hidden
+}
+
+.clearfix {
+display:inline-block
+}
+
+/*元素隐藏*/
+.hide {
+display:none
+}
+
+/*元素块显示*/
+.show {
+display:block
+}
+
+/*左浮动*/
+.float_lt {
+float:left
+}
+
+/*右浮动*/
+.float_rt {
+float:right
+}

@@ -1,0 +1,80 @@
+<div class="content yellow-in">
+    <div class="info yellow-in">
+<table>
+    <tr>
+        <td width="35%"><label for="age">年龄：</label></td>
+        <td><input id="MAMA_age" info="年龄" name="age" type="tel" min="16" max="65" value="25" class="radius-input" /></td>
+    </tr>
+    <tr>
+        <td><label for="select">自选项目：</label></td>
+        <td>
+            <em>母子保障</em>
+            <span class="radio" id="MAMA_option" data-option="1" info="母子保障"> </span>
+        </td>
+    </tr>
+    <tr>
+        <td><label for="select">等级：</label></td>
+        <td id="MAMA_plan">
+            <em>白银</em>
+            <span class="radio on" data-option="1" info="白银"> </span>
+            <br />
+            <em>黄金</em>
+            <span class="radio" data-option="2" info="黄金"> </span>
+            <br />
+            <em>钻石</em>
+            <span class="radio" data-option="3" info="钻石"> </span>
+
+        </td>
+    </tr>
+</table>
+    </div>
+</div>
+<input   name="{$code}_price" codename="{$code_name}"  class="{$color}_price totalprice {$code}_price" type="hidden" value="0" />
+<input name="{$code}_info" class="{$code}_info selected"  codename="{$code_name}"  type="hidden" value="" />
+
+<script language="JavaScript">
+
+    jQuery(function ($) {
+        $("#MAMA_plan .radio").click(function(){
+            $(this).addClass("on").siblings(".radio").removeClass("on");
+            init_mama($(this).attr("data-option"));
+        });
+        $("#MAMA_option").click(function(){
+            var age = parseInt($("#MAMA_age").val());
+            if(age > 45 || age < 16){
+                tip("母子保障仅适用年龄16-45");
+                $(this).removeClass("on");
+            }else{
+                $(this).toggleClass("on");
+            }
+        });
+        $("#MAMA_age").change(function(){
+            var age = parseInt($("#MAMA_age").val());
+            if(age < 16){
+                tip("最低年龄不能小于16岁");
+                $("#MAMA_age").val(16)
+            }
+            if(age > 45){
+                if($(this).hasClass("on")){
+                    tip("母子保障仅适用年龄16-45");
+                    $("#MAMA_option").removeClass("on");
+                }
+            }
+
+            if(age > 69){
+                tip("最高年龄不能大于69岁");
+                if($("#MAMA_option").hasClass("on")){
+                    $("#MAMA_option").removeClass("on");
+                }
+                $("#MAMA_age").val(69)
+            }
+        });
+        init_mama("1");
+    });
+    function init_mama(aa){
+        var aa;
+        $(".yellow .listBar").hide();
+        $(".MAMA_"+aa).show();
+    }
+
+</script>

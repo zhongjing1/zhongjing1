@@ -1,0 +1,55 @@
+<div class="header">
+	<div class="center">
+		<div class="logo"><a href="#"></a></div>
+		<div class="headR">
+			<ul class="nav">
+				<li><a href="/">首 頁</a></li>
+             <li>
+					<a class="f1" href="<?php echo U('sinpage/index',array('catid'=>77));?>">關於我們</a>
+					<ol>
+                      <volist name="cate1" id="vo">
+                      <li><a href="<?php echo U('sinpage/index',array('catid'=>$vo["id"]));?>">{$vo.title}</a></li>
+                      </volist>  
+					</ol>
+			  </li><li>
+					<a class="f1" href="<?php echo U('sinpage/caifu',array('catid'=>278));?>">財富咨詢</a>
+					<ol>
+                      <volist name="cate2" id="vo">
+                      <li><a href="<?php echo U('sinpage/caifu',array('catid'=>$vo["id"]));?>">{$vo.title}</a></li>
+                      </volist>  
+					</ol>
+				</li><li>
+					<a class="f1" href="<?php echo U('sinpage/zichan',array('catid'=>129));?>">資產管理</a>
+					<ol>
+                        <volist name="cate4" id="vo">
+                      <li><a href="<?php echo U('sinpage/zichan',array('catid'=>$vo["id"]));?>">{$vo.title}</a></li>
+                      </volist>                  
+                                 
+					</ol>
+				</li><li>
+					<a class="f1" href="<?php echo U('article/index');?>">最新資訊</a>
+					<ol>
+                     <volist name="cate10" id="vo">
+                        <li><a href="<?php echo U('article/index',array('catid'=>$vo["id"]));?>">{$vo.title}</a></li>
+                      </volist>                    
+
+					</ol>
+			 	</li><li>
+					<a class="f1" href="<?php echo U('sinpage/fuwu',array('catid'=>248));?>">客戶及理財顧問服務</a>
+					<ol>
+					 <volist name="cate7" id="vo">
+                        <li><a href="<?php echo U('sinpage/fuwu',array('catid'=>$vo["id"]));?>">{$vo.title}</a></li>
+                      </volist>   
+					</ol>
+				</li><li>
+					<a class="f1" href="<?php echo U('sinpage/contact',array('catid'=>82));?>">聯絡我們</a>
+					<ol>
+					
+					</ol>
+				</li>
+				<div class="clear"></div>
+			</ul>
+		</div>
+        <div style="position:relative;"><div style="position: absolute; top: 10px; left: 885px; font-size:12px;"><a href="/" class="fanti">繁體版</a>&nbsp; | &nbsp;<a href="/index.php/en" class="en">English</a></div></div>
+	</div>
+</div>

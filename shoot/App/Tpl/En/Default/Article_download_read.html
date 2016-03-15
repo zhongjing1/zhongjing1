@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{$seo[title_en]}</title>
+<meta name="keywords" content="{$seo[keywords_en]}" />
+<meta name="description" content="{$seo[description_en]}" />
+<link href="/skin/style/css.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/skin/js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="/skin/js/slide.js"></script>
+<script type="text/javascript" src="/skin/js/main.js"></script>
+<script src="/skin/js/jquery.kinMaxShow-1.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="/skin/js/js.js"></script><script type="text/javascript">
+$(function(){
+	  $("#kinMaxShow").kinMaxShow();
+});
+</script>
+<script type="text/javascript"> 
+function displaySubMenu(li) { 
+var subMenu = li.getElementsByTagName("ul")[0]; 
+subMenu.style.display = "block"; 
+} 
+function hideSubMenu(li) { 
+var subMenu = li.getElementsByTagName("ul")[0]; 
+subMenu.style.display = "none"; 
+} 
+</script> 
+
+</head>
+<body>
+<include file="public:head" />
+<div class="contentbox">
+<table width="1000" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="260" height="510" valign="top" style="padding-left:0px; padding-top:10px;">
+    <table width="240" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="123" valign="top" style="background:url(/skin/images/left_bg.jpg) repeat-x; padding-top:0px;">
+  
+  <table width="260" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="32" height="36" align="right" style="background:url(/skin/images/left_titlebg.jpg) repeat-x; "><img src="/skin/images/icon_left.png" width="17" height="12" /></td>
+        <td width="228" style="background:url(/skin/images/left_titlebg.jpg) repeat-x; padding-left:12px; ">
+        <span class="font_white14b">下载专区</span>  &nbsp;&nbsp; <span class="font_white_12b">Download</span>
+        </td>
+      </tr>
+    </table>
+    <volist name="catenews" id="vo" >
+        <table width="260" border="0" align="center" cellpadding="0" cellspacing="0" style="margin-top:0px; background:url(/skin/images/left_item_bg.jpg)  repeat-x;">
+      <tr>
+        <td width="28" height="33" align="right" valign="middle" style=" height:33px; ">&nbsp;</td>
+        <td width="212" valign="middle" style="height:33px; padding-left:5px;">
+              <a href="<?php echo U('article/download',array('catid'=>$vo["id"]));?>" title="{$vo.title}"  class="link_proclass">{$vo.title}</a>
+        </td>
+      </tr>
+    </table> 
+   </volist>
+    </td>
+  </tr>
+</table>
+<table width="260" border="0" cellspacing="0" cellpadding="0"  style="margin-top:10px;">
+   <tr>
+     <td height="64" style="background:url(/skin/images/contact_t2_en.jpg) no-repeat; height:72px;"></td>
+   </tr>
+   <tr>
+     <td height="214" valign="top" style="background:url(/skin/images/contact_bt_bg.jpg) left bottom no-repeat;  padding:20px; line-height:200%; font-size:14px;">
+     {$leftcontact[0][content]}
+     </td>
+   </tr>
+ </table></td>
+    <td width="740" valign="top" style="padding-top:10px; padding-left:10px;">
+    <table width="730" border="0" cellspacing="0" cellpadding="0" style="margin-top:0px;">
+        <tr>
+          <td width="700" height="151" valign="top"><table width="720" border="0" cellspacing="0" cellpadding="0" style="background:url(/skin/images/line_02.jpg) left bottom no-repeat;">
+            <tr>
+              <td width="21" height="36" align="left" valign="top" style="background:url(/skin/images/title_bg.jpg) repeat-x; padding-top:9px; padding-left:15px;"><img src="/skin/images/icon_red.jpg" width="6" height="15" /></td>
+              <td width="78" align="left" valign="top" style="background:url(/skin/images/title_bg.jpg) repeat-x; padding-top:9px; padding-left:3px;"><span class="font_title">下载专区</span></td>
+              <td width="621" align="right" valign="top"  style="background:url(/skin/images/title_bg.jpg) repeat-x; padding-top:12px; padding-right:10px;">&nbsp;</td>
+            </tr>
+          </table>
+            <table width="730" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="411" height="195" valign="top" style="line-height:200%; padding:10px; padding-left:15px; padding-right:0px; border-top:0px;">
+<div class="tit">{$row.title}</div>
+<div class="txt">
+ {$row.content} </br></br>
+<div class="previous_next" style="float:right;">
+<if condition="$front.title eq ''">
+            <a href="###" title="Is the first"  >Is the first</a>
+            <else />
+            <a href="<?php echo U('article/download_read',array('id'=>$front["id"],'catid'=>$_GET["catid"]));?>" title="previous"  >previous：{$front[title]|strcut=40,'..'}</a>
+            </if>  
+            &nbsp;&nbsp;
+           <if condition="$after.title eq ''">
+            <a href="###" title="Is the last one" >Is the last one</a>
+            <else />
+            <a href="<?php echo U('article/download_read',array('id'=>$after["id"],'catid'=>$_GET["catid"]));?>" title="next" >next：{$after[title]|strcut=40,'..'}</a>
+           </if>  
+</div>
+<div class="clear"></div>
+<!-- JiaThis Button BEGIN -->
+<div id="ckepop" class="share_area" style="float:right;">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tsina">新浪微博</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_renren">人人网</a>
+<a class="jiathis_button_kaixin001">开心网</a>
+<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+</div>
+<script type="text/javascript" src="http://v2.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+
+</div>
+                </td>
+              </tr>
+            </table></td>
+        </tr>
+      </table>
+    
+    </td>
+    </tr>
+</table>
+
+
+</div>
+
+
+
+
+<include file="public:foot" />
+</body>
+</html>

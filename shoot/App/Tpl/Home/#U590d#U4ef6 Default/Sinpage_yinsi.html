@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{$seo[title]}</title>
+<meta name="keywords" content="{$seo[keywords]}" />
+<meta name="description" content="{$seo[description]}" />
+<!-- css-->
+<link type="text/css" rel="stylesheet" href="/templets/68/styles/reset_html5.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="/templets/68/styles/index.css" media="screen" />
+<script type="text/javascript" src="/templets/68/js/modernizr.2.7.1.js"></script>
+<script type="text/javascript" src="/templets/68/js/greensock/TweenMax.min.js"></script>
+<script type="text/javascript" src="/templets/68/js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="/templets/68/js/jquery.flexslider.js"></script>
+<script type="text/javascript" src="/templets/68/js/index.js"></script>
+<script type="text/javascript" src="/templets/68/js/slide.js"></script>
+<script type="text/javascript" src="/templets/68/js/util.js"></script>
+
+<script type="text/javascript">SKIN_PATH="/Skins/default/";</script>
+<link href="/templets/54/css/resetcommon.css" rel="stylesheet" type="text/css" />
+<link href="/templets/54/css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/templets/54/js/nsw_jcia.js"></script>
+<link href="/templets/54/css/lightbox.css" rel="stylesheet" type="text/css" />
+<script src="/templets/54/js/lightbox.js" type="text/javascript"></script>
+<link type="text/css" rel="stylesheet" href="/templets/68/styles/util.css" media="screen" />
+</head>
+<body>
+<style>
+A.applink:hover {border: 2px dotted #DCE6F4;padding:2px;background-color:#ffff00;color:green;text-decoration:none}
+A.applink       {border: 2px dotted #DCE6F4;padding:2px;color:#2F5BFF;background:transparent;text-decoration:none}
+A.info          {color:#2F5BFF;background:transparent;text-decoration:none}
+A.info:hover    {color:green;background:transparent;text-decoration:underline}
+</style>
+<include file="public:head"/>
+    <div class="topadcs">
+   <volist name='ad1' id='vo'>
+            <a class="fullad" href="javascript:;" title="" style="background:url({$vo.thumb}) no-repeat center top;"></a>
+        </volist>    </div>
+    
+    <div class="brd_bg">
+    <div class="bread">
+        <p style="background:#eee;">
+            <span>您現在的位置:</span><a href='/'>主頁</a> > <a href="<?php echo U('sinpage/yinsi',array('catid'=>280));?>">{$row.title}</a></p>
+    </div>
+</div>
+
+<div class="focus_list fn">
+	<div class="fc_lt">
+        <div class="dt">
+            <h3>{$row.title}<em>/</em></h3>
+              <div style="line-height:2; padding-bottom:10px;">
+                 {$row.content} 
+                <div class="clear">
+                </div>
+            </div>
+        </div>
+    </div>
+  <div class="fc_rt">
+<div class="rt_fc">
+            <h4>
+                <a href="#" title="{$row.title}" target="_blank">{$row.title}</a><em>/</em></h4>
+            <ul class="fc_list">
+                <volist name="catabout" id="vo" >
+                   <li    <if condition='$catid eq $vo["id"]'>  class="cur"  </if>><a href="<?php echo U('sinpage/yinsi',array('catid'=>$vo["id"]));?>"    >{$vo.title}</a></li>
+                </volist>
+            </ul>
+</div>
+  </div>
+    </div>
+
+
+<include file="public:foot" />
+</body>
+</html>

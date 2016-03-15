@@ -1,0 +1,29 @@
+@charset "utf-8";
+/* 港漂保险 */
+* {margin:0; padding:0;}
+body {width:100%; height:100%; font-size:175%; position:relative;}
+img {max-width:100%;height:auto; width:auto\9;}
+
+header {max-width:100%; height:auto; background-color:#26537b; color:#FFF; font-family:"微软雅黑"; text-align:center; padding-bottom:1.2em; display:block;}
+header h1 {display:block; padding:0.8em 0.8em 0.2em 0.8em; font-size:1.2em; font-weight:bold; line-height:1.4em;}
+header h2 {color:#26537b; border:1px solid #26537b; font-size:1em; width:55%; margin:0 auto; -moz-border-radius: 1.5em; -webkit-border-radius: 1.5em; border-radius:1.5em;}
+
+.rowBar {width:100%; padding:1.2em 0; font-size:0.7em; height:1.2em; line-height:1.2em; color:#000; background:url(../images/money-bg.png) no-repeat 15em center; background-size:auto 70%;}
+.rowBar span {display:block; float:left; padding-left:2em; background:url(../images/dot-bg.png) no-repeat 0.5em center; background-size:auto 60%;}
+.count-bar {width:100%; padding:0.7em 0 1.8em; text-align:center; background:url(../images/count-bg.png) no-repeat center 4.9em;}
+.count-bar .h3 {font-size:1.2em; color:#666; text-align:center;}
+.count-bar input {width:50%; padding:0 0.5em; font-size:1.8em; background:#fff url(../images/money-bg.png) no-repeat 4em center; background-size:auto 70%; -moz-border-radius: 1em; -webkit-border-radius: 1em; border-radius:1em; border:none;}
+.btnBar {width:100%; padding:1.2em 0; text-align:center;}
+.btnBar input {font-size:2em; background:none; border:1px solid #26537b; color:#26537b; padding:0 0.5em; font-size:1em;  -moz-border-radius: 1.5em; -webkit-border-radius: 1.5em; border-radius:1.5em;}
+.space {margin-right:2em;}
+
+.light-blue {background-color:#86d0d5;}
+.deep-yellow {background-color:#ffbb5c;}
+.light-red {background-color:#ef8467;}
+.deep-blue {background-color:#72c0a4;}
+.green {background-color:#83d161;}
+.light-green {background-color:#b7e244;}
+.pink {background-color:#e9b2b4;}
+.yellow {background-color:#f2cd4e;}
+.cyan {background-color:#8992db;}
+.gray {background-color:#eeeeee;}

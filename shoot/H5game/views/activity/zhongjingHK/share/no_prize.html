@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no" name="format-detection">
+<meta content="email=no" name="format-detection">
+<title>中精新年抽奖活动</title>
+<link rel="stylesheet" href="<{$tmp_dir}>/css/style.css" type="text/css">
+<script type="text/javascript" src="<{$tmp_dir}>/js/jquery-1.11.0.js" ></script>
+</head>
+<body class="bgimg">
+	<div class="no_prize">
+		<img src="<{$tmp_dir}>/images/no_p.png" width="70%">
+	</div>
+	<div class="g_sc">
+		<a href="http://www.Jiajiabaoxian.com/piao/">
+			<img src="<{$tmp_dir}>/images/btn2.png" width="40%">
+		</a>
+	</div>
+	<div class="img01">
+		<img src="<{$tmp_dir}>/images/t03.png" width="65%">
+	</div>
+	<{include file="activity/share.tpl"}>
+<script language="JavaScript">
+	wx.ready(function(){
+		//wx.hideOptionMenu();
+		wx.hideMenuItems({
+			menuList: ['menuItem:exposeArticle','menuItem:setFont','menuItem:dayMode','menuItem:nightMode','menuItem:share:appMessage','menuItem:share:timeline','menuItem:share:qq','menuItem:share:weiboApp','menuItem:share:facebook','menuItem:share:QZone','menuItem:editTag','menuItem:delete','menuItem:copyUrl','menuItem:originPage','menuItem:readMode','menuItem:openWithQQBrowser','menuItem:openWithSafari','menuItem:share:email','menuItem:share:brand'] //要隐藏的菜单项，所有menu项见附录3//刷新开启menuItem:refresh//查看公众号开启menuItem:profile//收藏开启menuItem:favorite
+		});
+		//wx.showOptionMenu();
+		wx.showMenuItems({
+			menuList: ['menuItem:share:timeline','menuItem:share:appMessage'] // 要显示的菜单项，所有menu项见附录3
+		});
+		var share_title = '港漂福利来啦！准备装奖品';
+		var share_desc = '港漂险照顾方方面面，还有更多优惠哦';
+
+		//分享给朋友
+		wx.onMenuShareAppMessage({
+			title: share_title,
+			desc: share_desc,
+			link: '<{site_url("<{$index_dir}>")}>',
+			imgUrl: '<{$tmp_dir}>/images/share.jpg',
+			success: function (res) {
+				window.location.href='<{site_url("<{$index_dir}>/prize")}>';
+			},
+			cancel: function (res) {
+				alert('已取消');
+			}
+		});
+		//分享到朋友圈
+		wx.onMenuShareTimeline({
+			title: share_title,
+			desc: share_desc,
+			link: '<{site_url("<{$index_dir}>")}>',
+			imgUrl: '<{$tmp_dir}>/images/share.jpg',
+			success: function (res) {
+				window.location.href='<{site_url("<{$index_dir}>/prize")}>';
+			},
+			cancel: function (res) {
+				alert('已取消');
+			}
+		});
+	});
+</script>
+</body>
+</html>
+ 
+
+

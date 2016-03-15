@@ -1,0 +1,229 @@
+﻿h1 {
+	font-size:32px;
+}
+h2 {
+	font-size:26px;
+}
+h3 {
+	font-size:20px;
+}
+h4 {
+	font-size:14px;
+}
+h5 {
+	font-size:12px;
+}
+h6 {
+	font-size:10px;
+}
+.mt10 {
+	margin-top:10px;
+}
+/*common.css*/
+html, body {
+	-webkit-text-size-adjust:none;
+	-blink-text-size-adjust:none;
+}
+body {
+	color:#666;
+	font-size:12px;
+	font-family:"Microsoft Yahei";
+	border-top:5px solid #2cb445;
+} /*网站字体颜色*/
+a {
+	color:#666;
+	text-decoration:none;
+}  /*for ie f6n.net*/
+a:focus {
+	outline:0;
+} /*for ff f6n.net*/
+a:hover {
+	text-decoration:underline;
+}
+.vam {
+	vertical-align:middle;
+}
+
+.fn:after {
+	clear: both;
+	content: " ";
+	display: block;
+	font-size: 0;
+	height: 0;
+	visibility: hidden;
+}
+.fn {
+	zoom:1;
+}
+.pa {
+	position:absolute;
+}
+.pr {
+	position:relative
+}
+
+
+
+
+
+
+/*面包屑*/
+
+.brd_bg {
+	background:#eee;
+	height:25px;
+	line-height:25px;
+	padding:12px 0; width:1020px; margin:0 auto;
+}
+.brd_bg p span {background:#eee;}
+.brd_bg p span {background:#eee;}
+.brd_bg p a {background:#eee;}
+
+
+.bread {
+	color:#2857ac;
+	width:1002px;
+	margin:0 auto;
+	background:url(../images/bread.gif) left center no-repeat;
+	padding-left:31px;
+	color:#666;
+	font-size:14px;
+}
+.bread a {
+	color:#666;
+	padding:0 2px;
+	display:inline-block;
+}
+.bread span {
+	color:#666;
+}
+/*快速通道*/
+
+
+
+
+
+
+/*面包屑*/
+
+.brd_bg {
+	background:#eee;
+	height:25px;
+	line-height:25px;
+	padding:12px 0; width:1020px; margin:0 auto;
+}
+.brd_bg p span {background:#eee;}
+.brd_bg p span {background:#eee;}
+.brd_bg p a {background:#eee;}
+
+
+.bread {
+	color:#2857ac;
+	width:1002px;
+	margin:0 auto;
+	background:url(../images/bread.gif) left center no-repeat;
+	padding-left:31px;
+	color:#666;
+	font-size:14px;
+}
+.bread a {
+	color:#666;
+	padding:0 2px;
+	display:inline-block;
+}
+.bread span {
+	color:#666;
+}
+
+
+
+
+/*面包屑*/
+.brd_bg {
+	background:#eee;
+	height:25px;
+	line-height:25px;
+	padding:12px 0; width:1020px; margin:0 auto;
+}
+.brd_bg p span {background:#eee;}
+.brd_bg p span {background:#eee;}
+.brd_bg p a {background:#eee;}
+
+
+.bread {
+	color:#2857ac;
+	width:982px;
+	margin:0 auto;
+	background:url(../images/bread.gif) left center no-repeat;
+	padding-left:31px;
+	color:#666;
+	font-size:14px;
+}
+.bread a {
+	color:#666;
+	padding:0 2px;
+	display:inline-block;
+}
+.bread span {
+	color:#666;
+}
+/*快速通道*/
+.n_gray {
+	background:#eee;
+	padding:48px 0 22px;
+}
+.cross {
+	width:1002px;
+	margin:0 auto 21px;
+	height:133px;
+}
+.cross h3 {
+	text-align:center;
+	height:32px;
+	color:#2857ac;
+	font-size:20px;
+	line-height:32px;
+	margin-bottom:25px;
+	background:url(../images/n1_line.gif) center center no-repeat;
+}
+.cross h3 a {
+	color:#2857ac;
+	font-size:20px;
+}
+.cr_list {
+	width:450px;
+	height:58px;
+	border:1px solid #cdcdcd;
+	line-height:24px;
+	padding:13px 28px 0 10px;
+}
+.cr_list dt {
+	float:left;
+	height:24px;
+	line-height:24px;
+	width:68px;
+	background:url(../images/n_jt.gif) right center no-repeat;
+	padding-right:8px;
+}
+.cr_list dd {
+	width:356px;
+	float:right;
+}
+.cr_list dt a {
+	color:#666;
+	font-weight:bold;
+	font-size:14px;
+}
+.cr_list dd a {
+	display:inline-block;
+	color:#666;
+	font-size:14px;
+	padding:0 12px;
+}
+
+.topadcs {
+}
+.topadcs .fullad {
+	display:block;
+	height:282px; width:1020px; margin:0 auto;
+}

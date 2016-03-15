@@ -1,0 +1,98 @@
+/* CSS Document */
+		body {
+			font-family:\'Lucida Grande\', \'Lucida Sans Unicode\', \'Lucida Sans\', Verdana, Tahoma, sans-serif;
+			font-size:62.5%;
+			color: #5e5e5e;
+			letter-spacing:0; }    	
+
+		a, a:visited, a:active {
+			color: #818181; }    	
+
+			a:hover {
+				color: #b3b3b3; }    	
+
+		h1, h2, h3, h4, h5, h6 {
+			color:#ffffff; }
+
+		form.global input, form.global textarea, form.global select, .commentarea form textarea, .commentarea form input[type=text]  {
+			font-family:\'Lucida Grande\', \'Lucida Sans Unicode\', \'Lucida Sans\', Verdana, Tahoma, sans-serif;
+			color: #5e5e5e; }
+
+			form.global input[type=submit], div.content-comments .commentarea form input[type=submit] {
+				background:#ffffff;
+				border-right:1px solid #c20430;
+				border-bottom:1px solid  #c20430;
+				text-shadow: 0 1px 0 #c20430;
+				color:#ffffff; }
+				
+				form.global input[type=submit]:hover, div.content-comments .commentarea form input[type=submit]:hover  {
+					color: #5e5e5e; }
+	
+		div.header {
+			background: #ffffff; }
+
+			div.header div.menu ul li a {
+				color:#000000; }
+
+			div.header div.menu ul li a:hover, 
+			div.header div.menu ul li.current_page_item a, div.header div.menu ul li.current_page_item a:hover,  
+			div.header div.menu ul li.current_page_ancestor a, div.header div.menu ul li.current_page_ancestor a:hover,
+			div.header div.menu ul li.current_page_parent a, div.header div.menu ul li.current_page_parent a:hover {
+				color:#c20430 !important; }
+
+				div.header div.menu ul.children li a {
+					color: #b3b3b3 !important; }
+					
+				div.header div.menu ul li ul.children li a:hover {
+					color: #c20430 !important; } 
+
+		#front-left h2 a, #front-mid h2 a, #front-right h2 a {
+			color:#b3b3b3; }
+			
+			#front-left h2 a:hover, #front-mid h2 a:hover, #front-right h2 a:hover {
+				color:#ffffff; }
+
+		#col-left h1 {
+			color:#000000;
+			border-left:5px solid #b3b3b3; }
+
+			#col-left a, #col-left a a:visited, #col-left a a:active {
+				color:#b3b3b3; }
+				
+				#col-left a:hover, #col-left li.current_page_item a {
+					color:#000000; }
+
+		#col-right h2 {
+			color:#b3b3b3; }
+
+		#col-right div.quote p {
+				color:#ffffff; }
+
+		#col-right blockquote p {
+				color:#ffffff; }
+
+		div.left li.category a, div.left li.comments a { 
+			color:#b3b3b3; }
+
+		div.the-content div.postmetadata {
+			color:#5e5e5e;
+			background: #ededed; }
+
+			div.the-content div.postmetadata a {
+			    color:#ffffff; }
+
+				ul.pagination li a {
+					background: #b3b3b3;
+					color:#ffffff; }
+
+					ul.pagination li a:hover {
+						background:#c20430; }
+
+						ul.pagination li.current a {
+						 	background:#ffffff;}
+
+		
+		.footer {
+			color:#b3b3b3 
+			color:#b3b3b3 !important; 
+			}	

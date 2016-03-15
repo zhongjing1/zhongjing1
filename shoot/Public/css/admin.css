@@ -1,0 +1,79 @@
+﻿.navbar-inner{border: none; border-bottom: solid 1px #ddd\9;}
+.navbar .brand { background: url( ../img/logo.png) no-repeat;width:150px;height:30px; margin: 0px;padding: 0px;margin-top:3px; }
+
+
+.form-horizontal .controls label.error{ display:inline; margin-left:8px; color:#b94a48;}
+ select{ width:auto;}
+ 
+ #nodes label{ color:#333; display:inline;}
+
+ .box_main{ background:whiteSmoke; padding-left:5px; margin-bottom:10px; border:solid 1px #eee;}
+ h3{ line-height: 1;}
+ 
+
+ h3,legend{  font-size:18px; font-weight:normal;}
+.body1{ overflow:hidden;overflow-y:hidden; margin:0px;   }
+.checkbox{ display: inline; padding: 0px;}
+
+
+
+.modal-body {
+    max-height:500px;
+    padding:10px;
+    overflow-y: none;
+}
+
+.btn{
+
+background:#eeeeee url(../img/btn.png) repeat-x bottom\9;
+*border:solid 1px #ccc;
+
+}
+.btn:hover{
+background:#eeeeee url(../img/btn_hover.png) repeat-x bottom\9;
+*border:solid 1px #ccc;
+
+}
+.btn-primary{background:#006dcc\9;*border:none;
+}
+.btn-primary:hover{background:#0044cc\9;*border:none;
+}
+.form-horizontal .control-group{ margin-bottom: 15px;}
+
+/** 布局基础样式 **/
+.col-main {
+    float: left;
+    width: 100%;
+    /* bug fix: 主栏没有内容时，在 Firefox 和 Chrome 等浏览器下，布局不对 */
+    min-height: 1px;
+}
+.col-sub, .col-extra {
+    float: left;
+    *position: relative;
+}
+
+/** 清除浮动 **/
+.layout:after, .main-wrap:after, .col-sub:after, .col-extra:after {
+    content: '\20';
+    display: block;
+    height: 0;
+    clear: both;
+}
+.layout, .main-wrap, .col-sub, .col-extra {
+    *zoom: 1;
+}
+input[type='text']:focus,textarea:focus,select:focus{ outline: none\9; border: solid 1px #0072C6\9; }
+
+.menus{}
+.menus ul,.menus li{ margin: 0px; padding: 0px; list-style: none;  }
+.menus a:hover{text-decoration: none;}
+.cc{
+}
+
+.cc .dd {font-size: 16px; cursor:pointer;line-height: 2; color:#ff6600;font-family:微软微软雅黑; background:url(../img/controls.png); background-position:1px -751px ; background-repeat:no-repeat; text-indent:16px; display: inline-block; font-weight:bold; padding-left:3px;}
+a.cc1{ background-position:0px -702px ;}
+.cc ul{ margin-bottom: 10px;}
+.cc ul li{ line-height:1.7;}
+.cc ul a{color: #555;}
+.cc .active{ background: #08c;}
+.cc .active a{ color: #fff;}

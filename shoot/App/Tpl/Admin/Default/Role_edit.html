@@ -1,0 +1,31 @@
+        <html>
+<form id="form1" class="form-horizontal" method="post"  style=" margin: 0px;"
+      action="<if condition="ACTION_NAME=='add'">{:U(MODULE_NAME.'/insert')}<else />{:U(MODULE_NAME.'/update')}</if>"   >
+    <input type="hidden" name="id" value="{$vo.id}">
+<fieldset>
+
+
+        <div class="control-group">
+            <label class="control-label" for="name">角色名称</label>
+            <div class="controls">
+                <input type="text"  class="span5 required" id="name" name="name" value="{$vo.name}" />
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label" for="remark">备注</label>
+            <div class="controls">
+                <textarea name="remark" id="remark" class="span5">{$vo.remark}</textarea>
+            </div>
+        </div>
+
+        <div class="form-actions" style="margin-bottom: 0px;" >
+            <button type="submit" class="btn btn-primary">提交</button> &nbsp;
+            <button type="reset" class="btn">取消</button>
+        </div>
+</fieldset>
+<input type="hidden" name="opwd" value="{$vo['password']}" />
+</form>
+
+
+        </html>

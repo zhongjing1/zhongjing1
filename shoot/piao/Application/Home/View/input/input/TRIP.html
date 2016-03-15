@@ -1,0 +1,146 @@
+<div class="content {$color}-in">
+    <div class="info {$color}-in">
+        <table>
+            <tr>
+                <td>保障方式：</td><td colspan="2"><em style="width: 5.5em;">单程</em><span class="radio on tripSafeguard" data-option="1" info="保障方式:单程"> </span></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td><td colspan="2"><em style="width: 5.5em;">往返旅程</em><span class="radio tripSafeguard" data-option="2"  info="保障方式:往返旅程"> </span></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td><td colspan="2"><em style="width: 5.5em;">全年旅游</em><span class="radio tripSafeguard" data-option="3"  info="保障方式:全年旅游"> </span></td>
+            </tr>
+            <tr>
+                <td>保障范围：</td><td colspan="2"><em>东南亚地区</em><span class="radio on range" data-option="1"  info="保障范围:东南亚地区"> </span></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td><td colspan="2"><em>全球（不含美国）</em><span class="radio range" data-option="2"  info="保障范围:全球（不含美国）"> </span></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td><td colspan="2"><em>全球（含美国）</em><span class="radio range" data-option="3"  info="保障范围:全球（含美国）"> </span></td>
+            </tr>
+            <tr>
+                <td>保障日长：</td><td colspan="2"><input id="PeriodsTrip" name="age" type="tel" min="1" max="365" value="365" class="radius-input" info="保障日长"  /></td>
+            </tr>
+            <tr>
+                <td>保障人数：</td><td colspan="2"><em><input name="age" type="tel" min="4" max="4" value="2" class="radius-input s-input"  info="成人" id="countadult" /></em><span>成人+</span><em><input name="age" type="tel" min="4" max="4" value="1" class="radius-input s-input" id="countchild"  info="小孩" /></em><span>小孩</span></td>
+            </tr>
+            <tr id="insured">
+                <td colspan="3"><em>您是否其中一个受保人: 是</em> <span class="radio on insured" data-option="1" info="是受保人"> </span> <em>否</em> <span class="radio  insured" data-option="0" info="否受保人"> </span></td>
+            </tr>
+            <tr id="wifeinsured">
+                <td colspan="3"><em>您是否为您的配偶投保: 是 </em><span class="radio on wifeinsured" data-option="1" info="是配偶投保"> </span> <em>否</em> <span class="radio wifeinsured" data-option="0" info="否配偶投保"> </span></td>
+            </tr>
+
+            <tr>
+                <td colspan="3"><em>保障小孩人数：</em><input name="age" type="tel" min="4" max="4" value="" class="radius-input" id="countchild2" info="保障小孩人数" /></td>
+            </tr>
+            <tr>
+                <td colspan="3" class="minitext">（小于18岁，未婚）</td>
+            </tr>
+            <tr>
+                <td height="25" colspan="3"><em>为其他18岁以上家庭成员投保人数</em>
+                    <input name="age" type="tel" min="4" max="4" value="" class="radius-input s-input"  info="为其他家庭成员投保数" id="countadult2"   /></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+<input class="{$color}_select" type="hidden" value="0" />
+<input   name="{$code}_price" class="{$color}_price totalprice  {$code}_price" type="hidden" value="0" />
+<input name="{$code}_info" class="{$code}_info selected" type="hidden" value="" />
+<script language="JavaScript">
+
+    jQuery(function ($) {
+        $(".{$color}-in .tripSafeguard").click(function(){
+            if($(".tripSafeguard").size() > 0){
+                $(".tripSafeguard").removeClass("on");
+                $(this).addClass("on");
+            }
+            allyear(0);
+
+        });
+
+        $(".{$color}-in .range").click(function(){
+            if($(".range").size() > 0){
+                $(".range").removeClass("on");
+                $(this).addClass("on");
+            }
+        });
+
+        $(".{$color}-in .insured").click(function(){
+            if($(".insured").size() > 0){
+                $(".insured").removeClass("on");
+                $(this).addClass("on");
+            }
+        });
+
+        $(".{$color}-in .wifeinsured").click(function(){
+            if($(".wifeinsured").size() > 0){
+                $(".wifeinsured").removeClass("on");
+                $(this).addClass("on");
+            }
+        });
+
+        $("#PeriodsTrip").change(function(){
+            allyear(1);
+        });
+
+
+
+
+
+        init_{$code}("{$code}_1");
+
+    });
+
+    function init_{$code}(aa){
+        var aa;
+        $(".{$color} .listBar").hide();
+        $("."+aa).show();
+    }
+
+    function allyear(a){
+        plan = 1;//职业
+        for(i=0;i<$(".tripSafeguard").length;i++){
+            if($(".tripSafeguard").eq(i).hasClass('on')){
+                plan = parseInt($(".tripSafeguard").eq(i).attr("data-option"));
+            }
+        }
+        if(plan == 1 || plan == '1'){
+            if($("#PeriodsTrip").val() > 7){
+                if(a == 1){
+                    tip("保障方式选了单程,保障日长为1-7");
+                }
+                $("#PeriodsTrip").val(7);
+            }else if($("#PeriodsTrip").val() < 1){
+
+                if(a == 1){
+                    tip("保障方式选了单程,保障日长为1-7");
+                }
+                $("#PeriodsTrip").val(3);
+            }
+        }
+        if(plan == 2 || plan == '2'){
+            if($("#PeriodsTrip").val() > 181){
+                if(a == 1){
+                    tip("保障方式选了单程,保障日长为1-181");
+                }
+                $("#PeriodsTrip").val(181);
+            }else if($("#PeriodsTrip").val() < 1){
+                if(a == 1){
+                    tip("保障方式选了单程,保障日长为1-181");
+                }
+                $("#PeriodsTrip").val(60);
+            }
+        }
+        if(plan == 3 || plan == '3'){
+            if(a == 1){
+                tip("保障方式选了全年,保障日长必须填365");
+            }
+            $("#PeriodsTrip").val(365);
+        }
+    }
+
+</script>

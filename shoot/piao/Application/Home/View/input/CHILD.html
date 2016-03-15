@@ -1,0 +1,71 @@
+<div class="content brightgreen-in">
+    <div class="info brightgreen-in">
+        <table>
+            <tr>
+                <td>年龄：</td><td colspan="2"><input  id="CHILD_age" name="age" type="tel" min="0" max="29" value="5" class="radius-input" info="年龄" /></td>
+            </tr>
+            <tr>
+                <td>等级：</td><td><em style="width: 4.5em;">大床房</em><span class="radio on childroom CHILD_plan" data-option="1"  info="大床房"> </span></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td><td><em style="width: 4.5em;">半私家房</em><span class="radio childroom CHILD_plan" data-option="2"  info="半私家房"> </span></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td><td><em style="width: 4.5em;">私家房</em><span class="radio childroom CHILD_plan" data-option="3"  info="私家房"> </span></td>
+            </tr>
+            <tr  ID="CHILD_payway">
+                <td>付款方式：</td><td><em>年付</em><span class="radio on childpayway" data-option="1"  info="年付"> </span></td><td><em>月付</em><span class="radio childpayway" data-option="2"  info="月付"> </span></td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>附加1：额外保额</em><span class="radio on childextrasecurity CHILD_option"  info="附加1额外保额" data-option="1"> </span></td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>附加2：住院现金</em><span class="radio childcash CHILD_option"  info="附加2住院现金" data-option="2"> </span></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<input  name="{$code}_price"  class="{$color}_price totalprice {$code}_price" codename="{$code_name}" type="hidden" value="0" />
+<input name="{$code}_info" class="{$code}_info selected"  codename="{$code_name}"  type="hidden" value="" />
+<script language="JavaScript">
+
+    jQuery(function ($) {
+        $(".brightgreen-in .childroom").click(function(){
+            if($(".childroom").size() > 0){
+                $(".childroom").removeClass("on");
+                $(this).addClass("on");
+            }
+            init_CHILD($(this).attr("data-option"));
+        });
+
+        $(".brightgreen-in .childpayway").click(function(){
+            if($(".childpayway").size() > 0){
+                $(".childpayway").removeClass("on");
+                $(this).addClass("on");
+            }
+        });
+
+        $(".childcash, .childextrasecurity").click(function(){
+            $(this).toggleClass("on");
+        });
+
+        $("#CHILD_age").change(function(){
+            var age = parseInt($("#CHILD_age").val());
+            if(age < 0 || age > 100){
+                tip("年龄不能大于99岁");
+                $("#CHILD_age").val(40)
+            }
+        });
+
+
+        init_CHILD("1");
+
+    });
+    function init_CHILD(aa){
+        var aa;
+        $(".brightgreen .listBar").hide();
+        $(".CHILD_"+aa).show();
+    }
+
+</script>

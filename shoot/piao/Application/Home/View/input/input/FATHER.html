@@ -1,0 +1,74 @@
+<div class="content green-in">
+    <div class="info green-in">
+        <table>
+            <tr>
+                <td>年龄：</td><td colspan="2"><input id="FATHER_age" name="age" type="tel" min="0" max="99" value="30" class="radius-input" info="年龄" /></td>
+            </tr>
+            <tr>
+                <td>等级：</td>
+                <td>
+                    <em style="width: 4.5em;">大床房</em>
+                    <span class="radio on room FATHER_plan" data-option="1"  info="大床房"> </span>
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td><td><em style="width: 4.5em;">半私家房</em><span class="radio room FATHER_plan" data-option="2"  info="半私家房"> </span></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td><td><em style="width: 4.5em;">私家房</em><span class="radio room FATHER_plan" data-option="3"  info="私家房"> </span></td>
+            </tr>
+            <tr ID="FATHER_payway">
+                <td>付款方式：</td><td><em>年付</em><span class="radio on payway" data-option="1"  info="年付"> </span></td><td><em>月付</em><span class="radio payway" data-option="2"  info="月付"> </span></td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>附加1：额外保额</em><span class="radio on extrasecurity FATHER_option"  info="附加1额外保额" data-option="1"> </span></td>
+            </tr>
+            <tr>
+                <td colspan="3"><em>附加2：住院现金</em><span class="radio cash FATHER_option"  info="附加2住院现金" data-option="2"> </span></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<input   name="{$code}_price" class="{$color}_price totalprice {$code}_price" type="hidden" value="0" />
+<input  name="{$code}_info" class="{$code}_info selected" type="hidden" value="" />
+<script language="JavaScript">
+
+    jQuery(function ($) {
+        $(".green-in .room").click(function(){
+            if($(".room").size() > 0){
+                $(".room").removeClass("on");
+                $(this).addClass("on");
+            }
+            init_father($(this).attr("data-option"));
+        });
+
+        $(".green-in .payway").click(function(){
+            if($(".payway").size() > 0){
+                $(".payway").removeClass("on");
+                $(this).addClass("on");
+            }
+        });
+
+        $(".green-in .cash, .green-in .extrasecurity").click(function(){
+            $(this).toggleClass("on");
+        });
+
+        $("#FATHER_age").change(function(){
+            var age = parseInt($("#FATHER_age").val());
+            if(age < 0 || age > 100){
+                tip("年龄不能大于99岁");
+                $("#FATHER_age").val(40)
+            }
+        });
+
+        init_father("1");
+
+    });
+    function init_father(aa){
+        var aa;
+        $(".green .listBar").hide();
+        $(".FATHER_"+aa).show();
+    }
+
+</script>

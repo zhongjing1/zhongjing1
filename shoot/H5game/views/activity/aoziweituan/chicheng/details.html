@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>炽橙</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no" > 
+<script type="text/javascript" src="<{$tmp_dir}>/js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="<{$tmp_dir}>/js/iscroll.js"></script>
+<link rel="stylesheet" type="text/css" href="<{$tmp_dir}>/css/public.css" />
+</head>
+<script>
+	$(function(){
+		var doc_H=window.innerHeight;	
+			$('.wrap').height(doc_H);	
+	});
+
+	var myScroll;
+    function loaded() {
+        myScroll = new IScroll('.wrap',{click: true });
+    }
+</script>
+<body onload="loaded()">
+<div class="wrap" style="background:#bdbdbd;padding-bottom:30px;">
+	<div id="scroller">
+		<img src="<{$tmp_dir}>/images/logo.jpg" class="logo">
+		<img src="<{$tmp_dir}>/images/detailbanner.png" class="bannerbox">
+		<div class="detailwrap">
+			<div class="detailscon">
+				<img src="<{$tmp_dir}>/images/label.png" class="label">
+				<{$details_data.desc}>
+				
+			</div>
+			<a href="<{site_url("<{$index_dir}>/student")}>"><img src="<{$tmp_dir}>/images/detailnext.png" class="nextbtn" width="240" height="120"></a>
+		</div>
+	</div>
+</div>
+</body>
+</html>

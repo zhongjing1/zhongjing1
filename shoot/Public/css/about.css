@@ -1,0 +1,173 @@
+/*----------About
+            START----------*/
+
+
+.splitter li {float:left; display:block; width:160px;}
+.splitter li a { position: static; color:#7c7c7c; font-size:14px; background:#d6d6d6; float:left; margin:0px 0px 10px 40px; width:160px; 
+padding:5px 10px;border-radius:5px;  letter-spacing:1px; border:1px #d6d6d6 solid; }
+.splitter li.selected-0 a, 
+.splitter li.selected-1 a,
+.splitter li.selected-2 a,
+.splitter li.selected-3 a,
+.splitter li.selected-4 a,
+.splitter li.selected-5 a,
+.splitter li a:hover
+{
+	background-color: #1ed003;
+	color:#fff;
+	border:1px solid #148101;
+	text-overflow:ellipsis;
+}
+
+.splitter li.current a { position: static; color:#7c7c7c; font-size:14px; background:#d6d6d6; float:left; margin:0px 0px 10px 40px; width:160px; 
+padding:5px 10px;border-radius:5px;  letter-spacing:1px; border:1px #d6d6d6 solid; background-color: #1ed003;
+	color:#fff;
+	border:1px solid #148101;
+	text-overflow:ellipsis;}
+
+
+.splitter:after, 
+.image-grid:after 
+{ display: block; height: 0px; clear: both; overflow: hidden; content: ""}
+
+
+
+
+
+/*who are we*/
+.who-are-we{ float:left; width:300px; color:#555; background:url(../images/bgImg/line2.gif) right 0 repeat-y; margin:30px 0 0 0;}
+.who-are-we h2, .what-we-do h2{ display:block; padding:0 0 15px 0}
+.what-we-do h2 img{ float:left}
+.who-are-we p, .what-we-do p{ clear:both; padding:10px 30px 0 0; line-height:1.6; font-size:12px; text-indent:24px;}
+.what-we-do p{ padding:25px 0px 0 0;}
+
+/*what we do*/
+.what-we-do{ display:inline; width:620px;float:right; margin:30px 30px 0;}
+.what-we-do dl { width:500px; display:block; margin:40px 0 0 0;font-family:"微软雅黑";}
+.what-we-do dt{   font-weight:600; color:#000;font-size:16px;}
+.what-we-do dd{ width:80px; padding:7px 40px; display:block; background-image: url(../images/icon/a-f2.gif); background-repeat:no-repeat; 
+background-color:#09f; height:24px; line-height:24px; color:#eaeaea; font-size:14px;font-weight:600; margin:5px 10px 0px 0}
+.what-we-do .numb-a{ background-position:0 0;}
+.what-we-do .numb-b{ background-position:0 -38px; margin:5px 10px 0 0px;}
+.what-we-do .numb-c{ background-position:0 -76px;}
+.what-we-do .numb-d{ background-position:0 -114px; margin:5px 10px 0 33px;}
+.what-we-do .numb-e{ background-position:0 -152px;}
+.what-we-do .numb-f{ background-position:0 -190px;margin:5px 10px 0 33px;}
+
+
+/*----------Target & Idea & Creat----------*/
+.hao123{ background: url(../images/icon/sanjiao.gif) 97% top no-repeat #3d3d3d; height:160px; margin:20px auto; overflow:hidden; width:980px; overflow:hidden; padding:20px 0 10px 0}
+.hao123 dl{ float:left; width:305px; height:160px; padding:0 10px; background:url(../images/bgImg/line4.gif) repeat-y right 0;}
+.hao123 dt{ padding:0 5px 15px;}
+.hao123 dd{ line-height:1.6; padding:0 5px;}
+
+/*----------ourTeam----------*/
+#ourTeam { margin:30px auto !important; padding:0 0 20px 0}
+#ourTeam span{ float:left; padding:0 30px 0 0}
+#ourTeam p{ padding:0 0px 0 30px; line-height:1.6; font-size:13px;}
+
+/*----------teamAdd----------*/
+#teamAdd { margin-bottom:30px;}
+#teamAdd li{ display:block; font-size:18px; font-family:"微软雅黑"; float:left; padding:20px 50px;}
+#teamAdd .add-black-down{ background: url(../images/icon/icon_Add1.gif) no-repeat right bottom; }
+#teamAdd .add-black-up{ background: url(../images/icon/icon_Add1.gif) no-repeat right top; margin:30px 0px 0 80px; width:115px }
+#teamAdd .add-black-middle{ background: url(../images/icon/icon_Add2.gif) no-repeat right 10px; margin: 30px 0 30px 30px;  padding:30px 80px 30px 40px;  }
+#teamAdd .add-black-middle span{ background: #f79414; padding:10px 30px; color:#eaeaea}
+
+/*----------ourClients----------*/
+#ourClients { height:auto;  }
+#ourClients p{ background: url(../images/bgImg/ourClients.gif) no-repeat left top; height:20px; padding:35px 0 0 180px;  font-size:14px; font-family:"微软雅黑"; }
+#ourClients table{ width:100%; margin:10px 0;}
+#ourClients td{border-collapse: collapse; border:1px solid #c1c1c1; width:20%; height:90px; line-height:90px; text-align:center}
+
+
+
+/*-------认定证书-------*/
+#zhengshu { padding:0 0 0 0px; width:760px;}
+#zhengshu a{ margin:20px 0 20px 10px; padding:5px; height:1.25cm; background:#ccc; display:block; float:left; }
+#zhengshu a img{ width:2.5cm; height:1.25cm;}
+#zhengshu a:hover{ background:#999}
+
+/*----------About
+END----------*/
+			
+			
+			
+/*----------News
+            START----------*/
+#newsTop{  height:26px; padding:20px 0 20px 0; margin-top:20px;}
+#newsTop img,#newsTop #Btn{ float:left}
+#news-join-Btn{ width:206px; height:26px; float:right;}
+#news-join-Btn a{ background-image:url(../images/btnImg/newsjoinBtn.gif); margin:0 0 0 3PX; background-repeat:no-repeat; width:100px; height:26px; display:inline-block;}			
+#news-join-Btn a.news{ background-position:0 0;}		
+#news-join-Btn a.join{ background-position:-100px 0;}
+#news-join-Btn a:hover{ background-image:url(../images/btnImg/newsjoinBtn2.gif);}
+
+/**turnPage Css**/
+#turnPage{ width:210px; height:24px; margin:30px auto}
+#turnPage a{ height:14px; line-height:14px; display:inline-block; padding:0 10px; margin:0 3px; color:#555; font-size:14px;border:#666 1px solid; border-radius:4px }
+#turnPage a.current{ height:14px; line-height:14px;border:#2264C8 1px solid;color:#2264C8; border-radius:4px;background:#2264C8; color:#fff}
+#turnPage a:hover{ border:#2264C8 1px solid; }
+#turnPage a.arrow{ border:none}
+/*--
+#news-join-Btn{ width:140px; height:48px; float:right;}
+#news-join-Btn a{ background-image:url(../images/btnImg/newsjoinBtn.gif); background-repeat:no-repeat; width:48px; height:48px; display:inline-block; margin:0 0 0 20px}			
+#news-join-Btn a.news{ background-position:0 0;}		
+#news-join-Btn a.join{ background-position:-48px 0;}	
+--*/	
+						
+.newsBar{ padding:20px 0; clear:both; position:relative; overflow:hidden; float:left; margin:0 auto !important;}	
+.newsBar img{ height:120px; width:210px; float:left; display:block;}
+.newsBar h3{ font-size:16px; padding:0 0 0 230px;font-family:"微软雅黑"; height:40px;}			
+.newsBar p{ padding:0px 0 0 230px; line-height:1.8; }			
+.newsBar span{ width:30px; height:20px; line-height:20px; background: url(../images/btnImg/viewIcon.gif) no-repeat left center; position:absolute; bottom:20px; right:0; padding:0 0 0 17px;}			
+.newsBar span a{ color:#555}
+.newsBar:hover h3,.newsBar:hover p, .newsBar:hover span a{ color:#000}
+	
+#newsMain{  min-height:500px;}
+#newsImg{ width:170px; padding:0 20px 0 0; vertical-align:top }
+#newsImg img{ border:5px #fff solid;}
+#newsMain h2{ font-size:18px; font-weight:700;  color:#000; padding:0 0 10px 0;font-family:"微软雅黑"; vertical-align:top}
+#newsMain h4{font-weight:700; color:#333; text-indent:24px; padding:5px 0}
+#newsMain .date{padding:0 0 10px 0; font-family:"微软雅黑";}
+#newsMain .newsText{ padding:15px 0; overflow:hidden; font-size:14px}
+#newsMain .newsText .newsImg{ text-align:center; padding:10px 0;}
+#newsMain .newsText p{ line-height:1.8; text-indent:24px; padding:10px 0;}
+#newsMain span{ text-align:right; font-size:12px; display:block}
+#newsMain span a{color:#1e96c8}
+
+
+#pre-nextBtn{ text-align:center; padding:50px 0}
+#pre-nextBtn a, #pre-nextBtn a.noMore:hover{ background-color:#d8d8d8; border-radius:4px; background-repeat:no-repeat; margin:0 10px; width:275px; height:30px; line-height:30px; display:inline-block; color:#999}
+
+#pre-nextBtn a:hover{ background-color:#1e96c8; color:#fff}
+#pre-nextBtn a.preText{ background-image: url(../images/btnImg/pre.png); background-position:5px center}
+#pre-nextBtn a.nextText{ background-image: url(../images/btnImg/next.png); background-position:255px center}
+
+/*----------News
+            END----------*/		
+			
+			
+			
+			
+/*----------Join us
+            Start----------*/		
+#join-us dl{ width:45%; margin:0 0 40px 40px;  height:auto; overflow:hidden; float:left; }		
+
+#join-us dt{ font-size:20px; font-weight:700; color:#323232; height:55px; line-height:55px; padding: 0 0 0 50px; font-family:"微软雅黑";}	
+#join-us dd{ width:80%;line-height:22px;margin: 0 0 0 50px;}	
+#join-us dd	 a{  color:#1e81d0; text-decoration:underline;}	
+#join-us dd	 a:hover{ text-decoration:none}
+.iosJoin{ }	
+.androidJoin{background: url(../images/icon/androidBg.gif) no-repeat left center}
+.testJoin{background: url(../images/icon/testBg.gif) no-repeat left center}		
+.gmJoin{background: url(../images/icon/gmBg.gif) no-repeat left center}		
+.uiJoin{background: url(../images/icon/uiBg.gif) no-repeat left center}		
+
+
+
+
+ .cleft{ width:200px; float:left;  padding:20px 0px 20px 0px; display:inline;}	
+ .cright{ width:740px; float:left;  padding:20px 0px 20px 10px; display:inline;}	
+/*----------Join us
+            END----------*/

@@ -1,0 +1,17 @@
+
+/*img Link*/
+#swap_pic,#introduce{overflow:hidden; margin:40px auto 0 auto;}
+#swap_pic{ width:980px; }
+.pics li { border: #CCC 2px solid; height: 135px;  padding:2px;  width:290px; position: relative;  float: left; overflow: hidden;  margin:0  0 0 20px; }
+.pics li span { position: absolute; height:30px;  line-height: 30px; text-align:center; width: 290px; display:none;  background: url(../images/bgImg/opacity0.7-black-Bg.png) repeat; height: 30px; color: #fff; 
+ cursor: pointer;  left: 2px; bottom:2px; }
+.pics li:hover, .pics li#current{ border:#333 2px solid;}
+.pics li:hover span, .pics li#current span{ display:block}
+
+/*Text introduce*/
+#introduce {line-height:1.8; background:#fff;  }
+#introduce h3{ background:#eaeaea; width:100%;}
+#introduce h3 span{ margin:0 auto; width:980px; font-size:24px; display:block; font-family:"微软雅黑"}
+#introduce p{ width:980px; margin:0 auto; padding:15px; text-indent:2em }
+
+

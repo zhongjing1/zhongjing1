@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>炽橙</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no" >
+<meta name="format-detection" content="telephone=no" />
+<{load_js('jquery')}>
+<script type="text/javascript" src="<{$tmp_dir}>/js/iscroll.js"></script>
+<link rel="stylesheet" type="text/css" href="<{$tmp_dir}>/css/public.css" />
+<{load_js('validform')}>
+<{load_js('layer1.8/layer')}>
+</head>
+<script>
+	$(function(){
+		var doc_H=window.innerHeight;	
+			$('.wrap').height(doc_H);	
+	});
+
+	var myScroll;
+    function loaded() {
+        myScroll = new IScroll('.wrap',{click: true });
+    }
+</script>
+<body>
+<div class="wrap" style="background: #2c2c2c;">
+	<div id="scroller">
+		<img src="<{$tmp_dir}>/images/logo.jpg" class="logo">
+		<img src="<{$tmp_dir}>/images/indexbanner.jpg" class="bannerbox">
+		<div class="contentbox">
+			<{foreach $details_list as $val=>$key}>
+			<div class="content">
+				<div class="order"> <{$val+1}> </div>
+				<a href="<{site_url("<{$index_dir}>/details/<{$key.id}>")}>"><img src="<{$tmp_dir}>/images/showbtn.png" class="showbtn"></a>
+				<div class="introducebox">
+					<h1><{$key.project}></h1>
+					<p><{$key.company}></p>
+					<p>项目运作基金：<{$key.money}></p>
+					<p>分成比例：</p>
+					<div class="demo-container">
+						<div id="pie1" class="demo-placeholder flexStyle">
+							<img src="<{$key.image}>" width="80%" />
+						</div>
+					</div>
+					<p>大学生合伙人要求</p>
+					<p><{$key.partnerrequire}></p>
+					<div class="zanbox">
+						<img src="<{$tmp_dir}>/images/zan.png" id="zan-btn" onclick="add_zan(<{$key.id}>)">
+						<span class="zanNum" id="zan_num_<{$key.id}>"><{$key.zan}></span>
+					</div>
+				</div>
+			</div>
+			<{/foreach}>
+		<div class="joinbox">
+			<img src="<{$tmp_dir}>/images/zhuban.png" class="zhuban">
+			<!-- <a href="<{site_url("<{$index_dir}>/company")}>"><img src="<{$tmp_dir}>/images/studentsign.png" class="jion-btn"></a>
+			<a href="<{site_url("<{$index_dir}>/student")}>"><img src="<{$tmp_dir}>/images/studentsign.png" class="nextbtn" width="240" height="120"></a> -->
+			<div class="joinbtnbox">
+				<div class="joinbtnleft">
+					<a href="<{site_url("<{$index_dir}>/company")}>"><img src="<{$tmp_dir}>/images/companysign.png" ></a>
+				</div>
+				<div class="joinbtnright">
+					<a href="<{site_url("<{$index_dir}>/student")}>"><img src="<{$tmp_dir}>/images/studentsign.png" ></a>
+				</div>
+			</div>
+		</div>
+		<div class="commentwrap">
+			<img src="<{$tmp_dir}>/images/comment.png" class="commentTitle">
+			<form name="add_comment" id="add_comment" method="post" action="<{site_url("<{$index_dir}>/save_comment")}>">
+			<div class="textbox">
+				<textarea name="comment" id="comment" datatype="*" nullmsg="请输入评论内容！"></textarea>
+				<input type="submit" value="提交" id="submitcomment">
+			</div>
+			</form>
+			
+			<div class="commentbox">
+				<{foreach $comment_list as $val=>$key}>
+				<{if $val>9}><div class="commenthidden"><{/if}>
+				<div class="commentlist">
+					<div class="commentLeft">
+						<img src="<{$key.headimgurl}>" width="100%"/>
+					</div>
+					<div class="commentRight">
+						<p class="yellow"><span class="nick"><{$key.nickname}></span><span class="issuetime"><{date("Y-m-d",$key.addtime)}></span></p>
+						<p><{$key.comment}> </p>
+					</div>
+				</div>
+				<{if $val>9}></div><{/if}>
+				<{/foreach}>
+				<img src="<{$tmp_dir}>/images/morebtn.png" id="morebtn">
+			</div>
+		</div>
+	</div>
+</div>
+	<script type="text/javascript" >
+		$(function(){
+			$.Tipmsg.r=null;
+			$("#add_comment").Validform({
+				tiptype:function(msg){
+					layer.msg(msg, 2, -1);//错误提示
+				},
+				tipSweep:true,
+				ajaxPost:true,
+				callback:function(data){
+					if(data.status=="y"){
+						layer.msg('评论成功', 2, -1);
+						$(".textbox").hide();
+					}
+				}
+			});
+		})
+	</script>
+	<{include file="activity/share.tpl"}>
+
+<script type="text/javascript" src="<{$tmp_dir}>/js/jquery.flot.js"></script>
+<script type="text/javascript" src="<{$tmp_dir}>/js/jquery.flot.pie.js"></script>
+<script>
+	$(function() {
+		/*//饼图
+		var data = [
+			{ label: "大学生合伙人",  data: 40},
+			{ label: "杭州思量",  data: 60}		
+		];
+		
+		$.plot($("#pie1"), data, {
+			series: {
+				pie: { 
+					show: true,
+					combine: {
+						color: "#999",
+						threshold: 0.05
+					}
+
+				}
+			},
+			legend: {
+				show: false
+			}
+		});
+
+
+		$.plot($("#pie2"), data, {
+			series: {
+				pie: { 
+					show: true,
+					combine: {
+						color: "#999",
+						threshold: 0.05
+					}
+
+				}
+			},
+			legend: {
+				show: false
+			}
+		});*/
+
+
+		//评论输入框的展示和隐藏
+		$(".commentTitle").click(function(){
+			$(".textbox").show();
+		});
+		$("#submitcomment").click(function(){
+			$(".textbox").hide();
+		});
+
+		//展示全部评论
+		$("#morebtn").click(function(){
+			$(".commenthidden").show();
+		});
+	})
+
+	function add_zan(id){
+		$.ajax({
+			type:"POST",
+			url: "<{site_url("<{$index_dir}>/add_zan")}>",
+			data:"id="+id,
+			dataType:"json",
+			success: function(data){
+				if(data.status=='y'){
+					nums = Number($('#zan_num_'+id).text());
+					all_num = nums+1;
+					$('#zan_num_'+id).text(all_num)
+				}else{
+					alert(data.info);
+				}
+			}
+		});
+	}
+</script>
+</body>
+</html>

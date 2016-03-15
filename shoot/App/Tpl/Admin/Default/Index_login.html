@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head id="Head1" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="__PUBLIC__/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="__PUBLIC__/js/jquery-1.8.2.min.js" type="text/javascript"></script>
+    <script src="__PUBLIC__/js/jquery.validate.min.js" type="text/javascript"></script>
+    <script src="__PUBLIC__/js/messages_cn.js" type="text/javascript"></script>
+    <script src="__PUBLIC__/js/bootstrap.min.js" type="text/javascript"></script>
+
+    <link href="__PUBLIC__/css/admin.css" rel="stylesheet" type="text/css" />
+    <title>中精财富</title>
+    <style type="text/css">
+        .form-horizontal .controls label.error{  margin-left:8px; color:#b94a48;}
+        .modal{ margin:0px; position:static; margin:auto; margin-top:10%;}
+        input.input{ padding:6px;}
+        .modal-header{ text-align:center;
+            background-color: #F6F6F6;
+            background-image: -moz-linear-gradient(top, #FAFAFA, #F2F2F2);
+            background-image: -ms-linear-gradient(top, #FAFAFA, #F2F2F2);
+            background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#FAFAFA), to(#F2F2F2));
+            background-image: -webkit-linear-gradient(top, #FAFAFA, #F2F2F2);
+            background-image: -o-linear-gradient(top, #FAFAFA, #F2F2F2);
+            background-image: linear-gradient(top, #FAFAFA,#F2F2F2);
+            background-repeat: repeat-x;
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFAFAFA', endColorstr='#FFF2F2F2', GradientType=0);
+            border-bottom:solid 1px #ccc;
+        }
+        body{ background:#eee;}
+    </style>
+    <script type="text/javascript">
+        $(function () {
+            $("#form1").validate();
+        });
+        function fleshVerify(){
+            //重载验证码
+            var timenow = new Date().getTime();
+            $('#verifyImg').attr("src", '__URL__/verify/'+timenow);
+        }
+    </script>
+</head>
+<body class="body1" >
+<form id="form1"  method="post" action="__URL__/checkLogin" class="form-horizontal" >
+    <div class="modal" id="myModal"  >
+        <div class="modal-header">
+            <h3>中精财富</h3>
+        </div>
+        <div class="modal-body" style="padding-top:35px;">
+
+            <fieldset>
+
+                <div class="control-group">
+                    <label class="control-label" for="input01">用户名</label>
+                    <div class="controls">
+                        <input type="text" class="input required" minlength="3"  maxlength="50" id="account" name="account" value="" />
+
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="pwd">密码</label>
+                    <div class="controls">
+                        <input type="password" class="input required" minlength="3"  maxlength="50" id="password" name="password" value="" />
+
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="pwd">验证码</label>
+                    <div class="controls">
+                        <input type="text" class="input span1 required"   maxlength="50" id="verify" name="verify" />
+                        <img id="verifyImg" SRC="__URL__/verify/" onClick="fleshVerify()" BORDER="0" ALT="点击刷新验证码" style="cursor:pointer" align="absmiddle">
+
+                    </div>
+                </div>
+
+            </fieldset>
+
+        </div>
+        <div class="modal-footer" >
+            <div style="float:left;">&copy; 中精财富</div>
+            <button type="submit" class="btn btn-primary " style="padding-left:25px; padding-right:25px;">登陆</button>
+
+
+        </div>
+</html>

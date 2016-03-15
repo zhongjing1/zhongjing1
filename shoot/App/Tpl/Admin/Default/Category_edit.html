@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>网站后台管理系统</title>
+<link href="__PUBLIC__/css/bootstrap.css" rel="stylesheet" type="text/css"   />
+
+<link rel="stylesheet" href="/Public/admin/css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="/Public/admin/css/style.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="/Public/admin/css/invalid.css" type="text/css" media="screen" />
+
+<script src="__PUBLIC__/js/jquery-1.8.2.min.js" type="text/javascript"></script>
+<script src="__PUBLIC__/js/jquery.validate.min.js" type="text/javascript"></script>
+<script src="__PUBLIC__/js/messages_cn.js" type="text/javascript"></script>
+<script src="__PUBLIC__/js/bootstrap.min.js" type="text/javascript"></script>
+
+<script type="text/javascript" src="/Public/admin/scripts/simpla.jquery.configuration.js"></script>
+<style>
+body {
+	background: #f0f0f0
+}
+</style>
+<script type="text/javascript">
+        $(function () {
+            $("#form1").validate();
+            $("#sub").submit(function () {
+                $("#ids").val($("input[name='c_id']").val());
+                var chk_value = [];
+                $('input[name="c_id"]:checked').each(function () {
+                    chk_value.push($(this).val());
+                });
+                $("#ids").val(chk_value);
+                if (chk_value == "") {
+                    alert("请选择操作的记录！");
+                    return false;
+                }
+                if ($("#cp").val() == "0") {
+                    alert("请选择操作！");
+                    return false;
+                }
+                if( confirm("确认执行操作吗？")){
+                   if($('#cp').val()=="1"){
+                       $("#sub").attr("action","__URL__/foreverdelete");
+                   }else if($('#cp').val()=="2"){
+                       $("#sub").attr("action","__URL__/checkPass");
+                   }else if($('#cp').val()=="3"){
+                       $("#sub").attr("action","__URL__/recycle");
+                    }
+
+                    return true;
+                }
+
+            });
+            $("a").focus(function () { $(this).blur(); });
+            $("input[type='checkbox']").addClass("checkbox");
+            $("#ckall").live("click",function () {
+
+
+                if (!$(this).attr("checked")) {
+                    $("input[name='c_id']").removeAttr("checked");
+                }
+                else {
+                    $("input[name='c_id']").attr("checked", true);
+
+                }
+            });
+            $("#ckall1").live("click",function () {
+                if (!$(this).attr("checked")) {
+                    $("input[name='c1_id[]']").removeAttr("checked");
+                }
+                else {
+                    $("input[name='c1_id[]']").attr("checked", true);
+                }
+            });
+            $(".table tr:odd").addClass("odd");
+            $("#del").click(function () {
+                if (confirm("确认要删除吗？")) {
+                    $("#form1").submit();
+                }
+            });
+            $("a[data-toggle=modal]").click(function(){
+                var target = $(this).attr('data-target');
+                var url = $(this).attr('href');
+                $(target+" .modal-body").load(url);
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="main-content">
+<!-- Main Content Section with everything -->
+<div class="content-box"> 
+  <!-- Start Content Box -->
+  <div class="content-box-header">
+    <h3>编辑</h3> <a href="__URL__" class="link_back"><i class="icon-chevron-left"></i>返回</a>
+  </div>
+  <!-- End .content-box-header -->
+  <div class="content-box-content">
+    <div class="tab-content default-tab">
+   <div style="padding-right:20px; " >
+  <form id="form1" class="form-horizontal" method="post"
+      action="<if condition="ACTION_NAME=='add'">{:U(MODULE_NAME.'/insert')}<else />{:U(MODULE_NAME.'/update')}</if>"   >
+    <input type="hidden" name="id" value="{$vo.id}">
+    <fieldset>
+        <div class="control-group">
+            <label class="control-label" for="title">上级栏目</label>
+            <div class="controls">
+               <select id="pid" name="pid" onchange=""  ondblclick="" class="" >
+                   <if condition="$_GET['pid'] neq ''">
+                      <volist  name="pcate" id="vcat">
+                         <option value="{$vcat.id}" <if condition='$vo.pid eq $vcat.id'> selected="selected"</if>>{$vcat.title}</option>
+                      </volist>
+                   <else />
+                       <if condition="$vo['pid'] eq 0">
+                           <option value="0" selected="selected">顶级栏目</option>
+                           <else />
+                           <volist  name="pcate1" id="vcat">
+                           <option value="{$vcat.id}" <if condition='$vo.pid eq $vcat.id'> selected="selected"</if>>{$vcat.title}</option>
+                           </volist>
+                      </if>
+                  </if>
+               </select>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="title">类型</label>
+            <div class="controls">
+                <html:select name='mid' id='mid' options='mode' selected="vo['mid']" style="required"  first='请选择'  />
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="title">名称</label>
+            <div class="controls">
+                  <input type="text"  class="span5 required" id="title" name="title" value="{$vo.title}" />
+            </div>
+        </div>
+        
+   <div class="control-group">
+            <label class="control-label" for="url">栏目图片</label>
+            <div class="controls " style="">
+                <div class="input-append">
+                    <input type="hidden" name="thumb" id="thumb" value="{$vo[thumb]}" >
+                    <img src="{$vo.thumb|default='__PUBLIC__/images/admin_upload_thumb.png'}" id="image1" style="width: 135px; height:113px; border: solid 1px #ccc;padding: 2px; cursor: pointer; "  /><br>
+                    <div style="margin-top:8px;">
+                        <button type="button" class="btn" id="quxiao" >取消图片</button>
+                    </div>
+                </div>
+            </div>
+        </div>                
+        <div class="control-group">
+            <label class="control-label" for="keywords">关键字</label>
+            <div class="controls">
+                <textarea name="keywords" id="keywords" class="span5">{$vo.keywords}</textarea>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="description">简介</label>
+            <div class="controls">
+                <textarea name="description" id="description" class="span5">{$vo.description}</textarea>
+            </div>
+        </div>
+
+        <div class="control-group" >
+            <label class="control-label" for="copyfrom">位置</label>
+            <div class="controls">
+                <input type="text"  class="span2 digits required" id="orderid"   name="ordernum" value="{$vo.ordernum|default=100}" />
+            </div>
+        </div>
+        <div class="control-group" >
+            <label class="control-label" for="ismenu">菜单显示</label>
+            <div class="controls">
+                <select name="ismenu" id="ismenu"   >
+                    <option value="0" <eq name="vo[ismenu]" value="0">selected="selected"</eq> >否</option>
+                    <option value="1" <eq name="vo[ismenu]" value="1">selected="selected"</eq> >是</option>
+                </select>
+            </div>
+        </div>
+        <div class="control-group" >
+            <label class="control-label" for="istj">推荐</label>
+            <div class="controls">
+                <select name="istj" id="istj"   >
+                    <option value="0" <eq name="vo[istj]" value="0">selected="selected"</eq> >否</option>
+                    <option value="1" <eq name="vo[istj]" value="1">selected="selected"</eq> >是</option>
+                </select>
+            </div>
+        </div>
+
+
+        <div class="form-actions">
+            <input name="ch" type="hidden" value="{$vo.ch}" />
+            <button type="submit" class="btn btn-primary">提交</button> &nbsp;<button type="reset" class="btn">取消</button>
+
+        </div>
+    </fieldset>
+</form>
+<script type="text/javascript" src="__PUBLIC__/js/kindeditor/kindeditor.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Js/kindeditor/lang/zh_CN.js"></script>
+<link href="__PUBLIC__/Js/kindeditor/themes/default/default.css" rel="stylesheet" />
+<script type="text/javascript">
+
+    KindEditor.ready(function(K) {
+        var editor1 = K.editor({
+            allowFileManager : true
+        });
+        K('#image1').click(function() {
+            editor1.loadPlugin('image', function() {
+                editor1.plugin.imageDialog({
+                    imageUrl : K('#thumb').val(),
+                    clickFn : function(url, title, width, height, border, align) {
+                        K('#thumb').val(url);
+                        $("#image1").attr("src",url);
+                        editor1.hideDialog();
+                    }
+                });
+            });
+        });
+    });
+    $("#quxiao").click(function(){
+
+        $("#thumb").val('');
+        $("#image1").attr("src","__PUBLIC__/images/admin_upload_thumb.png");
+    });
+</script>
+
+</div>
+    </div>
+    <!-- End .content-box-content --> 
+  </div>
+</div>
+
+  <!-- End .content-box -->
+      <include file="public:footer" />
+  <!-- End #footer --> 
+  
+</div>
+<!-- End #main-content -->
+</body>
+</html>

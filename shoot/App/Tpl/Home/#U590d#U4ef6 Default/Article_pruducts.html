@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{$seo[title]}</title>
+<meta name="keywords" content="{$seo[keywords]}" />
+<meta name="description" content="{$seo[description]}" />
+<link href="/skin/style/css.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/skin/js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="/skin/js/slide.js"></script>
+<script type="text/javascript" src="/skin/js/main.js"></script>
+<script src="/skin/js/jquery.kinMaxShow-1.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="/skin/js/js.js"></script><script type="text/javascript">
+$(function(){
+	  $("#kinMaxShow").kinMaxShow();
+});
+</script>
+<script type="text/javascript"> 
+function displaySubMenu(li) { 
+var subMenu = li.getElementsByTagName("ul")[0]; 
+subMenu.style.display = "block"; 
+} 
+function hideSubMenu(li) { 
+var subMenu = li.getElementsByTagName("ul")[0]; 
+subMenu.style.display = "none"; 
+} 
+</script> 
+
+</head>
+<body>
+<include file="public:head" />
+<div class="contentbox">
+<table width="1000" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="260" height="510" valign="top" style="padding-left:0px; padding-top:10px;">
+    <table width="240" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="123" valign="top" style="background:url(/skin/images/left_bg.jpg) repeat-x; padding-top:0px;">
+  
+  <table width="260" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="32" height="36" align="right" style="background:url(/skin/images/left_titlebg.jpg) repeat-x; "><img src="/skin/images/icon_left.png" width="17" height="12" /></td>
+        <td width="228" style="background:url(/skin/images/left_titlebg.jpg) repeat-x; padding-left:12px; ">
+        <span class="font_white14b">产品展示</span>  &nbsp;&nbsp; <span class="font_white_12b">Products</span>
+        </td>
+      </tr>
+    </table>
+   <SCRIPT language="JavaScript">
+function chkHinde(objDiv){
+	var obj=document.getElementById(objDiv);
+	if (obj){
+		if (obj.style.display=="none"){
+			obj.style.display='';
+		}
+		else{
+			obj.style.display='none';
+		}
+	}	
+}
+function setShow(objDiv){
+	var obj=document.getElementById(objDiv);
+	window.alert(obj)
+	if (obj.style.display=="none"){
+		obj.style.display='';
+	}
+}
+</SCRIPT>
+   <volist name="catpro" id="vo" >
+   <a href="<?php echo U('article/pruducts',array('catid'=>$vo["id"]));?>" title="{$vo.title}"  onClick="chkHinde('menu{$key}')"  class="link_proclass">                             
+ <table width="260" border="0" align="center" cellpadding="0" cellspacing="0" style="margin-top:0px; background:url(/skin/images/left_item_bg.jpg)  repeat-x;">
+      <tr>
+        <td width="28" height="33" align="right" valign="middle" style=" height:33px; ">&nbsp;</td>
+        <td width="212" valign="middle" class="link_proclass" style="height:33px; padding-left:5px; font-size:14px; font-weight:bold;">
+             {$vo.title}
+        </td>
+      </tr>
+    </table></a>
+                         
+                          <if condition="($vo.sublist neq null)">
+                           <ul 
+                              <if condition='($_GET["pid"]==$vo["id"])||($_GET["catid"]==$vo["id"])'>
+                              style="" 
+                              <else />
+                              style="display:none;" 
+                              </if>
+                               id="menu{$key}" class="submenu">
+                              <volist name="vo['sublist']" id="voo">  
+                                <table cellspacing="0" cellpadding="0" width="100%" border="0" >
+                                  <tr>
+                                    <td><a       <if condition='$_GET["catid"]==$voo["id"]'> class="link_mt1_on" 
+                                    <else /> class="link_mt1" 
+                                    </if>
+                                      href="<?php echo U('article/pruducts',array('catid'=>$voo["id"],'pid'=>$vo["id"]));?>" >{$voo.name}</a> </td>
+                                  </tr>
+                                </table>
+                              </volist>
+	                    	</ul>
+                          </if>                            
+                      </volist>
+   
+   
+   
+    </td>
+  </tr>
+</table>
+<table width="260" border="0" cellspacing="0" cellpadding="0"  style="margin-top:10px;">
+   <tr>
+     <td height="64" style="background:url(/skin/images/contact_t2.jpg) no-repeat; height:72px;"></td>
+   </tr>
+   <tr>
+     <td height="214" valign="top" style="background:url(/skin/images/contact_bt_bg.jpg) left bottom no-repeat;  padding:20px; line-height:200%; font-size:14px;">
+     {$leftcontact[0][content]}
+     </td>
+   </tr>
+ </table></td>
+    <td width="740" valign="top" style="padding-top:10px; padding-left:10px;">
+    <table width="730" border="0" cellspacing="0" cellpadding="0" style="margin-top:0px; background:#FFF;">
+        <tr>
+          <td width="700" height="151" valign="top"><table width="730" border="0" cellspacing="0" cellpadding="0" style="background:url(/skin/images/line_02.jpg) left bottom no-repeat;">
+            <tr>
+              <td width="21" height="36" align="left" valign="top" style="background:url(/skin/images/title_bg.jpg) repeat-x; padding-top:9px; padding-left:15px;"><img src="/skin/images/icon_red.jpg" width="6" height="15" /></td>
+              <td align="left" valign="top" style="background:url(/skin/images/title_bg.jpg) repeat-x; padding-top:9px; padding-left:3px;"><span class="font_title">{$cattitle}</span></td>
+              </tr>
+          </table>
+            <table width="730" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="730" height="477" valign="top" style="line-height:200%; padding:10px; padding-left:20px; padding-right:0px; border-top:0px;">
+    <volist name="list" id="vo" mod="2" >
+          <div style="float:left; width:180px; margin-right:45px;">
+                <if condition='$_GET["catid"] neq ""'>
+               <a href="<?php echo U('article/pruducts_read',array('id'=>$vo["id"],'catid'=>$_GET["catid"]));?>"> <img src="{$vo.thumb}" height="135" width="180"  style="border:1px solid #e0e0e0; padding:3px;" /></a>
+                <else />
+               <a href="<?php echo U('article/pruducts_read',array('id'=>$vo["id"],'catid'=>$vo["catid"]));?>"> <img src="{$vo.thumb}" height="135" width="180" style="border:1px solid #e0e0e0; padding:3px;"/></a>
+                 </if>
+            <div style="width:180px; text-align:center; padding-top:10px; padding-bottom:15px;">
+             <a href="<?php echo U('article/pruducts_read',array('id'=>$vo["id"],'catid'=>$vo["catid"]));?>" class="link_pro">{$vo.title}</a></div>
+            <div style="width:180px; text-align:center;"><a href="<?php echo U('sinpage/order',array('id'=>$vo["id"]));?>"><img src="/skin/images/order.jpg" width="138" height="32" />
+            </a></div>
+           </div>
+    </volist>  
+    <div class="clear"></div>
+       <div class='t_page ColorLink' style="width:680px;">{$page} </div>
+                </td>
+              </tr>
+            </table></td>
+        </tr>
+      </table>
+    
+    </td>
+    </tr>
+</table>
+
+
+</div>
+
+
+
+
+<include file="public:foot" />
+</body>
+</html>

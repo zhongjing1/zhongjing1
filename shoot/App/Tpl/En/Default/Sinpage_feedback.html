@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{$seo[title_en]}</title>
+<meta name="keywords" content="{$seo[keywords_en]}" />
+<meta name="description" content="{$seo[description_en]}" />
+<link href="/skin/style/css.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/skin/js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="/skin/js/slide.js"></script>
+<script type="text/javascript" src="/skin/js/main.js"></script>
+<script src="/skin/js/jquery.kinMaxShow-1.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="/skin/js/js.js"></script><script type="text/javascript">
+$(function(){
+	  $("#kinMaxShow").kinMaxShow();
+});
+</script>
+<script type="text/javascript"> 
+function displaySubMenu(li) { 
+var subMenu = li.getElementsByTagName("ul")[0]; 
+subMenu.style.display = "block"; 
+} 
+function hideSubMenu(li) { 
+var subMenu = li.getElementsByTagName("ul")[0]; 
+subMenu.style.display = "none"; 
+} 
+</script> 
+
+</head>
+<body>
+<include file="public:head" />
+<div class="contentbox">
+<table width="1000" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="260" height="510" valign="top" style="padding-left:0px; padding-top:10px;">
+    <table width="240" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="123" valign="top" style="background:url(/skin/images/left_bg.jpg) repeat-x; padding-top:0px;">
+  
+  <table width="260" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="32" height="36" align="right" style="background:url(/skin/images/left_titlebg.jpg) repeat-x; "><img src="/skin/images/icon_left.png" width="17" height="12" /></td>
+        <td width="228" style="background:url(/skin/images/left_titlebg.jpg) repeat-x; padding-left:12px; ">
+        <span class="font_white14b">Contact us</span>  
+        </td>
+      </tr>
+    </table>
+      <volist name="catabout" id="vo" >
+         <table width="260" border="0" align="center" cellpadding="0" cellspacing="0" style="margin-top:0px; background:url(/skin/images/left_item_bg.jpg)  repeat-x;">
+          <tr>
+            <td width="28" height="33" align="right" valign="middle" style=" height:33px; ">&nbsp;</td>
+            <td width="212" valign="middle" style="height:33px; padding-left:5px;">
+              <a href="<?php echo U('sinpage/contact',array('catid'=>$vo["id"]));?>" title="{$vo.title}"  class="link_proclass">{$vo.title}</a>
+            </td>
+          </tr>
+        </table> 
+     </volist>
+    
+    </td>
+  </tr>
+</table>
+<table width="260" border="0" cellspacing="0" cellpadding="0"  style="margin-top:10px;">
+   <tr>
+     <td height="64" style="background:url(/skin/images/contact_t2_en.jpg) no-repeat; height:72px;"></td>
+   </tr>
+   <tr>
+     <td height="214" valign="top" style="background:url(/skin/images/contact_bt_bg.jpg) left bottom no-repeat;  padding:20px; line-height:200%; font-size:14px;">
+           {$leftcontact[0][content]}
+     </td>
+   </tr>
+ </table></td>
+    <td width="740" valign="top" style="padding-top:10px; padding-left:10px;">
+    <table width="730" border="0" cellspacing="0" cellpadding="0" style="margin-top:0px; background:#FFF;">
+        <tr>
+          <td width="700" height="151" valign="top"><table width="730" border="0" cellspacing="0" cellpadding="0" style="background:url(/skin/images/line_02.jpg) left bottom no-repeat;">
+            <tr>
+              <td width="21" height="36" align="left" valign="top" style="background:url(/skin/images/title_bg.jpg) repeat-x; padding-top:9px; padding-left:15px;"><img src="/skin/images/icon_red.jpg" width="6" height="15" /></td>
+              <td align="left" valign="top" style="background:url(/skin/images/title_bg.jpg) repeat-x; padding-top:9px; padding-left:3px;"><span class="font_title">Feedback</span></td>
+              </tr>
+          </table>
+            <table width="730" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="411" height="385" valign="top" style="line-height:200%; padding:10px; padding-left:15px; padding-right:0px; border-top:0px;">
+<form id="form1" class="form-horizontal" method="post"  action="{:U('Feedbook/insert')}"   >
+<input type="hidden" name="catid" value="260">
+<table class="tab_form" width="100%" align="center" border="0" cellpadding="0" cellspacing="5">
+  <tbody>
+<tr>
+<td class="b" align="right" width="100px">Title：</td>
+<td>
+<input class="input_txt" type="text" name="title" value="" size="40" maxlength="100" /> *
+<span class="post_error"> </span>
+</td>
+</tr> 
+ <tr>
+<td class="b" align="right">Company Name：</td>
+<td align="left">
+<input class="input_txt" style="width: 150px" name="company" id="company" maxlength="50">
+<span class=redsmall>*</span>
+</td>
+  </tr>
+  <tr>
+<td class="b" align="right">Contact：</td>
+<td align="left">
+<input class="input_txt" style="width: 150px" name="contact" id="name" maxlength="20"> 
+<span class=redsmall>*</span>
+</td>
+  </tr>
+  <tr>
+<td class="b" align="right">Telephone：</td>
+<td align="left">
+<input class="input_txt" style="width: 150px" name="telephone" id="telephone" maxlength="20">
+<span class=redsmall>*</span>
+</td>
+  </tr>
+  <tr>
+<td class="b" align="right">Fax：</td>
+<td align="left">
+<input class="input_txt" style="width: 150px" name="fax" id="fax" maxlength="20">
+</td>
+  </tr>
+  <tr>
+<td class="b" align="right">Mobile：</td>
+<td align="left">
+<input class="input_txt" style="width: 150px" name="mobile" id="mobile" maxlength="20"> 
+</td>
+  </tr>
+  <tr>
+<td class="b" align="right">E-mail：</td>
+<td align="left">
+<input class="input_txt" style="width: 150px" name="email" id="email" maxlength="40">
+<span class=redsmall>*</span>
+</td>
+  </tr>
+  
+  <tr>
+<td class="b" align="right">Address：</td>
+<td align="left">
+<textarea class="input_txt" name="address" id="address" cols="40" rows="2"></textarea>
+</td>
+  </tr>
+  <tr>
+<td class="b" align="right">Remark：</td>
+<td align="left">
+<textarea class="input_txt" name="remark" id="remark" cols="40" rows="2"></textarea>
+</td>
+  </tr> 	  
+  <tr>
+<td>
+<input type="hidden" name="action" value=exbRegister>
+</td>
+<td align="left">
+<input class="btn" type="submit" value="Submit" style="width:120px;">
+&nbsp;<input class="btn" type="reset" value="Reset" style="width:120px;">
+</td>
+  </tr>
+  </tbody>
+</table>
+
+</form>
+                 
+                 
+                </td>
+              </tr>
+            </table></td>
+        </tr>
+      </table>
+    
+    </td>
+    </tr>
+</table>
+
+
+</div>
+
+
+
+
+<include file="public:foot" />
+</body>
+</html>

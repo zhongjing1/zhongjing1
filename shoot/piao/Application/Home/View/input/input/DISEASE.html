@@ -1,0 +1,163 @@
+<div class="content {$color}-in">
+    <div class="info {$color}-in">
+        <table>
+            <tr>
+                <td>年龄：</td><td colspan="2"><input id="disease_age" name="age" type="tel" min="16" max="65" value="" class="radius-input" info="年龄" /></td>
+            </tr>
+            <tr id="disease_issmoker">
+                <td><em>吸烟者</em><span class="radio {$color}_smoking" data-option="1"  info="吸烟者" > </span></td><td colspan="2"><em>非吸烟者</em><span class="radio on {$color}_smoking" data-option="2"  info="非吸烟者" > </span></td>
+            </tr>
+            <tr id="disease_payway">
+                <td>付款方式：</td><td><em>年付</em><span class="radio on {$color}_payway" data-option="1"  info="年付" > </span></td><td><em>月付</em><span class="radio {$color}_payway" data-option="2"  info="月付" > </span></td>
+            </tr>
+            <tr>
+                <td colspan="3">投保内容：<abbr class="minitext">（以下两项至少要选择一个）</abbr></td>
+            </tr>
+            <tr>
+                <td class="midtext">危疾保障(保障额:港币)：<em><span class="radio on Policycontent Policydanger" data-option="1"  info="危疾保障" > </span></em></td><td><em>250000</em><span class="radio on Dangerousinfo" data-option="250000"  info="危疾保障:250000" > </span></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td><td><em>500000</em><span class="radio Dangerousinfo" data-option="500000"  info="危疾保障:500000" > </span></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td><td><em>1000000</em><span class="radio Dangerousinfo" data-option="1000000"  info="危疾保障:1000000" > </span></td>
+            </tr>
+            <tr>
+                <td class="minitext">住院现金(每日保障额:港币)：<em><span class="radio Policycontent Policycash" data-option="2"  info="住院现金" > </span></em></td><td><em>500</em><span class="radio on  cashsupport" data-option="500"  info="住院现金保障:500" > </span></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td><td><em>1000</em><span class="radio cashsupport" data-option="1000"  info="住院现金保障:1000" > </span></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td><td><em>1500</em><span class="radio cashsupport" data-option="1500"  info="住院现金保障:1500" > </span></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+<input class="{$color}_select" type="hidden" value="0" />
+<input  name="{$code}_price"  class="{$color}_price totalprice  {$code}_price" type="hidden" value="0" />
+<input name="{$code}_info" class="{$code}_info selected" type="hidden" value="" />
+<script language="JavaScript">
+
+    jQuery(function ($) {
+        $(".{$color}-in .{$color}_smoking").click(function(){
+            if($(".{$color}_smoking").size() > 0){
+                $(".{$color}_smoking").removeClass("on");
+                $(this).addClass("on");
+            }
+
+        });
+
+        $(".{$color}-in .{$color}_payway").click(function(){
+            if($(".{$color}_payway").size() > 0){
+                $(".{$color}_payway").removeClass("on");
+                $(this).addClass("on");
+            }
+        });
+
+        //Policycash
+        $(".{$color}-in .Policydanger").click(function(){
+             if($(".Policycash").hasClass("on")){
+                 $(this).toggleClass("on");
+             }else{
+                 $(this).addClass("on");
+             }
+            init_{$code}();
+        });
+
+        $(".{$color}-in .Policycash").click(function(){
+            if($(".Policydanger").hasClass("on")){
+                $(this).toggleClass("on");
+            }else{
+                $(this).addClass("on");
+            }
+            init_{$code}();
+        });
+
+
+        $(".{$color}-in .Dangerousinfo").click(function(){
+            if($(".Policydanger").hasClass("on")){
+                $(".Dangerousinfo").removeClass("on");
+                $(this).addClass("on");
+            }else{
+                $(".Dangerousinfo").removeClass("on");
+                $(".Policydanger").addClass("on");
+                $(this).addClass("on");
+            }
+            init_{$code}();
+        });
+
+        $(".{$color}-in .cashsupport").click(function(){
+            if($(".Policycash").hasClass("on")){
+                $(".cashsupport").removeClass("on");
+                $(this).addClass("on");
+            }else{
+                $(".cashsupport").removeClass("on");
+                $(".Policycash").addClass("on");
+                $(this).addClass("on");
+            }
+            init_{$code}();
+        });
+
+
+
+
+        init_{$code}();
+
+    });
+    function init_{$code}(){
+        var aa=0;
+        if($(".Policydanger").hasClass("on")){
+            aa =  aa +1 ;
+            var Dangerousinfo_selected = true;
+            for(var i=0;i<$(".Dangerousinfo").size();i++){
+                if($(".Dangerousinfo").eq(i).hasClass("on")){
+                    Dangerousinfo_selected = false;
+                }
+            }
+            if(Dangerousinfo_selected){
+                $(".Dangerousinfo").eq(0).addClass("on")
+            }
+        }else{
+            $(".Dangerousinfo").removeClass("on");
+        }
+        if($(".Policycash").hasClass("on")){
+            aa =  aa +2 ;
+            var cashsupport_selected = true;
+            for(var i=0;i<$(".cashsupport").size();i++){
+                if($(".cashsupport").eq(i).hasClass("on")){
+                    cashsupport_selected = false;
+                }
+            }
+            if(cashsupport_selected){
+                $(".cashsupport").eq(0).addClass("on")
+            }
+        }else{
+            $(".cashsupport").removeClass("on");
+        }
+
+        $(".{$color} .listBar").hide();
+        switch (aa){
+            case 1:
+            default :
+                $(".blue .unitbg").eq(0).show();
+                $(".blue .unitbg").eq(1).show();
+                $(".blue .unitbg").eq(2).hide();
+                break;
+            case 2:
+                $(".blue .unitbg").eq(0).show();
+                $(".blue .unitbg").eq(1).hide();
+                $(".blue .unitbg").eq(2).show();
+                break;
+            case 3:
+                $(".blue .unitbg").eq(0).show();
+                $(".blue .unitbg").eq(1).show();
+                $(".blue .unitbg").eq(2).show();
+                break;
+        }
+        $(".DISEASE_"+aa).show();
+    }
+
+</script>
